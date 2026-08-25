@@ -121,7 +121,7 @@
     </section>
 
     <section class="app-grid" aria-label="Aplicaciones disponibles">
-      <a class="app-card" href="tools/worldbuilding/index.html">
+      <a class="app-card" href="tools/worldbuilding/">
         <div class="card-content">
           <div class="card-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48"><path d="M24 5 42 16v16L24 43 6 32V16Z"/><path d="m24 5 8 15-8 23-8-23Z"/><path d="m6 16 10 4h16l10-4M6 32l10-12m26 12L32 20"/></svg>
@@ -133,7 +133,7 @@
         </div>
       </a>
 
-      <a class="app-card" href="systems/dnd-5e-2024/character/index.html">
+      <a class="app-card" href="systems/dnd-5e-2024/character/">
         <div class="card-content">
           <div class="card-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48"><path d="M14 5h17l7 7v31H14Z"/><path d="M31 5v8h7M20 22h12M20 29h12M20 36h8"/><circle cx="14" cy="15" r="7"/></svg>
@@ -218,6 +218,7 @@ const LEGACY_SHARED_THEME_KEY='appsRolTheme';
     document.querySelectorAll('.app-card').forEach(link=>link.addEventListener('click',()=>{
       writeThemePreference(root.dataset.theme);
       const destination=new URL(link.href,location.href);
+      if(destination.protocol==='file:'&&/\/$/.test(destination.pathname))destination.pathname+='index.html';
       destination.searchParams.set('theme',root.dataset.theme);
       link.href=destination.href;
     }));
