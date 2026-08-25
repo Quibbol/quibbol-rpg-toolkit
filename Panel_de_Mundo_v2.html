@@ -1781,7 +1781,7 @@ body.npc-codex-open .npc-codex-button{
   .brand{display:flex;align-items:center;gap:12px;min-width:260px}.seal{width:43px;height:43px;display:grid;place-items:center;border:2px solid var(--accent);transform:rotate(45deg);background:#5f4924;box-shadow:inset 0 0 0 3px var(--deep);flex:0 0 auto}.seal img{width:29px;height:29px;object-fit:contain;transform:rotate(-45deg);filter:invert(1)}
   html[data-theme="light"] .seal{background:#ead2d8;box-shadow:inset 0 0 0 3px var(--panel)}html[data-theme="light"] .seal img{filter:none}
   .brand h1{font:800 20px/1 Georgia,serif;letter-spacing:.08em;text-transform:uppercase;margin:0;color:var(--text)}.brand small{display:block;color:var(--accent);font-size:10px;letter-spacing:.2em;margin-top:5px;text-transform:uppercase;font-weight:700}
-  .topbar .toolbar{display:flex;align-items:center;gap:7px;flex:1;justify-content:flex-end;flex-wrap:wrap;margin:0}.topbar .toolbar select{width:auto;min-width:210px;max-width:280px}.btn,.topbar .toolbar select{height:38px;border:1px solid var(--border);background:var(--panel2);color:var(--text);border-radius:3px;padding:0 12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-weight:700;width:auto}.btn:hover{border-color:var(--accent);transform:translateY(-1px)}.btn.primary{background:#5f4924!important;border-color:#8c6d35!important;color:#fff!important}.btn.danger{background:#532929!important;border-color:#804242!important;color:var(--text)!important}.btn.icon{width:38px;padding:0}.save-state{font-size:11px;color:var(--muted);min-width:66px;text-align:center}
+  .topbar .toolbar{display:flex;align-items:center;gap:7px;flex:1;justify-content:flex-end;flex-wrap:wrap;margin:0}.topbar .toolbar select{width:auto;min-width:210px;max-width:280px}.btn,.topbar .toolbar select{height:38px;border:1px solid var(--border);background:var(--panel2);color:var(--text);border-radius:3px;padding:0 12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-weight:700;width:auto}.btn:hover{border-color:var(--accent);transform:translateY(-1px)}.btn.primary{background:#5f4924!important;border-color:#8c6d35!important;color:#fff!important}.btn.danger{background:#532929!important;border-color:#804242!important;color:var(--text)!important}.btn.icon{width:38px;height:38px;padding:0;display:inline-grid;place-items:center;line-height:1;letter-spacing:0}.home-glyph{display:block;font-family:Arial,sans-serif;font-size:22px;line-height:1;letter-spacing:0}.save-state{font-size:11px;color:var(--muted);min-width:66px;text-align:center}
   html[data-theme="light"] .btn.primary{background:#8f3048!important;border-color:#6f2237!important;color:#fff!important}html[data-theme="light"] .btn.danger{background:#f1d6d3!important;border-color:#c4837d!important;color:#7b3232!important}
   @media(max-width:900px){.topbar{align-items:flex-start;flex-wrap:wrap}.brand{min-width:220px}.topbar .toolbar{flex-basis:100%;justify-content:flex-start}.topbar .toolbar select{flex:1 1 210px;max-width:none}}
   @media(max-width:560px){.topbar{position:static;padding:10px 12px}.brand{min-width:0}.brand h1{font-size:17px}.brand small{letter-spacing:.13em}.save-state{display:none}.topbar .toolbar select{flex-basis:100%;width:100%}}
@@ -1803,15 +1803,16 @@ body.npc-codex-open .npc-codex-button{
     <div><h1>Panel de Mundo</h1><small>Archivo de mundos</small></div>
   </div>
   <div class="toolbar">
+    <button class="btn icon" type="button" onclick="goToMainMenu()" title="Volver al menú principal" aria-label="Volver al menú principal"><span class="home-glyph" aria-hidden="true">⌂</span></button>
     <select id="worldFileSelect" aria-label="Mundo activo" onchange="selectWorldFile(this.value)"></select>
-    <button class="btn icon primary" type="button" onclick="addWorldFile()" title="Nuevo mundo" aria-label="Nuevo mundo">＋</button>
     <button class="btn icon" type="button" onclick="renameWorldFile()" title="Renombrar mundo" aria-label="Renombrar mundo">✎</button>
+    <button class="btn icon primary" type="button" onclick="addWorldFile()" title="Nuevo mundo" aria-label="Nuevo mundo">＋</button>
     <button class="btn icon danger" type="button" onclick="deleteWorldFile()" title="Eliminar mundo" aria-label="Eliminar mundo">×</button>
     <button class="btn" type="button" onclick="exportState()" title="Exportar mundo">⇩ <span>JSON</span></button>
     <button class="btn icon" type="button" onclick="document.getElementById('importFile').click()" title="Importar mundo" aria-label="Importar mundo">⇧</button>
     <button class="btn icon" type="button" onclick="window.print()" title="Imprimir o guardar como PDF" aria-label="Imprimir">▣</button>
     <button id="themeToggle" class="btn icon" type="button" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema"><span class="theme-glyphs" aria-hidden="true">◐</span></button>
-    <button id="languageToggle" class="btn icon" type="button" onclick="toggleLanguage()" title="Cambiar idioma" aria-label="Cambiar idioma"><span class="language-glyph">ES</span></button>
+    <button id="languageToggle" class="btn icon" type="button" onclick="toggleLanguage()" title="Cambiar idioma" aria-label="Cambiar idioma" hidden style="display:none!important"><span class="language-glyph">ES</span></button>
     <span id="worldSaveState" class="save-state">Guardado</span>
   </div>
   <input id="importFile" type="file" accept=".json,application/json" hidden onchange="importState(event)">
@@ -2216,6 +2217,10 @@ function applyTheme(){
   }
 }
 
+function goToMainMenu(){
+  autoSave();
+  window.location.assign("Menu_Aplicaciones.html");
+}
 function toggleTheme(){
   const root = document.documentElement;
   root.classList.add("theme-switching");
