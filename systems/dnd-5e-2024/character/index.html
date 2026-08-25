@@ -3,18 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" type="image/png" href="data:image/png;base64,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">
-<title>Ficha de personaje D&D</title>
+<!-- Favicon adaptativo según el esquema de color del navegador -->
+<link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="data:image/png;base64,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">
+<title>Ficha de personaje D&D — Archivo de Rol</title>
+<script src="../../../assets/js/json-formats.js"></script>
+<script id="theme-bootstrap">
+(()=>{
+  const root=document.documentElement;
+  root.classList.add('theme-booting');
+  const parse=raw=>{
+    if(!raw)return null;
+    try{const value=JSON.parse(raw);if(value&&(value.theme==='dark'||value.theme==='light'))return {theme:value.theme,updatedAt:Number(value.updatedAt)||0};}
+    catch(error){if(raw==='dark'||raw==='light')return {theme:raw,updatedAt:0};}
+    return null;
+  };
+  let fallback='dark';
+  try{const legacy=JSON.parse(localStorage.getItem('dnd2024CharacterManagerV1'));if(legacy?.theme==='light'||legacy?.theme==='dark')fallback=legacy.theme;}catch(error){}
+  let stored=null;
+  try{stored=parse(localStorage.getItem('appsRolTheme'));}catch(error){}
+  const fromWindow=String(window.name||'').startsWith('appsRolTheme:')?parse(String(window.name).slice(13)):null;
+  const newest=[stored,fromWindow].filter(Boolean).sort((a,b)=>b.updatedAt-a.updatedAt)[0];
+  const urlTheme=new URLSearchParams(location.search).get('theme');
+  root.dataset.theme=urlTheme==='light'||urlTheme==='dark'?urlTheme:(newest?.theme||fallback);
+})();
+</script>
+<style id="theme-bootstrap-style">html.theme-booting *,html.theme-booting *::before,html.theme-booting *::after{transition:none!important;animation:none!important}</style>
 <style>
 :root{--bg:#111318;--panel:#1b1f27;--panel2:#232936;--surface:#171b22;--deep:#0e1117;--text:#ece7dc;--muted:#a9adba;--accent:#d0a85c;--danger:#b44747;--ok:#4f8a5b;--border:#343b49;--shadow:rgba(0,0,0,.3);--header-bg:#0d1015}
-html[data-theme="light"]{--bg:#f3f0e8;--panel:#fff;--panel2:#f3efe5;--surface:#f7f3eb;--deep:#ece7dc;--text:#292821;--muted:#68675f;--accent:#946820;--danger:#a34444;--ok:#3f7b4c;--border:#cfc8b8;--shadow:rgba(67,55,35,.14);--header-bg:#fbf9f3}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(180deg,var(--deep),var(--bg));color:var(--text);min-height:100vh}button,input,select,textarea{font:inherit;color:var(--text);background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:9px 10px}button{cursor:pointer}button:hover{filter:brightness(1.1)}input,select,textarea{width:100%}textarea{resize:vertical;min-height:90px}.primary{background:#5f4924;border-color:#8c6d35}.danger{background:#532929;border-color:#804242}html[data-theme="light"] .primary{background:#e8d4aa;border-color:#b68b45}html[data-theme="light"] .danger{background:#f1d6d3;border-color:#c4837d}.ghost{background:transparent}.small{font-size:.82rem;color:var(--muted)}label{display:block;color:var(--muted);font-size:.75rem;font-weight:700;margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em}
+html[data-theme="light"]{--bg:#f3f0e8;--panel:#fff;--panel2:#f3efe5;--surface:#f7f3eb;--deep:#ece7dc;--text:#292821;--muted:#68675f;--accent:#8f3048;--danger:#a34444;--ok:#3f7b4c;--border:#cfc8b8;--shadow:rgba(67,55,35,.14);--header-bg:#fbf9f3}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(180deg,var(--deep),var(--bg));color:var(--text);min-height:100vh}button,input,select,textarea{font:inherit;color:var(--text);background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:9px 10px}button{cursor:pointer}button:hover{filter:brightness(1.1)}input,select,textarea{width:100%}textarea{resize:vertical;min-height:90px}.primary{background:#5f4924;border-color:#8c6d35}.danger{background:#532929;border-color:#804242}html[data-theme="light"] .primary{background:#8f3048;border-color:#6f2237}html[data-theme="light"] .danger{background:#f1d6d3;border-color:#c4837d}.ghost{background:transparent}.small{font-size:.82rem;color:var(--muted)}label{display:block;color:var(--muted);font-size:.75rem;font-weight:700;margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em}
 header{position:sticky;top:0;z-index:20;padding:12px 18px;background:var(--header-bg);border-bottom:1px solid var(--border)}.header-main{max-width:1500px;margin:auto;display:grid;grid-template-columns:minmax(250px,auto) minmax(220px,1fr) auto auto;gap:18px;align-items:center}.header-title{min-width:0}.header-title h1{font-size:1.6rem;margin:0 0 3px}.header-title p{margin:0;color:var(--muted)}.character-switch{display:flex;gap:7px;align-items:center;min-width:0}.character-switch select{min-width:220px}.toolbar{display:flex;gap:8px;justify-content:flex-end;align-items:center;flex-wrap:wrap}.header-controls{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-left:auto;padding-left:18px;border-left:1px solid var(--border)}.header-control,.icon{width:42px;height:42px;padding:0;display:inline-grid;place-items:center;flex:0 0 auto;font-weight:700;line-height:1}.theme-glyphs{display:grid;place-items:center;font-size:1.05rem}
 main{max-width:1500px;margin:auto;padding:18px}.sheet-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(270px,340px);gap:16px;margin-bottom:16px;align-items:stretch}.portrait{aspect-ratio:1;border:1px dashed var(--border);border-radius:14px;overflow:hidden;background:var(--surface);display:grid;place-items:center;position:relative}.portrait img{width:100%;height:100%;object-fit:cover}.portrait button{position:absolute;inset:auto 8px 8px 8px;padding:6px;font-size:.75rem}.identity{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px;box-shadow:0 10px 30px var(--shadow);height:100%}.identity-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:10px}.identity-name{grid-column:span 2}.name-input{font-size:1.35rem;font-weight:800}
 .stats-strip{display:grid;grid-template-columns:repeat(8,minmax(90px,1fr));gap:9px;margin-top:12px}.stat-box{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:9px;text-align:center;display:grid;grid-template-rows:minmax(30px,auto) 38px;align-items:center}.stat-box label{text-align:center;margin:0;align-self:center}.stat-value{font-size:1.2rem;font-weight:800;line-height:1;display:grid;place-items:center;height:38px}.stat-box input{padding:5px;text-align:center;height:38px;align-self:center;display:block;margin:0 auto}.armor-class-input{-moz-appearance:textfield;appearance:textfield;padding-left:5px;padding-right:5px;text-indent:0}.armor-class-input::-webkit-inner-spin-button,.armor-class-input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 .combat-status{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:11px 14px;box-shadow:0 10px 30px var(--shadow);display:grid;grid-template-rows:auto 1fr auto auto;gap:7px;height:100%}.combat-status h3{margin:0;font-size:1rem}.combat-status-hp{text-align:center;padding:7px 10px;background:var(--surface);border:1px solid var(--border);border-radius:10px;display:grid;align-content:center}.combat-status-hp .hp-main{font-size:1.7rem;font-weight:900;line-height:1}.combat-status-hp .hp-temp{margin-top:2px;color:var(--muted);font-size:.74rem}.combat-status-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.combat-status-box{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:7px 8px;text-align:center}.combat-status-box label{text-align:center}.combat-status-value{font-size:.9rem;font-weight:800}.combat-status-death{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:7px 8px}.combat-status-death-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:center}.combat-status-death .death-row{display:flex;gap:6px;justify-content:center;align-items:center;min-width:0}.combat-status-death .death-row .small{font-weight:700;white-space:nowrap}.combat-status .death-dot{width:17px;height:17px}.combat-fab{position:fixed;left:auto;right:18px;top:var(--floating-nav-button-top,18px);transform:none;z-index:1004;width:48px;height:48px;padding:0;border-radius:50%;display:grid;place-items:center;font-size:1.35rem;font-weight:900;background:#5f4924;border-color:#8c6d35;box-shadow:0 10px 28px var(--shadow);transition:right .25s ease,transform .2s ease}
 body.combat-panel-open .combat-fab{right:calc(min(520px,calc(100vw - 72px)) + 18px)}
-html[data-theme="light"] .combat-fab{background:#e8d4aa;border-color:#b68b45}
+html[data-theme="light"] .combat-fab{background:#8f3048;border-color:#6f2237}
 .combat-overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);visibility:hidden;opacity:0;pointer-events:none;z-index:1003;transition:opacity .25s ease,visibility 0s linear .25s}
 .combat-overlay.open{visibility:visible;opacity:1;pointer-events:auto;transition:opacity .25s ease}
 .combat-side-panel{position:absolute;top:0;right:0;width:min(520px,calc(100vw - 72px));height:100%;overflow:auto;padding:14px;background:var(--panel);box-shadow:-8px 0 24px rgba(0,0,0,.25);transform:translateX(100%);transition:transform .25s ease}
@@ -41,36 +65,78 @@ html[data-theme="light"] .combat-fab{background:#e8d4aa;border-color:#b68b45}
 @media(max-width:1100px){.sheet-head{grid-template-columns:1fr}.header-main{grid-template-columns:1fr auto}.character-switch{grid-column:1/-1;grid-row:2}.toolbar{grid-column:1/-1;grid-row:3;justify-content:flex-end}.header-controls{grid-column:2;grid-row:1}.layout{grid-template-columns:1fr}.vitals-row{grid-template-columns:1fr}.stats-strip{grid-template-columns:repeat(4,1fr)}.identity-grid{grid-template-columns:repeat(3,1fr)}.identity-name{grid-column:span 2}}
 @media(max-width:1180px){.main-training-resources{grid-template-columns:1fr}}@media(max-width:900px){.weapon-list,.tool-list,.language-list{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:720px){.training-columns{grid-template-columns:1fr}}@media(max-width:760px){.combat-fab{right:14px;top:var(--floating-nav-button-top,14px);bottom:auto;transform:none}body.combat-panel-open .combat-fab{right:calc(min(520px,calc(100vw - 64px)) + 2px)}.combat-side-panel{width:min(520px,calc(100vw - 64px))}.combat-modal-grid,.combat-modal-actions{grid-template-columns:1fr}.combat-status-grid{grid-template-columns:1fr 1fr}.weapon-list,.tool-list,.language-list{grid-template-columns:1fr}.hp-controls{grid-template-columns:1fr 1fr}.hp-controls>div:first-child{grid-column:1/-1}header{position:static;padding:10px 12px}.header-main{gap:10px}.header-title h1{font-size:1.35rem}.header-title p{font-size:.9rem}.toolbar{justify-content:flex-start;gap:6px}.header-controls{padding-left:10px}.character-switch{flex-wrap:wrap}.character-switch select{min-width:0;flex:1 1 180px}.sheet-head{grid-template-columns:1fr}.identity-grid,.grid2,.grid3,.abilities{grid-template-columns:1fr}.identity-name{grid-column:auto}.stats-strip{grid-template-columns:repeat(2,1fr)}main{padding:12px}.resource-row{grid-template-columns:1fr 64px 64px}.resource-row button{grid-column:1/-1}}
 </style>
-</head>
+<style id="forge-visual-edition">
+  :root{--bg:#f4f5f7;--panel:#fff;--panel2:#f7f9fb;--surface:#f7f9fb;--deep:#edf1f4;--text:#30343a;--muted:#717983;--accent:#218ad1;--danger:#c34242;--ok:#3e9b6b;--border:#d9dee4;--shadow:rgba(28,39,49,.16);--header-bg:#202124}
+  html[data-theme="dark"]{--bg:#17191c;--panel:#24272b;--panel2:#2b2f34;--surface:#2a2e33;--deep:#121416;--text:#f2f4f5;--muted:#aeb5bc;--accent:#39a5eb;--danger:#d65d5d;--ok:#55b982;--border:#3b4148;--shadow:rgba(0,0,0,.36);--header-bg:#101214}
+  html[data-theme="light"]{--bg:#f4f5f7;--panel:#fff;--panel2:#f7f9fb;--surface:#f7f9fb;--deep:#edf1f4;--text:#30343a;--muted:#717983;--accent:#218ad1;--danger:#c34242;--ok:#3e9b6b;--border:#d9dee4;--shadow:rgba(28,39,49,.16);--header-bg:#202124}
+  body{background:var(--bg);font-family:"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:.005em}
+  header{background:var(--header-bg);border-bottom:0;box-shadow:0 2px 7px rgba(0,0,0,.28);padding:13px 20px}header h1,header strong{color:#f7f7f7}header button,header select{background:#292c30;border-color:#484d52;color:#f2f4f5}
+  main{max-width:1440px;padding:24px 18px 60px}.card,.sheet-head,.combat-status,.item,.trait,.spell,.resource{border-radius:3px;border-color:var(--border);box-shadow:0 2px 5px var(--shadow)}.card,.sheet-head{background:var(--panel)}.card h3,.sheet-head h2{font-weight:400;color:var(--text)}
+  button,input,select,textarea{border-radius:3px;border-color:var(--border);background:var(--panel2);color:var(--text)}button{font-weight:600;letter-spacing:.035em;transition:background .15s,border-color .15s,transform .15s}button:hover{filter:none;border-color:var(--accent);color:var(--accent)}button:active{transform:translateY(1px)}
+  .primary{background:var(--accent)!important;border-color:var(--accent)!important;color:#fff!important;text-transform:uppercase}.danger{background:transparent!important;border-color:#d68080!important;color:var(--danger)!important}
+  input:focus,select:focus,textarea:focus{outline:2px solid color-mix(in srgb,var(--accent) 35%,transparent);border-color:var(--accent)}label{font-weight:600;letter-spacing:.055em}
+  .tabs{background:var(--panel);border:1px solid var(--border);border-radius:3px;box-shadow:0 2px 5px var(--shadow);padding:0}.tab{border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;text-transform:uppercase}.tab.active{background:transparent!important;color:var(--accent)!important;border-bottom-color:var(--accent)!important}
+  .stat-box,.ability,.spell-level{border-radius:3px;background:var(--surface)}.dot.active,.death-dot.active,.slot:not(.spent){background:var(--accent);border-color:var(--accent)}
+  .combat-fab{background:var(--accent)!important;border-color:var(--accent)!important;color:#fff!important;box-shadow:0 4px 14px rgba(0,0,0,.28)}.combat-side-panel{border-radius:0;background:var(--panel)}table th{background:var(--deep);color:var(--muted);text-transform:uppercase;letter-spacing:.045em}
+  @media(max-width:700px){header{padding:11px 12px}main{padding:16px 9px 50px}.card,.sheet-head{padding:14px}}
+</style>
+<style id="wrath-glory-project-style">
+  :root{--bg:#111318;--panel:#1b1f27;--panel2:#232936;--surface:#171b22;--deep:#0e1117;--text:#ece7dc;--muted:#a9adba;--accent:#d0a85c;--danger:#b44747;--ok:#4f8a5b;--border:#343b49;--shadow:rgba(0,0,0,.3);--header-bg:rgba(13,16,21,.94);color-scheme:dark}
+  html[data-theme="dark"]{--bg:#111318;--panel:#1b1f27;--panel2:#232936;--surface:#171b22;--deep:#0e1117;--text:#ece7dc;--muted:#a9adba;--accent:#d0a85c;--danger:#b44747;--ok:#4f8a5b;--border:#343b49;--shadow:rgba(0,0,0,.3);--header-bg:rgba(13,16,21,.94);color-scheme:dark}
+  html[data-theme="light"]{--bg:#f3f0e8;--panel:#fff;--panel2:#f3efe5;--surface:#f7f3eb;--deep:#ece7dc;--text:#292821;--muted:#68675f;--accent:#8f3048;--danger:#a34444;--ok:#3f7b4c;--border:#cfc8b8;--shadow:rgba(67,55,35,.14);--header-bg:rgba(251,249,243,.94);color-scheme:light}
+  body{background:radial-gradient(circle at 75% 0,color-mix(in srgb,var(--accent) 13%,transparent) 0,transparent 32%),linear-gradient(135deg,#0002 25%,transparent 25%) 0 0/8px 8px,var(--bg);font-family:Inter,"Segoe UI",Arial,sans-serif}
+  header{min-height:72px;padding:10px 22px;background:var(--header-bg);border-bottom:1px solid var(--border);box-shadow:none;backdrop-filter:blur(15px)}header h1{font:800 20px/1 Georgia,serif;letter-spacing:.08em;text-transform:uppercase;color:var(--text)}header p{color:var(--accent);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-top:7px}header button,header select{background:var(--panel2);border-color:var(--border);color:var(--text)}
+  main{max-width:1540px;padding:24px}.card,.sheet-head,.combat-status,.item,.trait,.spell,.resource{background:color-mix(in srgb,var(--panel2) 70%,var(--panel));border:1px solid var(--border);border-radius:4px;box-shadow:0 18px 50px var(--shadow)}
+  .identity{border-radius:4px}
+  .sheet-head,.card{position:relative;overflow:hidden}.sheet-head:before,.card:before{content:"";position:absolute;width:70px;height:70px;left:-50px;top:-50px;border:1px solid var(--accent);opacity:.2;transform:rotate(45deg);pointer-events:none}.card h3,.sheet-head h2{font-family:Georgia,serif;font-weight:800;letter-spacing:.07em;color:var(--text)}
+  button,input,select,textarea{border-radius:3px;border:1px solid var(--border);background:var(--panel2);color:var(--text)}button{font-weight:700}button:hover{border-color:var(--accent);color:var(--text);transform:translateY(-1px)}.primary{background:#5f4924!important;border-color:#8c6d35!important;color:#fff!important}.danger{background:#532929!important;border-color:#804242!important;color:var(--text)!important}.danger:hover{background:#6a3333!important;color:#fff!important}html[data-theme="light"] .primary{background:#8f3048!important;border-color:#6f2237!important;color:#fff!important}html[data-theme="light"] .danger{background:#f1d6d3!important;border-color:#c4837d!important;color:#7b3232!important}
+  label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800}input:focus,select:focus,textarea:focus{outline:0;border-color:var(--accent);background:color-mix(in srgb,var(--accent) 7%,var(--panel2))}
+  .tabs{background:var(--panel);border-color:var(--border);box-shadow:0 12px 32px var(--shadow)}.tab{font-family:Georgia,serif;letter-spacing:.08em}.tab.active{color:var(--accent)!important;border-bottom-color:var(--danger)!important}
+  .stat-box,.ability,.spell-level{background:var(--panel);border-color:var(--border)}.stat-value,.modifier,.hp-main{font-family:Georgia,serif;color:var(--accent)}.dot.active,.death-dot.active,.slot:not(.spent){background:var(--accent);border-color:var(--accent)}
+  .combat-fab{background:#5f4924!important;border-color:#8c6d35!important}.combat-side-panel{background:var(--panel)}table th{background:linear-gradient(90deg,#5f4924,color-mix(in srgb,#5f4924 15%,var(--panel2)));color:#f4ead7;font-family:Georgia,serif;letter-spacing:.1em}
+  html[data-theme="light"] .combat-fab{background:#8f3048!important;border-color:#6f2237!important;color:#fff!important}html[data-theme="light"] table th{background:linear-gradient(90deg,#7a283e,color-mix(in srgb,#7a283e 15%,var(--panel2)));color:#fff}
+  .card-head{border-bottom:3px double var(--accent);padding-bottom:9px}.empty{border:1px dashed var(--border);padding:15px;color:var(--muted)}
+  @media(max-width:700px){header{padding:10px 14px}main{padding:15px 9px 45px}.card,.sheet-head{box-shadow:0 10px 28px var(--shadow)}}
+</style>
+<style id="unified-application-header">
+  .topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:14px;min-height:72px;padding:10px 22px;background:color-mix(in srgb,var(--header-bg) 91%,transparent);border-bottom:1px solid var(--border);backdrop-filter:blur(15px)}
+  .brand{display:flex;align-items:center;gap:12px;min-width:260px}.seal{width:43px;height:43px;display:grid;place-items:center;border:2px solid var(--accent);transform:rotate(45deg);background:#5f4924;box-shadow:inset 0 0 0 3px var(--deep);flex:0 0 auto}.seal img{width:29px;height:29px;object-fit:contain;transform:rotate(-45deg);filter:invert(1)}
+  html[data-theme="light"] .seal{background:#ead2d8;box-shadow:inset 0 0 0 3px var(--panel)}html[data-theme="light"] .seal img{filter:none}
+  .brand h1{font:800 20px/1 Georgia,serif;letter-spacing:.08em;text-transform:uppercase;margin:0;color:var(--text)}.brand small{display:block;color:var(--accent);font-size:10px;letter-spacing:.2em;margin-top:5px;text-transform:uppercase;font-weight:700}
+  .topbar .toolbar{display:flex;align-items:center;gap:7px;flex:1;justify-content:flex-end;flex-wrap:wrap;margin:0}.topbar .toolbar select{width:auto;min-width:210px;max-width:280px}.btn,.topbar .toolbar select{height:38px;border:1px solid var(--border);background:var(--panel2);color:var(--text);border-radius:3px;padding:0 12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-weight:700;width:auto}.btn:hover{border-color:var(--accent);transform:translateY(-1px)}.btn.primary{background:#5f4924!important;border-color:#8c6d35!important;color:#fff!important}.btn.danger{background:#532929!important;border-color:#804242!important;color:var(--text)!important}.btn.icon{width:38px;height:38px;padding:0;display:inline-grid;place-items:center;line-height:1;letter-spacing:0}.home-glyph{display:block;font-family:Arial,sans-serif;font-size:22px;line-height:1;letter-spacing:0}.save-state{font-size:11px;color:var(--muted);min-width:66px;text-align:center}
+  html[data-theme="light"] .btn.primary{background:#8f3048!important;border-color:#6f2237!important;color:#fff!important}html[data-theme="light"] .btn.danger{background:#f1d6d3!important;border-color:#c4837d!important;color:#7b3232!important}
+  @media(max-width:900px){.topbar{align-items:flex-start;flex-wrap:wrap}.brand{min-width:220px}.topbar .toolbar{flex-basis:100%;justify-content:flex-start}.topbar .toolbar select{flex:1 1 210px;max-width:none}}
+  @media(max-width:560px){.topbar{position:static;padding:10px 12px}.brand{min-width:0}.brand h1{font-size:17px}.brand small{letter-spacing:.13em}.save-state{display:none}.topbar .toolbar select{flex-basis:100%;width:100%}}
+  @media print{.topbar{display:none!important}}
+</style>
+<style id="import-conflict-dialog-style">
+  .import-conflict-overlay{position:fixed;inset:0;z-index:3000;display:none;place-items:center;padding:20px;background:rgba(0,0,0,.68);backdrop-filter:blur(5px)}
+  .import-conflict-overlay.open{display:grid}
+  .import-conflict-dialog{width:min(560px,100%);padding:22px;background:var(--panel);border:1px solid color-mix(in srgb,var(--accent) 65%,var(--border));border-radius:6px;box-shadow:0 28px 80px rgba(0,0,0,.48)}
+  .import-conflict-heading{display:flex;align-items:center;gap:12px;margin-bottom:12px}.import-conflict-symbol{width:42px;height:42px;display:grid;place-items:center;flex:0 0 auto;border:1px solid var(--accent);border-radius:50%;background:color-mix(in srgb,var(--accent) 16%,var(--panel));color:var(--accent);font-size:22px;font-weight:900}
+  .import-conflict-dialog h3{margin:0;font-family:Georgia,serif;letter-spacing:.045em}.import-conflict-message{margin:0;color:var(--muted);line-height:1.55}
+  .import-conflict-actions{display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap;margin-top:22px}.import-conflict-actions button{width:auto;min-height:42px}.import-conflict-copy{border-color:var(--accent);color:var(--text)}
+  @media(max-width:620px){.import-conflict-actions{display:grid;grid-template-columns:1fr}.import-conflict-actions button{width:100%}}
+</style></head>
 <body>
-<header>
-  <div class="header-main">
-    <div class="header-title">
-      <h1>Ficha de personaje D&amp;D</h1>
-      <p>Gestor local</p>
-    </div>
-
-    <div class="character-switch">
-      <select id="characterSelect" onchange="selectCharacter(this.value)"></select>
-      <button class="icon primary" type="button" onclick="addCharacter()" title="Nuevo personaje" aria-label="Nuevo personaje">＋</button>
-      <button class="icon danger" type="button" onclick="deleteCharacter()" title="Eliminar personaje" aria-label="Eliminar personaje">×</button>
-    </div>
-
-    <div class="toolbar">
-      <button class="primary" type="button" onclick="saveState()">Guardar</button>
-      <button type="button" onclick="exportState()">Exportar JSON</button>
-      <button type="button" onclick="importInput.click()">Importar JSON</button>
-      <input id="importInput" type="file" accept=".json" hidden>
-    </div>
-
-    <div class="header-controls">
-      <button id="themeToggle" class="header-control" type="button" onclick="toggleTheme()"
-        title="Cambiar entre modo oscuro y claro" aria-label="Cambiar entre modo oscuro y claro">
-        <span class="theme-glyphs" aria-hidden="true">☾</span>
-      </button>
-    </div>
+<header class="topbar">
+  <div class="brand">
+    <div class="seal" aria-hidden="true"><img src="data:image/png;base64,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" alt=""></div>
+    <div><h1>Dungeons &amp; Dragons</h1><small>Archivo de personajes</small></div>
+  </div>
+  <div class="toolbar">
+    <button class="btn icon" type="button" onclick="goToMainMenu()" title="Volver al menú principal" aria-label="Volver al menú principal"><span class="home-glyph" aria-hidden="true">⌂</span></button>
+    <select id="characterSelect" aria-label="Personaje activo" onchange="selectCharacter(this.value)"></select>
+    <button class="btn icon primary" type="button" onclick="addCharacter()" title="Nuevo personaje" aria-label="Nuevo personaje">＋</button>
+    <button class="btn icon danger" type="button" onclick="deleteCharacter()" title="Eliminar personaje" aria-label="Eliminar personaje">×</button>
+    <button class="btn" type="button" onclick="exportState()" title="Exportar ficha">⇩ <span>JSON</span></button>
+    <button class="btn icon" type="button" onclick="document.getElementById('importInput').click()" title="Importar ficha" aria-label="Importar ficha">⇧</button>
+    <button class="btn icon" type="button" onclick="window.print()" title="Imprimir o guardar como PDF" aria-label="Imprimir">▣</button>
+    <button id="themeToggle" class="btn icon" type="button" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema"><span class="theme-glyphs" aria-hidden="true">◐</span></button>
+    <span id="characterSaveState" class="save-state">Guardado</span>
   </div>
 </header>
+<input id="importInput" type="file" accept=".json,application/json" hidden>
 <main><div id="app"></div></main>
 <div class="footer-note">Los datos se guardan únicamente en este navegador mediante localStorage.</div>
 <div id="restModal" class="modal"><div class="modal-box"><div class="card-head"><h3 id="restTitle">Descanso</h3><button class="mini" onclick="closeRest()">×</button></div><div id="restOptions"></div><div class="modal-actions"><button onclick="closeRest()">Cancelar</button><button class="primary" onclick="applyRest()">Aplicar</button></div></div></div>
@@ -83,6 +149,45 @@ html[data-theme="light"] .combat-fab{background:#e8d4aa;border-color:#b68b45}
 </div>
 <script>
 const STORAGE_KEY='dnd2024CharacterManagerV1';
+const CHARACTER_JSON_DESCRIPTOR={
+  module:'character-sheet',
+  system:'dnd-5e-2024',
+  entity:'character',
+  schemaVersion:1
+};
+const SHARED_THEME_KEY='appsRolTheme';
+const THEME_WINDOW_PREFIX='appsRolTheme:';
+function parseThemePreference(raw){
+  if(!raw)return null;
+  try{
+    const value=JSON.parse(raw);
+    if(value&&(value.theme==='dark'||value.theme==='light'))return {theme:value.theme,updatedAt:Number(value.updatedAt)||0};
+  }catch(error){
+    if(raw==='dark'||raw==='light')return {theme:raw,updatedAt:0};
+  }
+  return null;
+}
+function readThemePreference(fallback='dark'){
+  const urlTheme=new URLSearchParams(location.search).get('theme');
+  if(urlTheme==='dark'||urlTheme==='light'){
+    try{const cleanUrl=new URL(location.href);cleanUrl.searchParams.delete('theme');history.replaceState(null,'',cleanUrl.href);}catch(error){}
+    return urlTheme;
+  }
+  let stored=null;
+  try{stored=parseThemePreference(localStorage.getItem(SHARED_THEME_KEY));}catch(error){}
+  const fromWindow=String(window.name||'').startsWith(THEME_WINDOW_PREFIX)
+    ?parseThemePreference(String(window.name).slice(THEME_WINDOW_PREFIX.length))
+    :null;
+  const newest=[stored,fromWindow].filter(Boolean).sort((a,b)=>b.updatedAt-a.updatedAt)[0];
+  return newest?.theme||(fallback==='light'?'light':'dark');
+}
+function writeThemePreference(theme){
+  const preference={theme:theme==='light'?'light':'dark',updatedAt:Date.now()};
+  const serialized=JSON.stringify(preference);
+  try{localStorage.setItem(SHARED_THEME_KEY,serialized);}catch(error){}
+  try{window.name=THEME_WINDOW_PREFIX+serialized;}catch(error){}
+  return preference.theme;
+}
 const ABILITIES={str:['Fuerza',['Atletismo']],dex:['Destreza',['Acrobacias','Juego de manos','Sigilo']],con:['Constitución',[]],int:['Inteligencia',['Conocimiento arcano','Historia','Investigación','Naturaleza','Religión']],wis:['Sabiduría',['Medicina','Percepción','Perspicacia','Supervivencia','Trato con animales']],cha:['Carisma',['Engaño','Interpretación','Intimidación','Persuasión']]};
 const CONDITIONS=['Agarrado','Asustado','Aturdido','Cegado','Derribado','Envenenado','Ensordecido','Hechizado','Incapacitado','Inconsciente','Invisible','Paralizado','Petrificado','Restringido'];
 const WEAPON_CATEGORIES=['Simples','Marciales'];
@@ -146,11 +251,53 @@ const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,8);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 const attr=esc;
 function blankCharacter(name='Nuevo personaje'){const skills={};Object.values(ABILITIES).forEach(([,ss])=>ss.forEach(s=>skills[s]={rank:0}));return{id:uid(),name,background:'',species:'',className:'',subclass:'',level:1,xp:0,alignment:'',size:'Mediano',speed:9,armorClass:10,shield:0,shieldEquipped:false,initiativeOverride:'',passiveOverride:'',proficiencyOverride:'',heroic:false,hp:{current:10,max:10,temp:0},hitDice:{die:'d8',current:1,max:1},death:{success:0,fail:0},abilities:Object.fromEntries(Object.keys(ABILITIES).map(k=>[k,{score:10,save:false}])),skills,portrait:'',weapons:[],traits:[],resources:[],inventory:[],spells:[],spellcasting:{ability:'int',slots:Object.fromEntries(Array.from({length:9},(_,i)=>[i+1,{total:0,spent:0}]))},conditions:[],training:{armor:[],weaponCategories:[],weapons:[],tools:[],languages:[],openGroups:{}},notes:{historia:'',apariencia:'',personalidad:'',objetivos:'',sesiones:'',otros:''},coins:{pc:0,pp:0,pe:0,po:0,ppt:0},attunement:['','','']};}
-let state=loadState();let activeTab='principal',activeNotes='historia',restType='short',weaponPickerOpen=false,spellSearch='';
-function loadState(){try{const s=JSON.parse(localStorage.getItem(STORAGE_KEY));if(s&&Array.isArray(s.characters)&&s.characters.length)return s}catch(e){}const c=blankCharacter('Nuevo personaje');return{theme:'dark',activeId:c.id,characters:[c]}}
+function storedObject(value){return value&&typeof value==='object'&&!Array.isArray(value)?value:{}}
+function storedObjectList(value){return Array.isArray(value)?value.filter(item=>item&&typeof item==='object'&&!Array.isArray(item)):[]}
+function normalizeCharacter(source,index=0){
+  source=storedObject(source);
+  const base=blankCharacter(String(source.name||`Personaje ${index+1}`));
+  const character={...base,...source};
+  character.hp={...base.hp,...storedObject(source.hp)};
+  character.hitDice={...base.hitDice,...storedObject(source.hitDice)};
+  character.death={...base.death,...storedObject(source.death)};
+  character.abilities={...base.abilities};
+  const savedAbilities=storedObject(source.abilities);
+  Object.keys(base.abilities).forEach(key=>{character.abilities[key]={...base.abilities[key],...storedObject(savedAbilities[key])}});
+  character.skills={...base.skills,...storedObject(source.skills)};
+  Object.keys(base.skills).forEach(key=>{character.skills[key]={...base.skills[key],...storedObject(character.skills[key])}});
+  ['weapons','traits','resources','inventory','spells'].forEach(key=>{character[key]=storedObjectList(source[key])});
+  character.conditions=Array.isArray(source.conditions)?source.conditions.filter(value=>typeof value==='string'):[];
+  const savedSpellcasting=storedObject(source.spellcasting),savedSlots=storedObject(savedSpellcasting.slots);
+  character.spellcasting={...base.spellcasting,...savedSpellcasting,slots:{}};
+  for(let level=1;level<=9;level++)character.spellcasting.slots[level]={...base.spellcasting.slots[level],...storedObject(savedSlots[level])};
+  const savedTraining=storedObject(source.training);
+  character.training={...base.training,...savedTraining};
+  ['armor','weaponCategories','weapons','tools','languages'].forEach(key=>{character.training[key]=Array.isArray(savedTraining[key])?savedTraining[key].filter(value=>typeof value==='string'):[]});
+  character.training.openGroups=storedObject(savedTraining.openGroups);
+  character.notes={...base.notes,...storedObject(source.notes)};
+  character.coins={...base.coins,...storedObject(source.coins)};
+  character.attunement=Array.from({length:3},(_,slot)=>String(Array.isArray(source.attunement)?source.attunement[slot]??'':''));
+  return character;
+}
+function normalizeStoredState(source){
+  source=storedObject(source);
+  const savedCharacters=storedObjectList(source.characters);
+  const characters=(savedCharacters.length?savedCharacters:[blankCharacter('Nuevo personaje')]).map(normalizeCharacter);
+  const usedIds=new Set();
+  characters.forEach(character=>{
+    let id=String(character.id||'');
+    if(!id||usedIds.has(id))id=uid();
+    character.id=id;
+    usedIds.add(id);
+  });
+  const requestedId=String(source.activeId||'');
+  return {...source,theme:source.theme==='light'?'light':'dark',activeId:usedIds.has(requestedId)?requestedId:characters[0].id,characters};
+}
+let state=loadState();state.theme=readThemePreference(state.theme);writeThemePreference(state.theme);requestAnimationFrame(()=>document.documentElement.classList.remove('theme-booting'));let activeTab='principal',activeNotes='historia',restType='short',weaponPickerOpen=false,spellSearch='';
+function loadState(){try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));if(saved)return normalizeStoredState(saved)}catch(error){console.warn('No se pudo cargar la ficha guardada.',error)}return normalizeStoredState({})}
 function ch(){const c=state.characters.find(c=>c.id===state.activeId)||state.characters[0];if(c&&typeof c.shieldEquipped!=='boolean')c.shieldEquipped=false;if(c&&!Number.isFinite(Number(c.shield)))c.shield=0;if(c&&Array.isArray(c.spells))c.spells.forEach(spell=>{if(typeof spell.prepared!=='boolean')spell.prepared=false});return c}
 function saveState(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));flash('Guardado')}
-function autoSave(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}
+function autoSave(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));const indicator=document.getElementById("characterSaveState");if(indicator)indicator.textContent="Guardado"}
 function flash(text){document.title=text+' · Ficha D&D';setTimeout(()=>document.title='Ficha de personaje D&D 2024',900)}
 function mod(score){return Math.floor((Number(score)-10)/2)}function signed(n){return Number(n)>=0?'+'+Number(n):String(Number(n))}function prof(){return ch().proficiencyOverride!==''?Number(ch().proficiencyOverride):Math.ceil(Number(ch().level)/4)+1}function skillAbility(name){return Object.keys(ABILITIES).find(k=>ABILITIES[k][1].includes(name))}function skillBonus(name){const c=ch(),a=skillAbility(name),r=Number(c.skills[name]?.rank||0);return mod(c.abilities[a].score)+prof()*r}function saveBonus(k){return mod(ch().abilities[k].score)+(ch().abilities[k].save?prof():0)}function initiative(){return ch().initiativeOverride!==''?Number(ch().initiativeOverride):mod(ch().abilities.dex.score)}function shieldBonus(){const c=ch();return c.shieldEquipped?2+Math.max(0,Number(c.shield)||0):0}function totalArmorClass(){return (Number(ch().armorClass)||0)+shieldBonus()}function setTotalArmorClass(value){let n=Number(value);if(!Number.isFinite(n))n=0;ch().armorClass=Math.max(0,n-shieldBonus());autoSave();render()}function changeShieldBonus(delta){const c=ch(),current=Math.max(0,Number(c.shield)||0);c.shield=Math.max(0,current+delta);autoSave();render()}function passive(){return ch().passiveOverride!==''?Number(ch().passiveOverride):10+skillBonus('Percepción')}function spellMod(){return mod(ch().abilities[ch().spellcasting.ability].score)}function spellDC(){return 8+prof()+spellMod()}function spellAttack(){return prof()+spellMod()}
 function set(path,value,rerender=false){let o=ch(),p=path.split('.');for(let i=0;i<p.length-1;i++)o=o[p[i]];o[p.at(-1)]=value;autoSave();if(rerender)render()}
@@ -177,7 +324,7 @@ function renderTrainingSummary(items,type){if(!items.length)return '<div class="
 function renderSpell(s,i){const level=Math.max(0,Number(s.level)||0);return `<div class="list-item ${s.open?'open':''}"><div class="list-head spell-list-head ${level>0?'':'no-prepared'}">${level>0?`<div class="spell-prepared-wrap"><button type="button" class="spell-prepared-check ${s.prepared?'active':''}" onclick="event.stopPropagation();toggleSpellPrepared(${i})" title="${s.prepared?'Marcar como no preparado':'Marcar como preparado'}" aria-label="${s.prepared?'Marcar como no preparado':'Marcar como preparado'}"></button></div>`:''}<button class="ghost" style="text-align:left" onclick="updateList('spells',${i},'open',!ch().spells[${i}].open,true)"><strong>${esc(s.name||'Conjuro sin nombre')}</strong><div class="small">Nivel ${s.level} · ${esc(s.casting||'')}</div></button><div class="list-actions"><button class="mini" onclick="updateList('spells',${i},'open',!ch().spells[${i}].open,true)">${s.open?'⌃':'⌄'}</button><button class="mini danger" onclick="removeList('spells',${i})">×</button></div></div><div class="collapsible-body"><div class="grid3"><div><label>Nivel</label><input type="number" min="0" max="9" value="${s.level}" onchange="updateSpellLevel(${i},this.value)"></div><div><label>Nombre</label><input value="${attr(s.name)}" onchange="updateList('spells',${i},'name',this.value,true)"></div><div><label>Tiempo de lanzamiento</label><input value="${attr(s.casting)}" onchange="updateList('spells',${i},'casting',this.value)"></div><div><label>Alcance</label><input value="${attr(s.range)}" onchange="updateList('spells',${i},'range',this.value)"></div><div><label>Duración</label><input value="${attr(s.duration)}" onchange="updateList('spells',${i},'duration',this.value)"></div><div><label>Componentes</label><input value="${attr(s.components)}" onchange="updateList('spells',${i},'components',this.value)"></div></div><label style="margin-top:8px">Descripción y notas</label><textarea onchange="updateList('spells',${i},'notes',this.value)">${esc(s.notes)}</textarea></div></div>`}
 function normalizeSlotUsage(s){const total=Math.max(0,Math.min(9,Number(s.total)||0));s.total=total;let spent;if(Number.isFinite(Number(s.spent))){spent=Math.max(0,Math.min(total,Number(s.spent)||0))}else if(Array.isArray(s.used)){spent=Math.max(0,Math.min(total,s.used.filter(Boolean).length))}else{spent=0}s.spent=spent;s.used=Array.from({length:total},(_,i)=>i>=total-spent);return s.used}
 function renderSlots(level,s){const used=normalizeSlotUsage(s);return `<div class="spell-level"><h4>Nivel ${level}<span class="small"><input style="width:64px;display:inline-block" type="number" min="0" max="9" value="${s.total}" onchange="setSlotTotal(${level},this.value)"></span></h4><div class="slots">${Array.from({length:s.total},(_,i)=>`<button type="button" class="slot ${used[i]?'spent':''}" onclick="toggleSlot(${level},${i})" aria-label="Espacio de conjuro ${i+1}: ${used[i]?'usado':'disponible'}"><span></span></button>`).join('')||'<span class="small">Sin espacios</span>'}</div></div>`}
-function addCharacter(){const c=blankCharacter(`Personaje ${state.characters.length+1}`);state.characters.push(c);state.activeId=c.id;autoSave();render()}function deleteCharacter(){if(state.characters.length===1)return alert('Debe existir al menos un personaje.');if(!confirm(`¿Eliminar a "${ch().name}"?`))return;state.characters=state.characters.filter(c=>c.id!==state.activeId);state.activeId=state.characters[0].id;autoSave();render()}function selectCharacter(id){state.activeId=id;autoSave();render()}function toggleTheme(){state.theme=state.theme==='dark'?'light':'dark';autoSave();render()}function choosePortrait(){document.getElementById('portraitInput').click()}function loadPortrait(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{set('portrait',r.result,true)};r.readAsDataURL(f)}
+function addCharacter(){const c=blankCharacter(`Personaje ${state.characters.length+1}`);state.characters.push(c);state.activeId=c.id;autoSave();render()}function deleteCharacter(){if(state.characters.length===1)return alert('Debe existir al menos un personaje.');if(!confirm(`¿Eliminar a "${ch().name}"?`))return;state.characters=state.characters.filter(c=>c.id!==state.activeId);state.activeId=state.characters[0].id;autoSave();render()}function selectCharacter(id){state.activeId=id;autoSave();render()}function goToMainMenu(){autoSave();window.location.assign('../../../index.html')}function toggleTheme(){state.theme=state.theme==='dark'?'light':'dark';writeThemePreference(state.theme);autoSave();render()}function choosePortrait(){document.getElementById('portraitInput').click()}function loadPortrait(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{set('portrait',r.result,true)};r.readAsDataURL(f)}
 function cycleSkill(name){ch().skills[name].rank=(ch().skills[name].rank+1)%3;autoSave();render()}function toggleCondition(x){const a=ch().conditions,i=a.indexOf(x);i>=0?a.splice(i,1):a.push(x);autoSave();render()}function armorTrainingList(c=ch()){const value=c.training?.armor;if(Array.isArray(value))return value.filter(x=>['Ligeras','Medias','Pesadas','Escudos'].includes(x));const legacy=String(value||'').toLowerCase();return ['Ligeras','Medias','Pesadas','Escudos'].filter(x=>legacy.includes(x.toLowerCase()))}function toggleArmorTraining(name){if(!['Ligeras','Medias','Pesadas','Escudos'].includes(name))return;const c=ch(),list=armorTrainingList(c),i=list.indexOf(name);i>=0?list.splice(i,1):list.push(name);c.training.armor=list;autoSave();render()}function weaponCategoryList(c=ch()){const value=c.training?.weaponCategories;return Array.isArray(value)?value.filter(x=>WEAPON_CATEGORIES.includes(x)):[]}function weaponTrainingList(c=ch()){const value=c.training?.weapons;if(Array.isArray(value))return value.filter(x=>Object.values(WEAPONS_2024).flat().includes(x));const legacy=String(value||'').toLowerCase();return Object.values(WEAPONS_2024).flat().filter(x=>legacy.includes(x.toLowerCase()))}function toggleWeaponCategory(name){if(!WEAPON_CATEGORIES.includes(name))return;const c=ch(),list=weaponCategoryList(c),i=list.indexOf(name);i>=0?list.splice(i,1):list.push(name);c.training.weaponCategories=list;autoSave();render()}function toggleWeaponTraining(name){const all=Object.values(WEAPONS_2024).flat();if(!all.includes(name))return;const c=ch(),list=weaponTrainingList(c),i=list.indexOf(name);i>=0?list.splice(i,1):list.push(name);c.training.weapons=list;autoSave();render()}function ensureTrainingOpenGroups(c=ch()){if(!c.training)c.training={};if(!c.training.openGroups||typeof c.training.openGroups!=='object'||Array.isArray(c.training.openGroups))c.training.openGroups={};return c.training.openGroups}function isTrainingGroupOpen(id){return !!ensureTrainingOpenGroups()[id]}function toggleTrainingGroup(id){const groups=ensureTrainingOpenGroups();groups[id]=!groups[id];autoSave();render()}function removeTrainingSelection(type,name){if(type==='weapon'){if(WEAPON_CATEGORIES.includes(name))toggleWeaponCategory(name);else toggleWeaponTraining(name)}else if(type==='tool')toggleToolTraining(name);else if(type==='language')toggleLanguageTraining(name)}function toolTrainingList(c=ch()){const all=Object.values(TOOLS_2024).flat(),value=c.training?.tools;if(Array.isArray(value))return value.filter(x=>all.includes(x));const legacy=String(value||'').toLowerCase();return all.filter(x=>legacy.includes(x.toLowerCase()))}function toggleToolTraining(name){const all=Object.values(TOOLS_2024).flat();if(!all.includes(name))return;const c=ch(),list=toolTrainingList(c),i=list.indexOf(name);i>=0?list.splice(i,1):list.push(name);c.training.tools=list;autoSave();render()}function languageTrainingList(c=ch()){const all=Object.values(LANGUAGES_2024).flat(),value=c.training?.languages;if(Array.isArray(value))return value.filter(x=>all.includes(x));const legacy=String(value||'').toLowerCase();return all.filter(x=>legacy.includes(x.toLowerCase()))}function toggleLanguageTraining(name){const all=Object.values(LANGUAGES_2024).flat();if(!all.includes(name))return;const c=ch(),list=languageTrainingList(c),i=list.indexOf(name);i>=0?list.splice(i,1):list.push(name);c.training.languages=list;autoSave();render()}function setResourceCurrent(i,value){const r=ch().resources[i];if(!r)return;const max=Math.max(0,Number.isFinite(Number(r.max))?Number(r.max):0),n=Number(value);r.max=max;r.current=Math.max(0,Math.min(max,Number.isFinite(n)?n:0));autoSave();render()}function setResourceMax(i,value){const r=ch().resources[i];if(!r)return;const n=Number(value);r.max=Math.max(0,Number.isFinite(n)?n:0);r.current=Math.max(0,Math.min(r.max,Number.isFinite(Number(r.current))?Number(r.current):0));autoSave();render()}function toggleResourceRest(i,key){const r=ch().resources[i];if(!r||!['short','long'].includes(key))return;const wasActive=!!r[key];r.short=false;r.long=false;if(!wasActive)r[key]=true;autoSave();render()}function setCurrentHP(value){const c=ch(),n=Number(value);c.hp.current=Math.max(-c.hp.max,Math.min(c.hp.max,Number.isFinite(n)?n:0));autoSave();render()}function setMaxHP(value){const c=ch(),n=Number(value);c.hp.max=Math.max(1,Math.min(999,Number.isFinite(n)?n:1));c.hp.current=Math.max(-c.hp.max,Math.min(c.hp.max,c.hp.current));c.hp.temp=Math.max(0,c.hp.temp);autoSave();render()}function setTempHP(value){const c=ch(),n=Number(value);c.hp.temp=Math.max(0,Number.isFinite(n)?n:0);autoSave();render()}function adjustHP(direction){const input=document.getElementById('hpAdjustment'),raw=Number(input?.value),amount=Math.max(0,Number.isFinite(raw)?raw:0),c=ch();if(direction<0){const absorbed=Math.min(c.hp.temp,amount);c.hp.temp=Math.max(0,c.hp.temp-absorbed);const remaining=amount-absorbed;if(remaining>0)c.hp.current=Math.max(-c.hp.max,c.hp.current-remaining)}else if(direction>0){c.hp.current=Math.min(c.hp.max,c.hp.current+amount)}autoSave();render()}function restoreHP(){const c=ch();c.hp.current=c.hp.max;c.hp.temp=0;autoSave();render()}function setCurrentHitDice(value){const c=ch(),n=Number(value);c.hitDice.current=Math.max(1,Math.min(c.hitDice.max,Number.isFinite(n)?n:1));autoSave();render()}function setMaxHitDice(value){const c=ch(),n=Number(value);c.hitDice.max=Math.max(1,Math.min(20,Number.isFinite(n)?n:1));c.hitDice.current=Math.max(1,Math.min(c.hitDice.max,c.hitDice.current));autoSave();render()}function setDeathSave(type,value){const c=ch(),current=Number(c.death[type])||0;c.death[type]=current===value?value-1:value;autoSave();render()}function updateList(list,i,key,value,rerender=false){ch()[list][i][key]=value;autoSave();if(rerender)render()}function removeList(list,i){ch()[list].splice(i,1);autoSave();render()}function moveListItem(list,i,direction){const items=ch()[list],target=i+direction;if(!Array.isArray(items)||target<0||target>=items.length)return;[items[i],items[target]]=[items[target],items[i]];autoSave();render()}function toggleWeaponPicker(){weaponPickerOpen=!weaponPickerOpen;render()}function weaponIsProficient(name,data,c=ch()){return weaponCategoryList(c).includes(data.category)||weaponTrainingList(c).includes(name)}function weaponAbilityMod(data,c=ch()){const str=mod(c.abilities.str.score),dex=mod(c.abilities.dex.score);if(data.finesse)return Math.max(str,dex);return data.kind==='ranged'?dex:str}function weaponAttackValue(name,data,c=ch()){return signed(weaponAbilityMod(data,c)+(weaponIsProficient(name,data,c)?prof():0))}function weaponDamageValue(data,c=ch()){const bonus=weaponAbilityMod(data,c),suffix=bonus===0?'':bonus>0?` + ${bonus}`:` - ${Math.abs(bonus)}`;return `${data.damage}${suffix} ${data.type}`}function weaponNotesValue(data){const parts=[];if(data.properties&&data.properties.length)parts.push(data.properties.join(', '));if(data.mastery)parts.push(`Maestría: ${data.mastery}`);return parts.join(' · ')}function syncAutoWeapons(c=ch()){if(!Array.isArray(c.weapons))c.weapons=[];c.weapons.forEach(w=>{if(!w||w.source!=='weapon2024'||!w.weaponId||!WEAPON_DATA_2024[w.weaponId])return;const data=WEAPON_DATA_2024[w.weaponId];w.name=w.weaponId;w.attack=weaponAttackValue(w.weaponId,data,c);w.damage=weaponDamageValue(data,c);w.range=data.range;w.notes=weaponNotesValue(data)})}function addWeaponFromCatalog(name){const data=WEAPON_DATA_2024[name];if(!data)return;ch().weapons.push({source:'weapon2024',weaponId:name,name,attack:weaponAttackValue(name,data),damage:weaponDamageValue(data),range:data.range,notes:weaponNotesValue(data)});weaponPickerOpen=false;autoSave();render()}function updateWeaponField(i,key,value){const w=ch().weapons[i];if(!w)return;w[key]=value;if(w.source==='weapon2024')w.source='manual';autoSave()}function moveWeapon(i,direction){const list=ch().weapons,target=i+direction;if(target<0||target>=list.length)return;[list[i],list[target]]=[list[target],list[i]];autoSave();render()}function addWeapon(){ch().weapons.push({source:'manual',name:'',attack:'',damage:'',range:'',notes:''});autoSave();render()}function addTrait(){ch().traits.push({name:'Nuevo rasgo',category:'Clase',description:'',open:true});autoSave();render()}function addResource(){ch().resources.push({name:'Nuevo recurso',current:1,max:1,short:false,long:true});autoSave();render()}function addItem(){ch().inventory.push({name:'Nuevo objeto',category:'Equipo',qty:1,weight:0,equipped:false,notes:''});autoSave();render()}function addSpell(){ch().spells.push({level:0,name:'Nuevo conjuro',casting:'',range:'',duration:'',components:'',notes:'',open:true});autoSave();render()}function setSlotTotal(level,value){const s=ch().spellcasting.slots[level],n=Number(value);s.total=Math.max(0,Math.min(9,Number.isFinite(n)?n:0));normalizeSlotUsage(s);autoSave();render()}function toggleSlot(level,i){const s=ch().spellcasting.slots[level],used=normalizeSlotUsage(s),total=s.total;if(i<0||i>=total)return;const firstSpent=total-s.spent;if(i<firstSpent){s.spent=total-i}else{s.spent=total-i-1}normalizeSlotUsage(s);autoSave();render()}
 function openCombatManager(){
   const overlay=document.getElementById('combatModal');
@@ -248,7 +395,148 @@ function closeCombatManager(){
 function adjustHPFromModal(direction){adjustHP(direction);openCombatManager()}function restoreHPFromModal(){restoreHP();openCombatManager()}
 function openRest(type){restType=type;document.getElementById('restTitle').textContent=type==='short'?'Descanso corto':'Descanso largo';const c=ch(),eligible=c.resources.map((r,i)=>({r,i})).filter(x=>type==='short'?x.r.short:(x.r.long||x.r.short));document.getElementById('restOptions').innerHTML=`<label><input class="check" id="restDeath" type="checkbox" ${type==='long'?'checked':''}> Reiniciar salvaciones contra muerte</label>${type==='long'?'<label><input class="check" id="restHp" type="checkbox" checked> Recuperar todos los puntos de golpe</label><label><input class="check" id="restHit" type="checkbox" checked> Recuperar la mitad de los dados de golpe máximos</label>':'<label><input class="check" id="restHp" type="checkbox"> Ajustar manualmente los PG después del descanso</label>'}<label><input class="check" id="restSlots" type="checkbox" ${type==='long'?'checked':''}> Recuperar espacios de conjuro</label><h4 style="margin-top:14px">Recursos</h4>${eligible.length?eligible.map(x=>`<label><input class="check rest-resource" type="checkbox" value="${x.i}" checked> Recuperar ${esc(x.r.name)}</label>`).join(''):'<div class="empty">No hay recursos configurados para este descanso.</div>'}`;document.getElementById('restModal').classList.add('open')}
 function closeRest(){document.getElementById('restModal').classList.remove('open')}function applyRest(){const c=ch();if(document.getElementById('restDeath')?.checked)c.death={success:0,fail:0};if(restType==='long'){if(document.getElementById('restHp')?.checked){c.hp.current=c.hp.max;c.hp.temp=0}if(document.getElementById('restHit')?.checked)c.hitDice.current=Math.min(c.hitDice.max,c.hitDice.current+Math.max(1,Math.floor(c.hitDice.max/2)))}if(document.getElementById('restSlots')?.checked){Object.values(c.spellcasting.slots).forEach(s=>{s.spent=0;s.used=Array.from({length:Math.max(0,Number(s.total)||0)},()=>false)})}document.querySelectorAll('.rest-resource:checked').forEach(el=>{const r=c.resources[Number(el.value)];if(r)r.current=r.max});autoSave();closeRest();render()}
-function exportState(){state.characters.forEach(syncAutoWeapons);const characterName=String(ch()?.name||'Personaje').trim()||'Personaje',safeName=characterName.replace(/[\\/:*?"<>|]+/g,'-').replace(/\s+/g,' ').trim(),blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`Ficha-${safeName}.json`;a.click();URL.revokeObjectURL(a.href)}document.getElementById('importInput').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const data=JSON.parse(r.result);if(!Array.isArray(data.characters)||!data.characters.length)throw new Error();const existingIds=new Set(state.characters.map(character=>character.id)),importedCharacters=data.characters.map(character=>{const imported=structuredClone(character);if(!imported.id||existingIds.has(imported.id)){do{imported.id=uid()}while(existingIds.has(imported.id))}existingIds.add(imported.id);return imported});state.characters.push(...importedCharacters);state.activeId=importedCharacters[0].id;autoSave();render();const count=importedCharacters.length;alert(`${count} personaje${count===1?' importado':'s importados'} correctamente.`)}catch(err){alert('El archivo JSON no es válido.')}};r.readAsText(f);e.target.value=''})
+function exportState(){
+  const currentCharacter=ch();
+  syncAutoWeapons(currentCharacter);
+  const characterName=String(currentCharacter?.name||'Personaje').trim()||'Personaje';
+  const safeName=characterName.replace(/[\\/:*?"<>|]+/g,'-').replace(/\s+/g,' ').trim();
+  const exportedState=ArchivoRolJSON.tag({
+    theme:state.theme,
+    activeId:currentCharacter.id,
+    characters:[structuredClone(currentCharacter)]
+  },CHARACTER_JSON_DESCRIPTOR);
+  const blob=new Blob([JSON.stringify(exportedState,null,2)],{type:'application/json'});
+  const link=document.createElement('a');
+  link.href=URL.createObjectURL(blob);
+  link.download=`Ficha-${safeName}.json`;
+  link.click();
+  URL.revokeObjectURL(link.href);
+}function chooseImportConflict(kind,name,language='es'){
+  let overlay=document.getElementById('importConflictOverlay');
+  if(!overlay){
+    overlay=document.createElement('div');
+    overlay.id='importConflictOverlay';
+    overlay.className='import-conflict-overlay';
+    overlay.setAttribute('role','dialog');
+    overlay.setAttribute('aria-modal','true');
+    overlay.setAttribute('aria-hidden','true');
+    overlay.innerHTML=`<div class="import-conflict-dialog"><div class="import-conflict-heading"><span class="import-conflict-symbol" aria-hidden="true">!</span><div><h3 data-role="title"></h3></div></div><p class="import-conflict-message" data-role="message"></p><div class="import-conflict-actions"><button type="button" data-choice="cancel"></button><button type="button" class="import-conflict-copy" data-choice="copy"></button><button type="button" class="primary" data-choice="update"></button></div></div>`;
+    document.body.appendChild(overlay);
+  }
+  const english=language==='en';
+  overlay.querySelector('[data-role="title"]').textContent=english?'Import conflict':'Conflicto de importación';
+  overlay.querySelector('[data-role="message"]').textContent=english
+    ?`The ${kind==='world'?'world':'character'} "${name}" already exists, but the imported file contains changes. What would you like to do?`
+    :`El ${kind==='world'?'mundo':'personaje'} "${name}" ya existe, pero el archivo importado contiene cambios. ¿Qué quieres hacer?`;
+  overlay.querySelector('[data-choice="cancel"]').textContent=english?'Cancel':'Cancelar';
+  overlay.querySelector('[data-choice="copy"]').textContent=english?'Create new entry':'Crear nueva entrada';
+  overlay.querySelector('[data-choice="update"]').textContent=english?'Update local copy':'Actualizar copia local';
+  return new Promise(resolve=>{
+    let settled=false;
+    const finish=choice=>{
+      if(settled)return;
+      settled=true;
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden','true');
+      document.removeEventListener('keydown',handleKey);
+      resolve(choice);
+    };
+    const handleKey=event=>{if(event.key==='Escape')finish('cancel')};
+    overlay.querySelectorAll('[data-choice]').forEach(button=>{button.onclick=()=>finish(button.dataset.choice)});
+    overlay.onclick=event=>{if(event.target===overlay)finish('cancel')};
+    document.addEventListener('keydown',handleKey);
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden','false');
+    requestAnimationFrame(()=>overlay.querySelector('[data-choice="update"]')?.focus());
+  });
+}function characterImportSignature(source,index=0){
+  const comparable=normalizeCharacter(structuredClone(source),index);
+  Object.values(comparable.spellcasting.slots).forEach(slot=>delete slot.used);
+  comparable.spells.forEach(spell=>{spell.prepared=!!spell.prepared});
+  return JSON.stringify(comparable);
+}
+const importInput=document.getElementById('importInput');
+if(importInput)importInput.addEventListener('change',event=>{
+  const file=event.target.files[0];
+  if(!file)return;
+  const reader=new FileReader();
+  reader.onload=async()=>{
+    try{
+      const document=JSON.parse(reader.result);
+      const {data}=ArchivoRolJSON.read(document,CHARACTER_JSON_DESCRIPTOR);
+      if(!Array.isArray(data.characters)||!data.characters.length)throw new Error('La ficha no contiene personajes.');
+      const addedCharacters=[];
+      const updatedCharacters=[];
+      let unchangedCount=0;
+      let cancelledCount=0;
+      for(const [index,character] of data.characters.entries()){
+        const imported=normalizeCharacter(structuredClone(character),state.characters.length+index);
+        imported.id=String(imported.id||uid());
+        const existingIndex=state.characters.findIndex(current=>String(current.id)===imported.id);
+        if(existingIndex>=0){
+          const current=normalizeCharacter(structuredClone(state.characters[existingIndex]),existingIndex);
+          if(characterImportSignature(current,existingIndex)===characterImportSignature(imported,existingIndex)){
+            unchangedCount++;
+            continue;
+          }
+          const name=imported.name||current.name||'Sin nombre';
+          const choice=await chooseImportConflict('character',name,'es');
+          if(choice==='update'){
+            state.characters[existingIndex]=imported;
+            updatedCharacters.push(imported);
+          }else if(choice==='copy'){
+            const usedIds=new Set([...state.characters,...addedCharacters].map(character=>String(character.id)));
+            do{imported.id=uid()}while(usedIds.has(imported.id));
+            addedCharacters.push(imported);
+          }else{
+            cancelledCount++;
+          }
+          continue;
+        }
+        addedCharacters.push(imported);
+      }
+      if(!addedCharacters.length&&!updatedCharacters.length){
+        const message=cancelledCount
+          ?'No se realizó ningún cambio.'
+          :'No se añadieron personajes: todos los del archivo ya estaban actualizados.';
+        alert(message);
+        return;
+      }
+      state.characters.push(...addedCharacters);
+      const changedCharacters=[...updatedCharacters,...addedCharacters];
+      const requestedActiveId=String(data.activeId||'');
+      state.activeId=changedCharacters.find(character=>character.id===requestedActiveId)?.id||changedCharacters[0].id;
+      autoSave();
+      render();
+      const messages=[];
+      if(addedCharacters.length)messages.push(`${addedCharacters.length} personaje${addedCharacters.length===1?' añadido':'s añadidos'}.`);
+      if(updatedCharacters.length)messages.push(`${updatedCharacters.length} personaje${updatedCharacters.length===1?' actualizado':'s actualizados'}.`);
+      if(unchangedCount)messages.push(`${unchangedCount} ya ${unchangedCount===1?'estaba actualizado':'estaban actualizados'}.`);
+      if(cancelledCount)messages.push(`${cancelledCount} ${cancelledCount===1?'actualización cancelada':'actualizaciones canceladas'}.`);
+      alert(messages.join(' '));
+    }catch(error){
+      if(error?.code==='INCOMPATIBLE_DOCUMENT'||error?.code==='INCOMPATIBLE_APPLICATION'){
+        alert('Este archivo JSON pertenece a otra herramienta o sistema de juego.');
+      }else if(error?.code==='UNSUPPORTED_FORMAT_VERSION'){
+        alert('Este archivo fue creado con una versión más reciente de Archivo de Rol.');
+      }else{
+        alert('El archivo JSON no es válido o no contiene una ficha de D&D compatible.');
+      }
+    }
+  };
+  reader.readAsText(file);
+  event.target.value='';
+});
+function syncSharedTheme(){
+  const sharedTheme=readThemePreference(state.theme);
+  if(sharedTheme===state.theme)return;
+  writeThemePreference(sharedTheme);
+  state.theme=sharedTheme;
+  autoSave();
+  render();
+}
+window.addEventListener('pageshow',syncSharedTheme);
+window.addEventListener('storage',event=>{if(event.key===SHARED_THEME_KEY)syncSharedTheme()});
 render();
 window.addEventListener('load',()=>{
   updateCombatButtonPosition();

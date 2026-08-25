@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quibbol.github.io/apps-rol/schemas/dnd-character-v1.schema.json",
+  "title": "Archivo de Rol - Ficha de personaje D&D 5e 2024",
+  "type": "object",
+  "required": ["_archivoRol", "characters"],
+  "properties": {
+    "_archivoRol": {
+      "type": "object",
+      "required": ["application", "formatVersion", "module", "system", "entity", "schemaVersion"],
+      "properties": {
+        "application": {"const": "archivo-de-rol"},
+        "formatVersion": {"const": 1},
+        "module": {"const": "character-sheet"},
+        "system": {"const": "dnd-5e-2024"},
+        "entity": {"const": "character"},
+        "schemaVersion": {"const": 1},
+        "exportedAt": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "theme": {"enum": ["light", "dark"]},
+    "activeId": {"type": "string"},
+    "characters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "object"}
+    }
+  },
+  "additionalProperties": true
+}
