@@ -1,4 +1,4 @@
-# Archivo de Rol
+# Quibbol’s RPG Toolkit
 
 Aplicación web local para gestionar herramientas de partidas y fichas de distintos sistemas de rol.
 
@@ -10,4 +10,4 @@ Aplicación web local para gestionar herramientas de partidas y fichas de distin
 - assets/: recursos y utilidades compartidas.
 - schemas/: contratos de las nuevas exportaciones JSON.
 
-Los JSON anteriores siguen siendo admitidos. Las nuevas exportaciones incorporan _archivoRol para identificar el módulo, el sistema y la versión del formato.
+Los JSON anteriores siguen siendo admitidos. Las nuevas exportaciones incorporan `_quibbolRpgToolkit` para identificar el módulo, el sistema y la versión del formato. También se siguen admitiendo `_archivoRol` y el identificador `archivo-de-rol` en archivos anteriores.

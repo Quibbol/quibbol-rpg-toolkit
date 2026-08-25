@@ -1,7 +1,10 @@
 (function(global){
   'use strict';
 
-  const APPLICATION_ID='archivo-de-rol';
+  const APPLICATION_ID='quibbol-rpg-toolkit';
+  const METADATA_KEY='_quibbolRpgToolkit';
+  const LEGACY_APPLICATION_IDS=new Set(['archivo-de-rol']);
+  const LEGACY_METADATA_KEYS=['_archivoRol'];
   const FORMAT_VERSION=1;
 
   class ArchivoRolJSONError extends Error{
@@ -69,9 +72,16 @@
       throw new ArchivoRolJSONError('INVALID_DOCUMENT','El contenido JSON debe ser un objeto.');
     }
 
-    if(isObject(document._archivoRol)){
-      const descriptor=normalizeDescriptor(document._archivoRol);
-      if(descriptor.application&&descriptor.application!==APPLICATION_ID){
+    const metadataSource=isObject(document[METADATA_KEY])
+      ?document[METADATA_KEY]
+      :LEGACY_METADATA_KEYS.map(key=>document[key]).find(isObject);
+    if(metadataSource){
+      const descriptor=normalizeDescriptor(metadataSource);
+      if(
+        descriptor.application&&
+        descriptor.application!==APPLICATION_ID&&
+        !LEGACY_APPLICATION_IDS.has(descriptor.application)
+      ){
         throw new ArchivoRolJSONError(
           'INCOMPATIBLE_APPLICATION',
           'El archivo pertenece a otra aplicación.',
@@ -133,7 +143,7 @@
       schemaVersion:Number(descriptor?.schemaVersion)||1,
       exportedAt:new Date().toISOString()
     };
-    return {...payload,_archivoRol:metadata};
+    return {...payload,[METADATA_KEY]:metadata};
   }
 
   function describe(descriptor){
@@ -146,6 +156,7 @@
 
   global.ArchivoRolJSON=Object.freeze({
     APPLICATION_ID,
+    METADATA_KEY,
     FORMAT_VERSION,
     Error:ArchivoRolJSONError,
     inspect,
