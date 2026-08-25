@@ -1790,10 +1790,10 @@ body.npc-codex-open .npc-codex-button{
   .brand{display:flex;align-items:center;gap:12px;min-width:260px}.seal{width:43px;height:43px;display:grid;place-items:center;border:2px solid var(--accent);transform:rotate(45deg);background:#5f4924;box-shadow:inset 0 0 0 3px var(--deep);flex:0 0 auto}.seal img{width:29px;height:29px;object-fit:contain;transform:rotate(-45deg);filter:invert(1)}
   html[data-theme="light"] .seal{background:#ead2d8;box-shadow:inset 0 0 0 3px var(--panel)}html[data-theme="light"] .seal img{filter:none}
   .brand h1{font:800 20px/1 Georgia,serif;letter-spacing:.08em;text-transform:uppercase;margin:0;color:var(--text)}.brand small{display:block;color:var(--accent);font-size:10px;letter-spacing:.2em;margin-top:5px;text-transform:uppercase;font-weight:700}
-  .topbar .toolbar{display:flex;align-items:center;gap:7px;flex:1;justify-content:flex-end;flex-wrap:wrap;margin:0}.topbar .toolbar select{width:auto;min-width:210px;max-width:280px}.btn,.topbar .toolbar select{height:38px;border:1px solid var(--border);background:var(--panel2);color:var(--text);border-radius:3px;padding:0 12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-weight:700;width:auto}.btn:hover{border-color:var(--accent);transform:translateY(-1px)}.btn.primary{background:#5f4924!important;border-color:#8c6d35!important;color:#fff!important}.btn.danger{background:#532929!important;border-color:#804242!important;color:var(--text)!important}.btn.icon{width:38px;height:38px;padding:0;display:inline-grid;place-items:center;line-height:1;letter-spacing:0}.home-glyph{display:block;font-family:Arial,sans-serif;font-size:22px;line-height:1;letter-spacing:0}.save-state{font-size:11px;color:var(--muted);min-width:66px;text-align:center}
+  .topbar .toolbar{display:flex;align-items:center;gap:7px;flex:1;justify-content:flex-end;flex-wrap:wrap;margin:0}.topbar .toolbar select{width:auto;min-width:210px;max-width:280px}.btn,.topbar .toolbar select{height:38px;border:1px solid var(--border);background:var(--panel2);color:var(--text);border-radius:3px;padding:0 12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-weight:700;width:auto}.btn:hover{border-color:var(--accent);transform:translateY(-1px)}.btn:disabled{opacity:.38;cursor:not-allowed;transform:none!important;border-color:var(--border);color:var(--muted)}.btn.primary{background:#5f4924!important;border-color:#8c6d35!important;color:#fff!important}.btn.danger{background:#532929!important;border-color:#804242!important;color:var(--text)!important}.btn.icon{width:38px;height:38px;padding:0;display:inline-grid;place-items:center;line-height:1;letter-spacing:0}.home-glyph{display:block;font-family:Arial,sans-serif;font-size:22px;line-height:1;letter-spacing:0}.header-create-glyph,.header-delete-glyph{position:relative;display:block;width:16px;height:16px;font-size:0}.header-create-glyph::before,.header-create-glyph::after,.header-delete-glyph::before,.header-delete-glyph::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;border-radius:1px;background:currentColor}.header-create-glyph::before{transform:translate(-50%,-50%)}.header-create-glyph::after{transform:translate(-50%,-50%) rotate(90deg)}.header-delete-glyph::before{transform:translate(-50%,-50%) rotate(45deg)}.header-delete-glyph::after{transform:translate(-50%,-50%) rotate(-45deg)}.save-state{display:block;flex:0 0 66px;width:66px;min-width:66px;height:1px;overflow:hidden}
   html[data-theme="light"] .btn.primary{background:#8f3048!important;border-color:#6f2237!important;color:#fff!important}html[data-theme="light"] .btn.danger{background:#f1d6d3!important;border-color:#c4837d!important;color:#7b3232!important}
   @media(max-width:900px){.topbar{align-items:flex-start;flex-wrap:wrap}.brand{min-width:220px}.topbar .toolbar{flex-basis:100%;justify-content:flex-start}.topbar .toolbar select{flex:1 1 210px;max-width:none}}
-  @media(max-width:560px){.topbar{position:static;padding:10px 12px}.brand{min-width:0}.brand h1{font-size:17px}.brand small{letter-spacing:.13em}.save-state{display:none}.topbar .toolbar select{flex-basis:100%;width:100%}}
+  @media(max-width:560px){.topbar{position:static;padding:10px 12px}.brand{min-width:0}.brand h1{font-size:17px}.brand small{letter-spacing:.13em}.topbar .toolbar select{flex-basis:100%;width:100%}}
   @media print{.topbar{display:none!important}}
 </style>
 <style id="import-conflict-dialog-style">
@@ -1801,8 +1801,11 @@ body.npc-codex-open .npc-codex-button{
   .import-conflict-overlay.open{display:grid}
   .import-conflict-dialog{width:min(560px,100%);padding:22px;background:var(--panel);border:1px solid color-mix(in srgb,var(--accent) 65%,var(--border));border-radius:6px;box-shadow:0 28px 80px rgba(0,0,0,.48)}
   .import-conflict-heading{display:flex;align-items:center;gap:12px;margin-bottom:12px}.import-conflict-symbol{width:42px;height:42px;display:grid;place-items:center;flex:0 0 auto;border:1px solid var(--accent);border-radius:50%;background:color-mix(in srgb,var(--accent) 16%,var(--panel));color:var(--accent);font-size:22px;font-weight:900}
+  .content-creation-symbol{margin:7px;border:2px solid var(--accent);border-radius:0;background:#5f4924;box-shadow:inset 0 0 0 3px var(--deep);color:#fff;transform:rotate(45deg)}.content-creation-symbol>span{display:block;line-height:1;transform:rotate(-45deg)}html[data-theme="light"] .content-creation-symbol{background:#ead2d8;box-shadow:inset 0 0 0 3px var(--panel);color:var(--accent)}
   .import-conflict-dialog h3{margin:0;font-family:Georgia,serif;letter-spacing:.045em}.import-conflict-message{margin:0;color:var(--muted);line-height:1.55}
   .import-conflict-actions{display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap;margin-top:22px}.import-conflict-actions button{width:auto;min-height:42px}.import-conflict-copy{border-color:var(--accent);color:var(--text)}
+  button.danger:is(.square-button,.icon-button),.milestone-delete{position:relative;display:inline-grid;place-items:center;padding:0;font-size:0;line-height:1;text-align:center}
+  button.danger:is(.square-button,.icon-button)::before,button.danger:is(.square-button,.icon-button)::after,.milestone-delete::before,.milestone-delete::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;border-radius:1px;background:currentColor}.milestone-delete::before,button.danger:is(.square-button,.icon-button)::before{transform:translate(-50%,-50%) rotate(45deg)}.milestone-delete::after,button.danger:is(.square-button,.icon-button)::after{transform:translate(-50%,-50%) rotate(-45deg)}
   @media(max-width:620px){.import-conflict-actions{display:grid;grid-template-columns:1fr}.import-conflict-actions button{width:100%}}
 </style></head>
 <body>
@@ -1815,14 +1818,14 @@ body.npc-codex-open .npc-codex-button{
     <button class="btn icon" type="button" onclick="goToMainMenu()" title="Volver al menú principal" aria-label="Volver al menú principal"><span class="home-glyph" aria-hidden="true">⌂</span></button>
     <select id="worldFileSelect" aria-label="Mundo activo" onchange="selectWorldFile(this.value)"></select>
     <button class="btn icon" type="button" onclick="renameWorldFile()" title="Renombrar mundo" aria-label="Renombrar mundo">✎</button>
-    <button class="btn icon primary" type="button" onclick="addWorldFile()" title="Nuevo mundo" aria-label="Nuevo mundo">＋</button>
-    <button class="btn icon danger" type="button" onclick="deleteWorldFile()" title="Eliminar mundo" aria-label="Eliminar mundo">×</button>
+    <button class="btn icon primary" type="button" onclick="addWorldFile()" title="Nuevo mundo" aria-label="Nuevo mundo"><span class="header-create-glyph" aria-hidden="true">＋</span></button>
+    <button class="btn icon danger" type="button" onclick="deleteWorldFile()" title="Eliminar mundo" aria-label="Eliminar mundo"><span class="header-delete-glyph" aria-hidden="true">×</span></button>
     <button class="btn" type="button" onclick="exportState()" title="Exportar mundo">⇩ <span>JSON</span></button>
     <button class="btn icon" type="button" onclick="document.getElementById('importFile').click()" title="Importar mundo" aria-label="Importar mundo">⇧</button>
     <button class="btn icon" type="button" onclick="window.print()" title="Imprimir o guardar como PDF" aria-label="Imprimir">▣</button>
     <button id="themeToggle" class="btn icon" type="button" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema"><span class="theme-glyphs" aria-hidden="true">◐</span></button>
     <button id="languageToggle" class="btn icon" type="button" onclick="toggleLanguage()" title="Cambiar idioma" aria-label="Cambiar idioma" hidden style="display:none!important"><span class="language-glyph">ES</span></button>
-    <span id="worldSaveState" class="save-state">Guardado</span>
+    <span class="save-state" aria-hidden="true"></span>
   </div>
   <input id="importFile" type="file" accept=".json,application/json" hidden onchange="importState(event)">
 </header>
@@ -1830,13 +1833,13 @@ body.npc-codex-open .npc-codex-button{
 <main>
   <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
     <h2 id="section-events" class="section-title nav-scroll-target" style="margin-bottom:12px">Grandes eventos</h2>
-    <button class="primary" onclick="addEvent()">+ Crear evento</button>
+    <button class="primary" onclick="openEventCreationDialog()">+ Crear evento</button>
   </div>
   <div id="eventsGrid" class="grid"></div>
 
   <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
     <h2 id="section-regions" class="section-title nav-scroll-target" style="margin-bottom:12px">Estado de las regiones</h2>
-    <button class="primary" onclick="addRegion()">+ Crear región</button>
+    <button class="primary" onclick="openRegionCreationDialog()">+ Crear región</button>
   </div>
   <div id="regionsCard"></div>
 
@@ -1866,6 +1869,50 @@ const POLITICAL_FIELDS = [
 const CITY_STATES = [
   "Próspera","Estable","Inquieta","Tensionada","En crisis",
   "Asediada","Ocupada","Devastada","Abandonada"
+];
+const NARRATIVE_SEEDS = [
+  {
+    premise:"Un fragmento de una estrella caída está alterando la tierra, la magia y las ambiciones de quienes viven a su alrededor.",
+    regions:[
+      {names:["La Marca de Ceniza","Los Páramos del Ascua"],cities:["Brasalba","Cenizal"],diagnoses:["Movilizada","Corrompida"],stability:["Inestable","Crisis"],military:["Movilización","Guerra"],cityStates:["Tensionada","En crisis"],populations:["18.000 habitantes","27.000 habitantes"],notes:"Los campos se agrietan mientras caravanas armadas convergen en {city0}."},
+      {names:["El Valle de las Campanas","La Vega Resonante"],cities:["Claravela","Campaluz"],diagnoses:["Expectante","Vigilante"],stability:["Estable","Inestable"],military:["Paz","Movilización"],cityStates:["Estable","Inquieta"],populations:["12.000 habitantes","21.000 habitantes"],notes:"Cada noche las campanas de {city1} responden a un sonido que llega desde el cielo."},
+      {names:["La Costa de Vidrio","Los Acantilados Esquirlados"],cities:["Puerto Espejo","Salcristal"],diagnoses:["Floreciente","Tensionada"],stability:["Estable","Inestable"],military:["Paz","Ocupación"],cityStates:["Próspera","Tensionada"],populations:["34.000 habitantes","16.000 habitantes"],notes:"La arena convertida en cristal ha enriquecido a {city2}, pero también atrae criaturas luminosas."},
+      {names:["El Bosque del Eclipse","La Arboleda Umbría"],cities:["Lindesombra","Raíz Alta"],diagnoses:["Aislada","Necrótica"],stability:["Crisis","Colapsando"],military:["Invasión","Ocupación"],cityStates:["Asediada","Devastada"],populations:["7.000 habitantes","9.500 habitantes"],notes:"Los senderos alrededor de {city3} cambian cuando el fragmento estelar oscurece la luna."}
+    ],
+    events:[
+      {names:["La caída de la segunda estrella","El fulgor bajo la tierra"],phase:"Presagios visibles",trigger:"Una columna de luz surge entre {region0} y {region1}.",notes:"El fragmento parece llamar a algo que permanece fuera del mundo.",milestones:["Los animales abandonan {region0}","Los pozos de {city1} comienzan a emitir luz","Una expedición desaparece cerca del cráter","Las facciones movilizan tropas hacia {region2}","La segunda estrella aparece en el firmamento"]},
+      {names:["La fiebre del cristal","La guerra de las esquirlas"],phase:"Rivalidades abiertas",trigger:"Un cargamento procedente de {city2} transforma a quienes lo custodian.",notes:"El cristal concede poder a cambio de recuerdos y vínculos personales.",milestones:["Se descubre el primer yacimiento estable","Los mercaderes cierran las rutas de {region2}","Un gobernante exige el monopolio del cristal","Estalla una revuelta en {city2}","El yacimiento revela una cámara consciente"]},
+      {names:["El despertar del bosque negro","Las raíces que recuerdan"],phase:"Expansión silenciosa",trigger:"Las raíces alcanzan las murallas de {city3} durante una sola noche.",notes:"El bosque conserva los recuerdos de quienes mueren bajo sus ramas.",milestones:["Desaparecen los primeros leñadores","Los caminos de {region3} cambian de lugar","Voces conocidas llaman desde los árboles","La guarnición abandona un distrito de {city3}","El corazón del bosque pronuncia el nombre del mundo"]}
+    ]
+  },
+  {
+    premise:"La muerte de una soberana sin heredero ha dejado un trono vacío y cuatro territorios que necesitan decidir entre la alianza y la guerra.",
+    regions:[
+      {names:["Las Tierras de la Corona","La Meseta Real"],cities:["Altacorte","Corona Vieja"],diagnoses:["Convulsa","Influyente"],stability:["Inestable","Crisis"],military:["Movilización","Ocupación"],cityStates:["Tensionada","Ocupada"],populations:["46.000 habitantes","61.000 habitantes"],notes:"En {city0}, cada casa noble presenta una versión distinta del testamento real."},
+      {names:["La Frontera del Hierro","Las Marcas Septentrionales"],cities:["Bastión Frío","Puerta de Hierro"],diagnoses:["Fortificada","Rebelde"],stability:["Estable","Inestable"],military:["Movilización","Guerra"],cityStates:["Estable","Asediada"],populations:["22.000 habitantes","14.000 habitantes"],notes:"Los veteranos de {city1} se niegan a reconocer órdenes procedentes de la capital."},
+      {names:["Los Viñedos del Sur","La Campiña Dorada"],cities:["Vendimia","Sol de Arán"],diagnoses:["Próspera","Expectante"],stability:["Estable","Inestable"],military:["Paz","Movilización"],cityStates:["Próspera","Inquieta"],populations:["31.000 habitantes","25.000 habitantes"],notes:"{city2} alimenta al reino y utiliza sus graneros como arma diplomática."},
+      {names:["El Delta de las Siete Casas","Las Marismas Nobles"],cities:["Sietepuentes","Dorsalba"],diagnoses:["Tensionada","Corrompida"],stability:["Inestable","Crisis"],military:["Paz","Ocupación"],cityStates:["Inquieta","En crisis"],populations:["38.000 habitantes","29.000 habitantes"],notes:"Espías y contrabandistas convierten {city3} en el verdadero centro de la sucesión."}
+    ],
+    events:[
+      {names:["La sucesión de la corona vacía","El testamento de la última reina"],phase:"Reclamaciones enfrentadas",trigger:"Aparece un segundo testamento sellado en {city0}.",notes:"Ningún aspirante puede imponerse sin controlar al menos dos regiones.",milestones:["Las casas nobles presentan a sus candidatos","El ejército de {region1} declara su neutralidad","Los graneros de {region2} cierran sus puertas","Un testigo del testamento desaparece en {city3}","Se convoca una coronación sin consenso"]},
+      {names:["La rebelión de los estandartes grises","La marcha del norte"],phase:"Lealtades quebradas",trigger:"Los comandantes de {city1} arrestan al enviado de la capital.",notes:"La frontera exige autonomía a cambio de seguir defendiendo el reino.",milestones:["Las fortalezas retiran los símbolos reales","Una legión abandona su puesto","Los clanes fronterizos eligen portavoz","Las tropas avanzan hacia {region0}","El norte proclama un nuevo pacto"]},
+      {names:["El hambre de los siete mercados","La guerra de los graneros"],phase:"Escasez provocada",trigger:"Arden tres almacenes en {city2} la misma noche.",notes:"Alguien intenta convertir una crisis de abastecimiento en una victoria política.",milestones:["Sube el precio del grano","Las rutas hacia {region3} quedan bloqueadas","Comienzan los saqueos en {city0}","Se descubre cereal oculto bajo un templo","La población exige que el trono sea ocupado"]}
+    ]
+  },
+  {
+    premise:"El mar interior está retrocediendo y deja al descubierto ruinas, rutas antiguas y una amenaza que llevaba siglos bajo el agua.",
+    regions:[
+      {names:["La Ribera Menguante","Las Orillas Blancas"],cities:["Puerto Seco","Salmuera"],diagnoses:["Tensionada","Movilizada"],stability:["Inestable","Crisis"],military:["Paz","Movilización"],cityStates:["Inquieta","En crisis"],populations:["28.000 habitantes","19.000 habitantes"],notes:"Los muelles de {city0} quedan cada semana más lejos del agua."},
+      {names:["Las Islas Unidas","El Archipiélago Varado"],cities:["Nácar","Tres Faros"],diagnoses:["Aislada","Rebelde"],stability:["Estable","Inestable"],military:["Paz","Guerra"],cityStates:["Estable","Tensionada"],populations:["13.000 habitantes","17.000 habitantes"],notes:"Antiguas islas forman ahora una península disputada alrededor de {city1}."},
+      {names:["La Cuenca de Sal","El Fondo Expuesto"],cities:["Costra","Pozo Azul"],diagnoses:["Floreciente","Corrompida"],stability:["Inestable","Crisis"],military:["Ocupación","Invasión"],cityStates:["Próspera","Ocupada"],populations:["24.000 habitantes","11.000 habitantes"],notes:"{city2} prospera excavando ruinas que nunca debieron recibir luz."},
+      {names:["Los Montes de la Lluvia","La Sierra de las Nubes"],cities:["Aguaclara","Cumbre Gris"],diagnoses:["Vigilante","Fortificada"],stability:["Estable","Inestable"],military:["Movilización","Paz"],cityStates:["Estable","Asediada"],populations:["15.000 habitantes","20.000 habitantes"],notes:"Los embalses de {city3} controlan el agua que todavía alcanza al resto del territorio."}
+    ],
+    events:[
+      {names:["El retroceso del mar","La última marea"],phase:"Descenso acelerado",trigger:"El agua retrocede diez kilómetros frente a {city0}.",notes:"La causa parece relacionada con una estructura descubierta en el centro de la cuenca.",milestones:["Los barcos quedan varados","Aparece una calzada hacia {region1}","Se abren las primeras ruinas en {region2}","Los pozos de {city3} pierden caudal","Una marea negra comienza a avanzar tierra adentro"]},
+      {names:["La carrera por las ciudades hundidas","Los tesoros de la cuenca"],phase:"Expediciones rivales",trigger:"Una tablilla hallada en {city2} promete una fuente inagotable.",notes:"Cada hallazgo altera el equilibrio entre las regiones costeras.",milestones:["Se cartografía la primera ciudad sumergida","Desaparece una expedición de {region0}","Mercenarios ocupan el acceso principal","Un artefacto provoca lluvia sobre {region3}","Las ruinas despiertan a sus antiguos guardianes"]},
+      {names:["La guerra del agua","El pacto de las cisternas"],phase:"Negociaciones rotas",trigger:"{city3} cierra los canales que abastecen a {region0}.",notes:"El agua dulce se convierte en moneda, frontera y arma.",milestones:["Se imponen cuotas de agua","Los refugiados llegan a {city1}","Un canal es saboteado durante la noche","Las regiones movilizan sus ejércitos","Se descubre quién está drenando el mar"]}
+    ]
+  }
 ];
 const CHARACTER_STATES = [
   "Activo","Ausente","Herido","Prisionero","Desaparecido",
@@ -2513,6 +2560,350 @@ let worldLibrary=loadWorldLibrary();
 let activeWorldId=worldLibrary.activeId;
 let state = normalizeState(loadState());
 
+const WORLD_UNDO_LIMIT=25;
+const worldUndoHistory=new Map();
+const worldUndoBaselines=new Map();
+const WORLD_UNDO_IGNORED_KEYS=new Set([
+  "theme","language","editingWorldName","editingTitle","editingName","editingDiagnosis",
+  "expanded","cardExpanded","traitsSectionExpanded","actionsSectionExpanded",
+  "defensesSectionExpanded","actionSubsectionsExpanded","selectedDay"
+]);
+let worldUndoSuppressed=false;
+
+function cloneUndoComparable(value){
+  if(Array.isArray(value)) return value.map(cloneUndoComparable);
+  if(!value || typeof value!=="object") return value;
+  return Object.fromEntries(Object.entries(value)
+    .filter(([key])=>!WORLD_UNDO_IGNORED_KEYS.has(key) && !key.startsWith("editing") && !key.endsWith("Expanded"))
+    .map(([key,item])=>[key,cloneUndoComparable(item)]));
+}
+
+function createWorldUndoSnapshot(value=state){
+  return structuredClone(value);
+}
+
+function worldUndoSignature(snapshot){
+  return JSON.stringify(cloneUndoComparable(snapshot));
+}
+
+function getActiveWorldUndoStack(){
+  if(!worldUndoHistory.has(activeWorldId)) worldUndoHistory.set(activeWorldId,[]);
+  return worldUndoHistory.get(activeWorldId);
+}
+
+function ensureWorldUndoBaseline(){
+  if(!worldUndoBaselines.has(activeWorldId)){
+    worldUndoBaselines.set(activeWorldId,createWorldUndoSnapshot());
+  }
+}
+
+function resetActiveWorldUndoTracking(clearHistory=false){
+  if(clearHistory) worldUndoHistory.set(activeWorldId,[]);
+  worldUndoBaselines.set(activeWorldId,createWorldUndoSnapshot());
+  updateUndoButton();
+}
+
+function updateUndoButton(){
+  const button=document.getElementById("undoButton");
+  if(!button) return;
+  const available=getActiveWorldUndoStack().length>0;
+  button.disabled=!available;
+  const label=available
+    ? (currentLanguage==="en" ? "Undo last change" : "Deshacer último cambio")
+    : (currentLanguage==="en" ? "No changes to undo" : "No hay cambios que deshacer");
+  button.title=label;
+  button.setAttribute("aria-label",label);
+}
+
+function captureWorldUndoStep(){
+  const current=createWorldUndoSnapshot();
+  const previous=worldUndoBaselines.get(activeWorldId);
+  if(previous && worldUndoSignature(previous)!==worldUndoSignature(current)){
+    const stack=getActiveWorldUndoStack();
+    stack.push(previous);
+    if(stack.length>WORLD_UNDO_LIMIT) stack.splice(0,stack.length-WORLD_UNDO_LIMIT);
+  }
+  worldUndoBaselines.set(activeWorldId,current);
+  updateUndoButton();
+}
+
+function undoLastWorldChange(){
+  const stack=getActiveWorldUndoStack();
+  if(!stack.length){
+    updateUndoButton();
+    return;
+  }
+  const previous=stack.pop();
+  worldUndoSuppressed=true;
+  state=normalizeState(createWorldUndoSnapshot(previous));
+  state.settings.theme=currentTheme;
+  state.settings.language=currentLanguage;
+  worldUndoBaselines.set(activeWorldId,createWorldUndoSnapshot());
+  persistWorldLibrary();
+  render();
+  worldUndoSuppressed=false;
+  const indicator=document.getElementById("worldSaveState");
+  if(indicator) indicator.textContent=currentLanguage==="en" ? "Change undone" : "Cambio deshecho";
+}
+
+function randomInteger(min,max){
+  return Math.floor(Math.random()*(max-min+1))+min;
+}
+
+function randomChoice(values){
+  return values[Math.floor(Math.random()*values.length)];
+}
+
+function shuffledCopy(values){
+  const result=values.slice();
+  for(let index=result.length-1;index>0;index--){
+    const target=Math.floor(Math.random()*(index+1));
+    [result[index],result[target]]=[result[target],result[index]];
+  }
+  return result;
+}
+
+function randomEntityId(prefix){
+  const suffix=typeof crypto!=="undefined" && typeof crypto.randomUUID==="function"
+    ? crypto.randomUUID()
+    : `${Date.now()}-${Math.random().toString(36).slice(2,10)}`;
+  return `${prefix}-${suffix}`;
+}
+
+function materializeNarrativeText(value,context){
+  return String(value ?? "").replace(/\{(region|city)(\d)\}/g,(_,kind,index)=>{
+    const collection=kind==="region" ? context.regions : context.cities;
+    return collection[Number(index)] || "un lugar lejano";
+  });
+}
+
+function createNarrativeContext(seed,useExistingContext=false){
+  const fallback={
+    regions:seed.regions.map(spec=>randomChoice(spec.names)),
+    cities:seed.regions.map(spec=>randomChoice(spec.cities))
+  };
+  if(!useExistingContext) return fallback;
+  const existing=shuffledCopy(state.regions || []);
+  if(!existing.length){
+    return {
+      regions:["una región fronteriza","la región central","las tierras del sur","una comarca aislada"],
+      cities:["la capital","una ciudad amurallada","un importante puerto comercial","un asentamiento remoto"]
+    };
+  }
+  return {
+    regions:Array.from({length:4},(_,index)=>existing[index%existing.length]?.name || fallback.regions[index]),
+    cities:Array.from({length:4},(_,index)=>{
+      const region=existing[index%existing.length];
+      const city=region?.cities?.length ? randomChoice(region.cities) : null;
+      return city?.name || `la principal ciudad de ${region?.name || fallback.regions[index]}`;
+    })
+  };
+}
+
+function buildNarrativeGeneration({eventCount=0,regionCount=0,useExistingContext=false}={}){
+  const seed=randomChoice(NARRATIVE_SEEDS);
+  const context=createNarrativeContext(seed,useExistingContext);
+  const allRegions=seed.regions.map((spec,index)=>{
+    const cityId=randomEntityId("city");
+    return {
+      id:randomEntityId("region"),
+      name:context.regions[index],
+      editingName:false,
+      diagnosis:randomChoice(spec.diagnoses),
+      editingDiagnosis:false,
+      stability:randomChoice(spec.stability),
+      military:randomChoice(spec.military),
+      politics:{
+        government:randomInteger(1,5),
+        legitimacy:randomInteger(1,5),
+        corruption:randomInteger(1,5),
+        religion:randomInteger(1,5),
+        magic:randomInteger(1,5)
+      },
+      cities:[{
+        id:cityId,
+        name:context.cities[index],
+        editingName:false,
+        state:randomChoice(spec.cityStates),
+        population:randomChoice(spec.populations),
+        notes:materializeNarrativeText(spec.notes,context),
+        expanded:false,
+        ratings:{
+          security:randomInteger(1,5),
+          economy:randomInteger(1,5),
+          corruption:randomInteger(1,5),
+          legitimacy:randomInteger(1,5)
+        }
+      }],
+      characters:[],
+      notes:materializeNarrativeText(spec.notes,context)
+    };
+  });
+  const safeRegionCount=Math.min(4,Math.max(0,Math.round(Number(regionCount)||0)));
+  const safeEventCount=Math.min(3,Math.max(0,Math.round(Number(eventCount)||0)));
+  const regions=shuffledCopy(allRegions).slice(0,safeRegionCount);
+  const events=shuffledCopy(seed.events).slice(0,safeEventCount).map(template=>{
+    const milestoneCount=randomInteger(2,Math.min(5,template.milestones.length));
+    const eventName=materializeNarrativeText(randomChoice(template.names),context);
+    return {
+      id:randomEntityId("evento"),
+      name:eventName,
+      editingTitle:false,
+      status:randomChoice(STATUS.slice(0,5)),
+      progress:0,
+      trigger:materializeNarrativeText(template.trigger,context),
+      phase:materializeNarrativeText(template.phase,context),
+      notes:`${materializeNarrativeText(template.notes,context)}\n\nPremisa compartida: ${seed.premise}`,
+      milestones:template.milestones.slice(0,milestoneCount).map((text,index)=>({
+        text:materializeNarrativeText(text,context),
+        done:false,
+        currentSituation:index===0
+          ? `Los primeros indicios ya afectan a ${context.regions[index % context.regions.length]}.`
+          : "Este paso todavía no se ha desencadenado.",
+        involvedActivities:"Las autoridades, comunidades locales y grupos interesados intentan inclinar el resultado a su favor.",
+        availableAdventures:"Investigar los indicios, negociar con los implicados o intervenir antes de que la situación avance.",
+        directorNotes:`Mantener este hito conectado con la premisa: ${seed.premise}`
+      }))
+    };
+  });
+  return {events,regions,premise:seed.premise};
+}
+
+function showContentCreationDialog({symbol,title,message,actions,focusChoice,dismissChoice="cancel"}){
+  let overlay=document.getElementById("contentCreationOverlay");
+  if(!overlay){
+    overlay=document.createElement("div");
+    overlay.id="contentCreationOverlay";
+    overlay.className="import-conflict-overlay";
+    overlay.setAttribute("role","dialog");
+    overlay.setAttribute("aria-modal","true");
+    overlay.setAttribute("aria-hidden","true");
+    document.body.appendChild(overlay);
+  }
+  const symbolMarkup=symbol==="＋"
+    ? '<span class="header-create-glyph"></span>'
+    : `<span>${symbol}</span>`;
+  overlay.innerHTML=`
+    <div class="import-conflict-dialog">
+      <div class="import-conflict-heading">
+        <span class="import-conflict-symbol content-creation-symbol" aria-hidden="true">${symbolMarkup}</span>
+        <div><h3>${title}</h3></div>
+      </div>
+      <p class="import-conflict-message">${message}</p>
+      <div class="import-conflict-actions">
+        ${actions.map(action=>`<button type="button" class="${action.className || ""}" data-choice="${action.choice}">${action.label}</button>`).join("")}
+      </div>
+    </div>`;
+  return new Promise(resolve=>{
+    let settled=false;
+    const finish=choice=>{
+      if(settled) return;
+      settled=true;
+      overlay.classList.remove("open");
+      overlay.setAttribute("aria-hidden","true");
+      document.removeEventListener("keydown",handleKey);
+      resolve(choice);
+    };
+    const handleKey=event=>{if(event.key==="Escape") finish(dismissChoice)};
+    overlay.querySelectorAll("[data-choice]").forEach(button=>{button.onclick=()=>finish(button.dataset.choice)});
+    overlay.onclick=event=>{if(event.target===overlay) finish(dismissChoice)};
+    document.addEventListener("keydown",handleKey);
+    overlay.classList.add("open");
+    overlay.setAttribute("aria-hidden","false");
+    requestAnimationFrame(()=>overlay.querySelector(`[data-choice="${focusChoice}"]`)?.focus());
+  });
+}
+
+function chooseContentCreationAction(kind){
+  const english=currentLanguage==="en";
+  const isEvent=kind==="event";
+  const singular=english ? (isEvent?"event":"region") : (isEvent?"evento":"región");
+  const plural=english ? (isEvent?"events":"regions") : (isEvent?"eventos":"regiones");
+  return showContentCreationDialog({
+    symbol:"＋",
+    title:english ? `Add ${singular}` : `Añadir ${singular}`,
+    message:english ? `Choose how you want to add ${plural} to the current world.` : `Elige cómo quieres añadir ${plural} al mundo actual.`,
+    focusChoice:"new",
+    actions:[
+      {choice:"cancel",label:english?"Cancel":"Cancelar"},
+      {choice:"new",className:"primary",label:english?`Create new ${singular}`:`Crear nuev${isEvent?"o":"a"} ${singular}`},
+      {choice:"1",className:"import-conflict-copy",label:english?`Generate one random ${singular}`:`Generar ${isEvent?"un":"una"} ${singular} aleatori${isEvent?"o":"a"}`},
+      {choice:"multiple",className:"import-conflict-copy",label:english?`Generate several random ${plural}`:`Generar vari${isEvent?"os":"as"} ${plural} aleatori${isEvent?"os":"as"}`}
+    ]
+  });
+}
+
+function chooseGeneratedContentCount(kind){
+  const english=currentLanguage==="en";
+  const isEvent=kind==="event";
+  const plural=english ? (isEvent?"events":"regions") : (isEvent?"eventos":"regiones");
+  const counts=isEvent ? [2,3] : [2,3,4];
+  return showContentCreationDialog({
+    symbol:"⚄",
+    title:english ? `Generate several random ${plural}` : `Generar vari${isEvent?"os":"as"} ${plural} aleatori${isEvent?"os":"as"}`,
+    message:english ? `How many ${plural} do you want to generate?` : `¿Cuánt${isEvent?"os":"as"} ${plural} quieres generar?`,
+    focusChoice:String(counts[0]),
+    dismissChoice:"back",
+    actions:[
+      {choice:"back",label:english?"Back":"Regresar"},
+      ...counts.map(count=>({
+        choice:String(count),
+        className:"import-conflict-copy",
+        label:`${count} ${plural}`
+      }))
+    ]
+  });
+}
+
+function addGeneratedEvents(count){
+  const generated=buildNarrativeGeneration({eventCount:count,useExistingContext:true});
+  state.events.push(...generated.events);
+  Object.keys(milestoneDetailUI).forEach(key=>delete milestoneDetailUI[key]);
+  autoSave();
+  render();
+  const indicator=document.getElementById("worldSaveState");
+  if(indicator) indicator.textContent=currentLanguage==="en" ? "Events generated" : "Eventos generados";
+  document.getElementById("section-events")?.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function addGeneratedRegions(count){
+  const generated=buildNarrativeGeneration({regionCount:count});
+  state.regions.push(...generated.regions);
+  autoSave();
+  render();
+  const indicator=document.getElementById("worldSaveState");
+  if(indicator) indicator.textContent=currentLanguage==="en" ? "Regions generated" : "Regiones generadas";
+  document.getElementById("section-regions")?.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+async function openEventCreationDialog(){
+  while(true){
+    let choice=await chooseContentCreationAction("event");
+    if(choice==="cancel") return;
+    if(choice==="multiple"){
+      choice=await chooseGeneratedContentCount("event");
+      if(choice==="back") continue;
+    }
+    if(choice==="new") addEvent();
+    else addGeneratedEvents(Number(choice));
+    return;
+  }
+}
+
+async function openRegionCreationDialog(){
+  while(true){
+    let choice=await chooseContentCreationAction("region");
+    if(choice==="cancel") return;
+    if(choice==="multiple"){
+      choice=await chooseGeneratedContentCount("region");
+      if(choice==="back") continue;
+    }
+    if(choice==="new") addRegion();
+    else addGeneratedRegions(Number(choice));
+    return;
+  }
+}
+
 function persistWorldLibrary(){
   const current=worldLibrary.worlds.find(file=>file.id===activeWorldId);
   if(current) current.state=structuredClone(state);
@@ -2545,6 +2936,7 @@ function selectWorldFile(id){
   state=normalizeState(structuredClone(next.state));
   state.settings.theme=currentTheme;
   currentLanguage=state.settings.language;
+  resetActiveWorldUndoTracking(false);
   localStorage.setItem(WORLDBUILDING_THEME_KEY,currentTheme);
   localStorage.setItem(WORLDBUILDING_LANGUAGE_KEY,currentLanguage);
   persistWorldLibrary();
@@ -2566,6 +2958,7 @@ function addWorldFile(){
   activeWorldId=id;
   worldLibrary.activeId=id;
   state=normalized;
+  resetActiveWorldUndoTracking(true);
   persistWorldLibrary();
   render();
 }
@@ -2594,6 +2987,7 @@ function deleteWorldFile(){
   state=normalizeState(structuredClone(next.state));
   state.settings.theme=currentTheme;
   currentLanguage=state.settings.language;
+  resetActiveWorldUndoTracking(false);
   persistWorldLibrary();
   render();
 }
@@ -3029,6 +3423,7 @@ function syncPreferencesToState(){
 }
 
 function render(){
+  ensureWorldUndoBaseline();
   renderWorldSelector();
   renderWorldTitle();
   renderEvents();
@@ -3040,6 +3435,7 @@ function render(){
   renderFloatingNav();
   applyTheme();
   applyLanguage();
+  updateUndoButton();
 }
 
 const milestoneDetailUI={};
@@ -4095,7 +4491,7 @@ function handleTitleKey(event,i,value){
 
 function deleteEvent(i){
   const eventName = state.events[i]?.name || "este evento";
-  if(!confirm(`¿Eliminar la tarjeta "${eventName}"? Esta acción no se puede deshacer.`)) return;
+  if(!confirm(`¿Eliminar la tarjeta "${eventName}"? Podrás recuperar la acción con Deshacer.`)) return;
   state.events.splice(i,1);
   autoSave();
   renderEvents();
@@ -4248,7 +4644,7 @@ function handleRegionNameKey(event,i,value){
 
 function deleteRegion(i){
   const regionName = state.regions[i]?.name || "esta región";
-  if(!confirm(`¿Eliminar la región "${regionName}"? Esta acción no se puede deshacer.`)) return;
+  if(!confirm(`¿Eliminar la región "${regionName}"? Podrás recuperar la acción con Deshacer.`)) return;
   const deletedId = state.regions[i].id;
   state.regions.splice(i,1);
   Object.keys(state.relations).forEach(key=>{
@@ -4602,6 +4998,11 @@ function deleteLog(i){
 
 function autoSave(){
   syncPreferencesToState();
+  if(worldUndoSuppressed){
+    worldUndoBaselines.set(activeWorldId,createWorldUndoSnapshot());
+  }else{
+    captureWorldUndoStep();
+  }
   persistWorldLibrary();
   localStorage.setItem(WORLDBUILDING_THEME_KEY,currentTheme);
   localStorage.setItem(WORLDBUILDING_LANGUAGE_KEY,currentLanguage);
@@ -4731,6 +5132,7 @@ function chooseImportConflict(kind,name,language='es'){
           state=importedState;
           state.settings.theme=currentTheme;
           currentLanguage=state.settings.language;
+          resetActiveWorldUndoTracking(true);
           localStorage.setItem(WORLDBUILDING_THEME_KEY,currentTheme);
           localStorage.setItem(WORLDBUILDING_LANGUAGE_KEY,currentLanguage);
           persistWorldLibrary();
@@ -4746,6 +5148,7 @@ function chooseImportConflict(kind,name,language='es'){
         state=importedState;
         state.settings.theme=currentTheme;
         currentLanguage=state.settings.language;
+        resetActiveWorldUndoTracking(true);
         localStorage.setItem(WORLDBUILDING_THEME_KEY,currentTheme);
         localStorage.setItem(WORLDBUILDING_LANGUAGE_KEY,currentLanguage);
         persistWorldLibrary();
@@ -4770,6 +5173,7 @@ function chooseImportConflict(kind,name,language='es'){
       state=importedState;
       state.settings.theme=currentTheme;
       currentLanguage=state.settings.language;
+      resetActiveWorldUndoTracking(true);
       localStorage.setItem(WORLDBUILDING_THEME_KEY,currentTheme);
       localStorage.setItem(WORLDBUILDING_LANGUAGE_KEY,currentLanguage);
       persistWorldLibrary();
@@ -5321,6 +5725,14 @@ function syncSharedTheme(){
 }
 window.addEventListener("pageshow",syncSharedTheme);
 window.addEventListener("storage",event=>{if(event.key===SHARED_THEME_KEY)syncSharedTheme()});
+document.addEventListener("keydown",event=>{
+  if(!(event.ctrlKey||event.metaKey) || event.shiftKey || event.key.toLowerCase()!=="z") return;
+  if(document.querySelector(".import-conflict-overlay.open")) return;
+  const target=event.target;
+  if(target instanceof HTMLElement && (target.matches("input,textarea,[contenteditable='true']") || target.isContentEditable)) return;
+  event.preventDefault();
+  undoLastWorldChange();
+});
 render();
 </script>
 
