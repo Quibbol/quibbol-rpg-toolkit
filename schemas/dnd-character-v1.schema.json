@@ -1,15 +1,15 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://quibbol.github.io/apps-rol/schemas/dnd-character-v1.schema.json",
-  "title": "Archivo de Rol - Ficha de personaje D&D 5e 2024",
+  "$id": "https://quibbol.github.io/quibbol-rpg-toolkit/schemas/dnd-character-v1.schema.json",
+  "title": "Quibbol’s RPG Toolkit - Ficha de personaje D&D 5e 2024",
   "type": "object",
-  "required": ["_archivoRol", "characters"],
+  "required": ["_quibbolRpgToolkit", "characters"],
   "properties": {
-    "_archivoRol": {
+    "_quibbolRpgToolkit": {
       "type": "object",
       "required": ["application", "formatVersion", "module", "system", "entity", "schemaVersion"],
       "properties": {
-        "application": {"const": "archivo-de-rol"},
+        "application": {"const": "quibbol-rpg-toolkit"},
         "formatVersion": {"const": 1},
         "module": {"const": "character-sheet"},
         "system": {"const": "dnd-5e-2024"},
