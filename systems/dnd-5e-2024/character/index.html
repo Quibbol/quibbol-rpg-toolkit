@@ -12,6 +12,11 @@
 (()=>{
   const root=document.documentElement;
   root.classList.add('theme-booting');
+  if(location.protocol!=='file:'&&/\/index\.html$/i.test(location.pathname)){
+    const cleanAppUrl=new URL(location.href);
+    cleanAppUrl.pathname=cleanAppUrl.pathname.replace(/index\.html$/i,'');
+    history.replaceState(null,'',cleanAppUrl.href);
+  }
   const parse=raw=>{
     if(!raw)return null;
     try{const value=JSON.parse(raw);if(value&&(value.theme==='dark'||value.theme==='light'))return {theme:value.theme,updatedAt:Number(value.updatedAt)||0};}
