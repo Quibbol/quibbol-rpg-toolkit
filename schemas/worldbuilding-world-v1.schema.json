@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quibbol.github.io/apps-rol/schemas/worldbuilding-world-v1.schema.json",
+  "title": "Archivo de Rol - Mundo agnóstico",
+  "type": "object",
+  "required": ["_archivoRol", "_worldFile", "settings"],
+  "properties": {
+    "_archivoRol": {
+      "type": "object",
+      "required": ["application", "formatVersion", "module", "system", "entity", "schemaVersion"],
+      "properties": {
+        "application": {"const": "archivo-de-rol"},
+        "formatVersion": {"const": 1},
+        "module": {"const": "worldbuilding"},
+        "system": {"const": "agnostic"},
+        "entity": {"const": "world"},
+        "schemaVersion": {"const": 1},
+        "exportedAt": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "_worldFile": {
+      "type": "object",
+      "required": ["id", "version"],
+      "properties": {
+        "id": {"type": "string"},
+        "version": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": true
+    },
+    "settings": {
+      "type": "object",
+      "required": ["worldName"],
+      "properties": {
+        "worldName": {"type": "string"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
