@@ -1804,8 +1804,9 @@ body.npc-codex-open .npc-codex-button{
   .content-creation-symbol{margin:7px;border:2px solid var(--accent);border-radius:0;background:#5f4924;box-shadow:inset 0 0 0 3px var(--deep);color:#fff;transform:rotate(45deg)}.content-creation-symbol>span{display:block;line-height:1;transform:rotate(-45deg)}html[data-theme="light"] .content-creation-symbol{background:#ead2d8;box-shadow:inset 0 0 0 3px var(--panel);color:var(--accent)}
   .import-conflict-dialog h3{margin:0;font-family:Georgia,serif;letter-spacing:.045em}.import-conflict-message{margin:0;color:var(--muted);line-height:1.55}
   .import-conflict-actions{display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap;margin-top:22px}.import-conflict-actions button{width:auto;min-height:42px}.import-conflict-copy{border-color:var(--accent);color:var(--text)}
-  button.danger:is(.square-button,.icon-button),.milestone-delete{position:relative;display:inline-grid;place-items:center;padding:0;font-size:0;line-height:1;text-align:center}
-  button.danger:is(.square-button,.icon-button)::before,button.danger:is(.square-button,.icon-button)::after,.milestone-delete::before,.milestone-delete::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;border-radius:1px;background:currentColor}.milestone-delete::before,button.danger:is(.square-button,.icon-button)::before{transform:translate(-50%,-50%) rotate(45deg)}.milestone-delete::after,button.danger:is(.square-button,.icon-button)::after{transform:translate(-50%,-50%) rotate(-45deg)}
+  button.danger:is(.square-button,.icon-button):not(.milestone-delete){position:relative;display:inline-grid;place-items:center;padding:0;font-size:0;line-height:1;text-align:center}
+  button.danger:is(.square-button,.icon-button):not(.milestone-delete)::before,button.danger:is(.square-button,.icon-button):not(.milestone-delete)::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;border-radius:1px;background:currentColor}button.danger:is(.square-button,.icon-button):not(.milestone-delete)::before{transform:translate(-50%,-50%) rotate(45deg)}button.danger:is(.square-button,.icon-button):not(.milestone-delete)::after{transform:translate(-50%,-50%) rotate(-45deg)}
+  .milestone-delete{position:relative;display:inline-grid;place-items:center;text-align:center}.milestone-delete::before,.milestone-delete::after{content:none!important}.card-delete-glyph{position:relative;display:inline-block;width:1em;line-height:normal;overflow:hidden;text-indent:-9999px}.card-delete-glyph::before,.card-delete-glyph::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;border-radius:1px;background:currentColor}.card-delete-glyph::before{transform:translate(-50%,-50%) rotate(45deg)}.card-delete-glyph::after{transform:translate(-50%,-50%) rotate(-45deg)}
   @media(max-width:620px){.import-conflict-actions{display:grid;grid-template-columns:1fr}.import-conflict-actions button{width:100%}}
 </style></head>
 <body>
@@ -3790,7 +3791,7 @@ function renderEvents(){
               class="danger icon-button milestone-delete"
               title="Eliminar hito"
               aria-label="Eliminar hito"
-              onclick="deleteMilestone(${idx},${i})">×</button>
+              onclick="deleteMilestone(${idx},${i})"><span class="card-delete-glyph" aria-hidden="true">×</span></button>
           </div>
         `).join("") : '<div class="empty">No hay hitos. Añade el primer paso.</div>'}
       </div>
