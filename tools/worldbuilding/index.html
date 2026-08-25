@@ -2226,7 +2226,9 @@ function applyTheme(){
 
 function goToMainMenu(){
   autoSave();
-  window.location.assign("../../index.html");
+  const menuUrl=new URL("../../",window.location.href);
+  if(menuUrl.protocol==="file:")menuUrl.pathname+="index.html";
+  window.location.assign(menuUrl.href);
 }
 function toggleTheme(){
   const root = document.documentElement;
