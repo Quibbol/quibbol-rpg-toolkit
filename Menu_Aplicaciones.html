@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aplicaciones de Rol</title>
+<script id="theme-bootstrap">
+(()=>{
+  const root=document.documentElement;
+  root.classList.add('theme-booting');
+  const parse=raw=>{
+    if(!raw)return null;
+    try{const value=JSON.parse(raw);if(value&&(value.theme==='dark'||value.theme==='light'))return {theme:value.theme,updatedAt:Number(value.updatedAt)||0};}
+    catch(error){if(raw==='dark'||raw==='light')return {theme:raw,updatedAt:0};}
+    return null;
+  };
+  let fallback='dark';
+  try{const legacy=localStorage.getItem('appsRolMenuTheme');if(legacy==='light'||legacy==='dark')fallback=legacy;}catch(error){}
+  let stored=null;
+  try{stored=parse(localStorage.getItem('appsRolTheme'));}catch(error){}
+  const fromWindow=String(window.name||'').startsWith('appsRolTheme:')?parse(String(window.name).slice(13)):null;
+  const newest=[stored,fromWindow].filter(Boolean).sort((a,b)=>b.updatedAt-a.updatedAt)[0];
+  const urlTheme=new URLSearchParams(location.search).get('theme');
+  root.dataset.theme=urlTheme==='light'||urlTheme==='dark'?urlTheme:(newest?.theme||fallback);
+})();
+</script>
+<style id="theme-bootstrap-style">html.theme-booting *,html.theme-booting *::before,html.theme-booting *::after{transition:none!important;animation:none!important}</style>
+  <style>
+    :root{
+      --bg:#111318;--panel:#1b1f27;--panel2:#232936;--surface:#171b22;--deep:#0e1117;
+      --text:#ece7dc;--muted:#a9adba;--accent:#d0a85c;--border:#343b49;
+      --shadow:rgba(0,0,0,.34);--header-bg:rgba(13,16,21,.94);color-scheme:dark;
+    }
+    html[data-theme="light"]{
+      --bg:#f3f0e8;--panel:#fff;--panel2:#f3efe5;--surface:#f7f3eb;--deep:#ece7dc;
+      --text:#292821;--muted:#68675f;--accent:#8f3048;--border:#cfc8b8;
+      --shadow:rgba(67,55,35,.16);--header-bg:rgba(251,249,243,.94);color-scheme:light;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%}
+    body{
+      min-height:100vh;color:var(--text);font-family:Inter,"Segoe UI",Arial,sans-serif;
+      background:
+        radial-gradient(circle at 75% 0,color-mix(in srgb,var(--accent) 13%,transparent) 0,transparent clamp(260px,30vmax,580px)),
+        linear-gradient(135deg,#0002 25%,transparent 25%) 0 0/8px 8px,var(--bg);
+    }
+    button{font:inherit;color:var(--text);cursor:pointer}
+    .topbar{
+      position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+      gap:18px;min-height:72px;padding:10px 22px;background:color-mix(in srgb,var(--header-bg) 91%,transparent);
+      border-bottom:1px solid var(--border);backdrop-filter:blur(15px);
+    }
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .seal{
+      width:43px;height:43px;display:grid;place-items:center;flex:0 0 auto;overflow:hidden;
+      border:2px solid var(--accent);background:#5f4924;box-shadow:inset 0 0 0 3px var(--deep);
+      transform:rotate(45deg);
+    }
+    .seal img{width:29px;height:29px;object-fit:contain;transform:rotate(-45deg);filter:invert(1)}
+    html[data-theme="light"] .seal{background:#ead2d8;box-shadow:inset 0 0 0 3px var(--panel)}
+    html[data-theme="light"] .seal img{filter:none}
+    .brand h1{margin:0;font:800 20px/1 Georgia,serif;letter-spacing:.08em;text-transform:uppercase}
+    .brand small{display:block;margin-top:7px;color:var(--accent);font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    .theme-toggle{
+      width:42px;height:42px;display:grid;place-items:center;padding:0;border:1px solid var(--border);
+      border-radius:3px;background:var(--panel2);font-size:17px;font-weight:800;transition:.18s ease;
+    }
+    .theme-toggle:hover{border-color:var(--accent);transform:translateY(-1px)}
+    main{width:min(1180px,calc(100% - 36px));margin:0 auto;padding:clamp(56px,9vh,110px) 0 70px}
+    .intro{max-width:760px;margin:0 auto 38px;text-align:center}
+    .eyebrow{margin:0 0 12px;color:var(--accent);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    .intro h2{margin:0;font:800 clamp(34px,5vw,58px)/1.03 Georgia,serif;letter-spacing:.025em}
+    .intro p{max-width:650px;margin:18px auto 0;color:var(--muted);font-size:16px;line-height:1.65}
+    .app-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .app-card{
+      position:relative;display:flex;min-height:350px;overflow:hidden;color:var(--text);text-decoration:none;
+      background:color-mix(in srgb,var(--panel2) 70%,var(--panel));border:1px solid var(--border);border-radius:5px;
+      box-shadow:0 22px 60px var(--shadow);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+    }
+    .app-card:before{content:"";position:absolute;width:130px;height:130px;left:-90px;top:-90px;border:1px solid var(--accent);opacity:.32;transform:rotate(45deg)}
+    .app-card:after{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 48%,color-mix(in srgb,var(--accent) 7%,transparent));pointer-events:none}
+    .app-card:hover,.app-card:focus-visible{outline:0;border-color:var(--accent);transform:translateY(-5px);box-shadow:0 30px 75px var(--shadow)}
+    .card-content{position:relative;z-index:1;display:flex;flex-direction:column;width:100%;padding:32px}
+    .card-icon{
+      width:68px;height:68px;display:grid;place-items:center;margin-bottom:40px;color:var(--accent);
+      border:1px solid var(--accent);background:color-mix(in srgb,var(--accent) 9%,var(--surface));transform:rotate(45deg);
+    }
+    .card-icon svg{width:35px;height:35px;transform:rotate(-45deg);fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .role{margin:0 0 9px;color:var(--accent);font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+    .app-card h3{margin:0;font:800 29px/1.1 Georgia,serif;letter-spacing:.035em}
+    .app-card p{margin:15px 0 28px;color:var(--muted);line-height:1.6}
+    .launch{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:20px;border-top:1px solid var(--border);font-size:12px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+    .launch span:last-child{color:var(--accent);font-size:20px;transition:transform .2s ease}.app-card:hover .launch span:last-child{transform:translateX(4px)}
+    footer{padding:0 18px 28px;color:var(--muted);font-size:11px;text-align:center;letter-spacing:.08em;text-transform:uppercase}
+    @media(max-width:760px){.topbar{padding:10px 14px}.brand h1{font-size:17px}.app-grid{grid-template-columns:1fr}.app-card{min-height:310px}.card-icon{margin-bottom:30px}main{width:min(100% - 24px,600px);padding-top:48px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="seal" aria-hidden="true"><img src="icons8-icosahedron-64.png" alt=""></div>
+      <div><h1>Aplicaciones de Rol</h1><small>Dungeons &amp; Dragons</small></div>
+    </div>
+    <button id="themeToggle" class="theme-toggle" type="button" title="Cambiar a modo claro" aria-label="Cambiar a modo claro"><span aria-hidden="true">☾</span></button>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="menuTitle">
+      <p class="eyebrow">Selecciona una aplicación</p>
+      <h2 id="menuTitle">Tu mesa de juego, en un solo lugar</h2>
+      <p>Accede a las herramientas de dirección de campaña o abre la ficha digital de tu personaje.</p>
+    </section>
+
+    <section class="app-grid" aria-label="Aplicaciones disponibles">
+      <a class="app-card" href="Panel_de_Mundo_v2.html">
+        <div class="card-content">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 5 42 16v16L24 43 6 32V16Z"/><path d="m24 5 8 15-8 23-8-23Z"/><path d="m6 16 10 4h16l10-4M6 32l10-12m26 12L32 20"/></svg>
+          </div>
+          <p class="role">Para directores de juego</p>
+          <h3>Panel de Mundo</h3>
+          <p>Organiza eventos, regiones, facciones, personajes, calendarios y el desarrollo completo de tu campaña.</p>
+          <div class="launch"><span>Abrir Panel de Mundo</span><span aria-hidden="true">→</span></div>
+        </div>
+      </a>
+
+      <a class="app-card" href="Ficha_DnD.html">
+        <div class="card-content">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M14 5h17l7 7v31H14Z"/><path d="M31 5v8h7M20 22h12M20 29h12M20 36h8"/><circle cx="14" cy="15" r="7"/></svg>
+          </div>
+          <p class="role">Para jugadores</p>
+          <h3>Ficha de personaje D&amp;D</h3>
+          <p>Gestiona características, combate, equipo, conjuros, recursos y la historia de tus personajes de D&amp;D.</p>
+          <div class="launch"><span>Abrir ficha de personaje</span><span aria-hidden="true">→</span></div>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <footer>Herramientas locales · Los datos permanecen en este navegador</footer>
+  <script>
+    const SHARED_THEME_KEY='appsRolTheme';
+    const THEME_WINDOW_PREFIX='appsRolTheme:';
+    const root=document.documentElement;
+    const toggle=document.getElementById('themeToggle');
+
+    function parseThemePreference(raw){
+      if(!raw)return null;
+      try{
+        const value=JSON.parse(raw);
+        if(value&&(value.theme==='dark'||value.theme==='light'))return {theme:value.theme,updatedAt:Number(value.updatedAt)||0};
+      }catch(error){
+        if(raw==='dark'||raw==='light')return {theme:raw,updatedAt:0};
+      }
+      return null;
+    }
+
+    function readThemePreference(fallback='dark'){
+      const urlTheme=new URLSearchParams(location.search).get('theme');
+      if(urlTheme==='dark'||urlTheme==='light'){
+        try{const cleanUrl=new URL(location.href);cleanUrl.searchParams.delete('theme');history.replaceState(null,'',cleanUrl.href);}catch(error){}
+        return urlTheme;
+      }
+      let stored=null;
+      try{stored=parseThemePreference(localStorage.getItem(SHARED_THEME_KEY));}catch(error){}
+      const fromWindow=String(window.name||'').startsWith(THEME_WINDOW_PREFIX)
+        ?parseThemePreference(String(window.name).slice(THEME_WINDOW_PREFIX.length))
+        :null;
+      const newest=[stored,fromWindow].filter(Boolean).sort((a,b)=>b.updatedAt-a.updatedAt)[0];
+      return newest?.theme||(fallback==='light'?'light':'dark');
+    }
+
+    function writeThemePreference(theme){
+      const preference={theme:theme==='light'?'light':'dark',updatedAt:Date.now()};
+      const serialized=JSON.stringify(preference);
+      try{localStorage.setItem(SHARED_THEME_KEY,serialized);}catch(error){}
+      try{window.name=THEME_WINDOW_PREFIX+serialized;}catch(error){}
+      return preference.theme;
+    }
+
+    function renderThemeButton(){
+      const dark=root.dataset.theme==='dark';
+      toggle.querySelector('span').textContent=dark?'☾':'☀';
+      const label=dark?'Cambiar a modo claro':'Cambiar a modo oscuro';
+      toggle.title=label;
+      toggle.setAttribute('aria-label',label);
+    }
+
+    function syncSharedTheme(){
+      const sharedTheme=readThemePreference(root.dataset.theme);
+      if(sharedTheme!==root.dataset.theme){
+        writeThemePreference(sharedTheme);
+        root.dataset.theme=sharedTheme;
+        renderThemeButton();
+      }
+    }
+
+    root.dataset.theme=readThemePreference(localStorage.getItem('appsRolMenuTheme'));
+    writeThemePreference(root.dataset.theme);
+    requestAnimationFrame(()=>root.classList.remove('theme-booting'));
+
+    toggle.addEventListener('click',()=>{
+      root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';
+      writeThemePreference(root.dataset.theme);
+      renderThemeButton();
+    });
+    document.querySelectorAll('.app-card').forEach(link=>link.addEventListener('click',()=>{
+      writeThemePreference(root.dataset.theme);
+      const destination=new URL(link.href,location.href);
+      destination.searchParams.set('theme',root.dataset.theme);
+      link.href=destination.href;
+    }));
+    window.addEventListener('pageshow',syncSharedTheme);
+    window.addEventListener('storage',event=>{if(event.key===SHARED_THEME_KEY)syncSharedTheme()});
+    renderThemeButton();
+  </script>
+</body>
+</html>
