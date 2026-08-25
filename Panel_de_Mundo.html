@@ -1,0 +1,5117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon adaptativo según el esquema de color del navegador -->
+  <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="data:image/png;base64,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">
+  <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="data:image/png;base64,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">
+
+  <title>Panel de Mundo — ...</title>
+  <style>
+    :root{
+      --bg:#111318; --panel:#1b1f27; --panel2:#232936; --text:#ece7dc;
+      --muted:#a9adba; --accent:#d0a85c; --danger:#b44747; --ok:#4f8a5b;
+      --border:#343b49;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background:linear-gradient(180deg,#0d0f13,#151922); color:var(--text);
+    }
+    header{
+      padding:20px; border-bottom:1px solid var(--border); background:#0d1015;
+      position:sticky; top:0; z-index:10;
+    }
+    header h1{margin:0 0 6px;font-size:1.6rem}
+    header p{margin:0;color:var(--muted)}
+    .toolbar{
+      display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;
+    }
+    button, select, input, textarea{
+      background:var(--panel2); color:var(--text); border:1px solid var(--border);
+      border-radius:8px; padding:9px 10px;
+    }
+    button{cursor:pointer}
+    button:hover{filter:brightness(1.12)}
+    .primary{background:#5f4924;border-color:#8c6d35}
+    .danger{background:#532929;border-color:#804242}
+    main{max-width:1400px;margin:auto;padding:18px}
+    .grid{
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:16px;
+    }
+    /* Un único evento conserva el ancho que tendría cada tarjeta en una fila de dos.
+       Con dos, tres o más eventos, la rejilla mantiene exactamente el comportamiento de v1. */
+    #eventsGrid > .card:only-child{
+      width:calc((100% - 16px) / 2);
+    }
+    @media(max-width:675px){
+      #eventsGrid > .card:only-child{width:100%}
+    }
+    .card{
+      background:rgba(27,31,39,.96); border:1px solid var(--border);
+      border-radius:14px; padding:16px; box-shadow:0 10px 30px rgba(0,0,0,.22);
+    }
+    .card h2,.card h3{margin-top:0}
+    .event-card-header{
+      display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start;margin-bottom:12px;
+    }
+    .event-title-area{min-width:0}
+    .event-title-display{
+      margin:0;
+      font-size:1.5rem;
+      line-height:1.2;
+      overflow-wrap:anywhere;
+    }
+    .event-title-input{
+      font-size:1.25rem;font-weight:700;padding:7px 9px;background:#151922;
+    }
+    .event-card-actions{
+      display:flex;gap:6px;align-items:center;
+    }
+    .square-button{
+      width:36px;height:36px;padding:0;display:inline-flex;align-items:center;justify-content:center;
+      border-radius:7px;font-size:1rem;line-height:1;
+    }
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+    label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:5px}
+    input,select,textarea{width:100%}
+    textarea{min-height:90px;resize:vertical}
+    .progress-wrap{margin:12px 0}
+    .progress{
+      height:14px;background:#0e1117;border:1px solid var(--border);
+      border-radius:999px;overflow:hidden;
+    }
+    .progress > div{height:100%;background:linear-gradient(90deg,#80632d,#d0a85c);width:0}
+    .progress-label{display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem;margin-top:5px}
+    .region{
+      border-top:1px solid var(--border);padding:10px 0;
+    }
+    .region:first-child{border-top:0}
+    .region-head{
+      display:grid;grid-template-columns:1fr auto;align-items:start;gap:10px;
+    }
+    .region-title-area{min-width:0}
+    .region-title-display{
+      margin:0;font-size:1.05rem;line-height:1.25;overflow-wrap:anywhere;
+    }
+    .region-title-input{
+      font-size:1rem;font-weight:700;padding:7px 9px;background:#151922;
+    }
+    .region-actions{display:flex;gap:6px;align-items:center}
+    .region-section{
+      margin-top:14px;padding-top:12px;border-top:1px solid var(--border);
+    }
+    .region-section h4{margin:0 0 10px;font-size:.95rem}
+    .political-grid{display:grid;gap:8px}
+    .political-row{
+      display:grid;grid-template-columns:minmax(120px,1fr) auto;gap:12px;align-items:center;
+      padding:7px 9px;background:#171b22;border:1px solid var(--border);border-radius:8px;
+    }
+    .rating-dots{display:flex;gap:5px}
+    .rating-dot{
+      width:18px;height:18px;padding:0;border-radius:50%;background:#11151c;
+      border:1px solid #596173;
+    }
+    .rating-dot.filled{background:var(--accent);border-color:var(--accent)}
+    .relations-list{display:grid;gap:8px}
+    .relation-row{
+      display:grid;grid-template-columns:minmax(140px,1fr) minmax(140px,190px);
+      gap:10px;align-items:center;
+    }
+    .relation-name{overflow-wrap:anywhere}
+
+    .subsection-head{
+      display:flex;justify-content:space-between;align-items:center;gap:10px;
+      margin-bottom:10px;flex-wrap:wrap;
+    }
+    .subsection-head h4{margin:0}
+    .city-list,.character-list{display:grid;gap:10px}
+    .city-card,.character-card{
+      padding:11px;background:#171b22;border:1px solid var(--border);border-radius:10px;
+    }
+    .item-head{
+      display:grid;grid-template-columns:1fr auto;gap:8px;align-items:start;margin-bottom:9px;
+    }
+    .item-title{margin:0;font-size:1rem;line-height:1.25;overflow-wrap:anywhere}
+    .item-actions{display:flex;gap:6px}
+    .compact-grid{
+      display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;
+    }
+    .city-ratings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:9px}
+    .city-rating{
+      padding:8px;background:#11151c;border:1px solid var(--border);border-radius:8px;
+    }
+    .city-rating-label{
+      display:flex;justify-content:space-between;gap:8px;font-size:.78rem;color:var(--muted);
+      margin-bottom:6px;
+    }
+    .mini-dots{display:flex;gap:4px}
+    .mini-dot{
+      width:15px;height:15px;padding:0;border-radius:50%;background:#0d1117;
+      border:1px solid #596173;
+    }
+    .mini-dot.filled{background:var(--accent);border-color:#e0bd76}
+    .item-notes{margin-top:9px;min-height:64px}
+    @media(max-width:620px){
+      .compact-grid,.city-ratings{grid-template-columns:1fr}
+    }
+
+
+    .diagnosis-wrap{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:7px}
+    .diagnosis-tag{
+      display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border-radius:999px;
+      border:1px solid var(--border);font-size:.82rem;font-weight:700;background:#171b22;
+    }
+    .diagnosis-dot{width:9px;height:9px;border-radius:50%;background:var(--muted)}
+    .diagnosis-tag[data-tone="positive"] .diagnosis-dot{background:#56c271}
+    .diagnosis-tag[data-tone="alert"] .diagnosis-dot{background:#d6b34f}
+    .diagnosis-tag[data-tone="danger"] .diagnosis-dot{background:#d66b5f}
+    .diagnosis-tag[data-tone="war"] .diagnosis-dot{background:#7387d8}
+    .diagnosis-tag[data-tone="dark"] .diagnosis-dot{background:#684d7e}
+    .diagnosis-tag[data-tone="special"] .diagnosis-dot{background:#c7b1ff}
+    .diagnosis-editor{
+      margin-top:10px;padding:10px;background:#11151c;border:1px solid var(--border);border-radius:9px;
+    }
+    .diagnosis-editor-head{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:8px}
+    .diagnosis-suggestions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+    .suggestion-chip{
+      padding:5px 8px;border-radius:999px;font-size:.78rem;background:#1a1f29;border:1px solid var(--border);
+    }
+    .diagnosis-input-row{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:end}
+    @media(max-width:620px){.diagnosis-input-row{grid-template-columns:1fr}}
+
+
+    #regionsCard{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+      background:transparent;
+      border:0;
+      box-shadow:none;
+      padding:0;
+    }
+    #regionsCard > .region{
+      margin:0;
+      height:fit-content;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:16px;
+      box-shadow:0 8px 22px rgba(0,0,0,.16);
+    }
+    #regionsCard > .empty{
+      grid-column:1/-1;
+    }
+    @media(max-width:760px){
+      #regionsCard{grid-template-columns:1fr}
+    }
+
+
+    .city-list,
+    .character-list{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .city-list > .city-card,
+    .character-list > .character-card{
+      margin:0;
+      min-width:0;
+      height:fit-content;
+    }
+    .city-list > .empty,
+    .character-list > .empty{
+      grid-column:1/-1;
+    }
+    @media(max-width:1100px){
+      .city-list,
+      .character-list{grid-template-columns:1fr}
+    }
+
+
+
+    #playerCharactersGrid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+    }
+    .player-card{
+      min-width:0;
+      height:fit-content;
+    }
+    .player-card-section{
+      margin-top:14px;
+      padding-top:14px;
+      border-top:1px solid var(--border);
+    }
+    .player-card-section:first-of-type{
+      margin-top:8px;
+    }
+    .player-identity-row{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(0,1fr) 92px;
+      gap:10px;
+    }
+    .ability-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:8px;
+    }
+    .ability-box{
+      padding:9px;
+      border:1px solid var(--border);
+      border-radius:10px;
+      background:rgba(255,255,255,.025);
+    }
+    .ability-box label{
+      margin-bottom:5px;
+      text-align:center;
+    }
+    .ability-line{
+      display:grid;
+      grid-template-columns:18px minmax(0,1fr) 42px;
+      gap:7px;
+      align-items:center;
+    }
+    .ability-line input{
+      min-width:0;
+      padding:7px 5px;
+      text-align:center;
+    }
+    .ability-modifier{
+      text-align:center;
+      font-weight:800;
+      color:var(--text);
+    }
+    .proficiency-dot{
+      width:12px;
+      height:12px;
+      border-radius:50%;
+      border:1px solid var(--muted);
+      background:transparent;
+      padding:0;
+      min-width:12px;
+      cursor:pointer;
+      box-shadow:none;
+    }
+    .proficiency-dot.active{
+      background:var(--accent);
+      border-color:var(--accent);
+    }
+    .proficiency-dot:hover{
+      transform:none;
+      filter:brightness(1.15);
+    }
+    .derived-stats-row{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:10px;
+      margin-top:10px;
+    }
+    .derived-stat{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:9px 10px;
+      border:1px solid var(--border);
+      border-radius:10px;
+      background:rgba(255,255,255,.025);
+    }
+    .derived-stat label{
+      margin:0;
+    }
+    .derived-value{
+      font-weight:800;
+      white-space:nowrap;
+    }
+    .player-related-list{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .player-related-list > .empty{
+      grid-column:1/-1;
+    }
+    .player-notes{
+      min-height:130px;
+    }
+    @media(max-width:1100px){
+      #playerCharactersGrid{grid-template-columns:1fr}
+    }
+    @media(max-width:720px){
+      .player-identity-row,
+      .ability-grid,
+      .player-related-list,
+      .derived-stats-row{
+        grid-template-columns:1fr;
+      }
+    }
+
+    .floating-nav-button{
+      position:fixed;
+      left:18px;
+      top:var(--floating-nav-button-top,18px);
+      z-index:1001;
+      width:48px;
+      height:48px;
+      padding:0;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      font-size:1.15rem;
+      box-shadow:0 10px 28px rgba(0,0,0,.38);
+    }
+    .floating-nav{
+      position:fixed;
+      left:18px;
+      top:var(--floating-nav-panel-top,76px);
+      bottom:18px;
+      z-index:1000;
+      width:max-content;
+      min-width:180px;
+      max-width:min(420px,calc(100vw - 36px));
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      background:#11151c;
+      border:1px solid var(--border);
+      border-radius:14px;
+      box-shadow:0 18px 48px rgba(0,0,0,.45);
+      transform:translateX(calc(-100% - 36px));
+      opacity:0;
+      pointer-events:none;
+      transition:transform .2s ease,opacity .2s ease;
+    }
+    .floating-nav.open{
+      transform:translateX(0);
+      opacity:1;
+      pointer-events:auto;
+    }
+    .floating-nav-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:12px 14px;
+      border-bottom:1px solid var(--border);
+    }
+    .floating-nav-header h3{margin:0;font-size:1rem}
+    .floating-nav-content{
+      padding:10px;
+      overflow:auto;
+      width:max-content;
+      min-width:100%;
+      max-width:100%;
+      box-sizing:border-box;
+    }
+    .floating-nav-group{margin-bottom:12px}
+    .floating-nav-label{
+      padding:0 7px 5px;
+      color:var(--muted);
+      font-size:.72rem;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .floating-nav-link{
+      width:100%;
+      margin:2px 0;
+      padding:7px 9px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      text-align:left;
+      white-space:nowrap;
+      background:transparent;
+      border:1px solid transparent;
+    }
+    .floating-nav-link:hover{background:#1c222d;border-color:var(--border)}
+    .floating-nav-link.sub{
+      padding-left:25px;
+      color:var(--muted);
+      font-size:.8rem;
+    }
+    .floating-nav-link.active{
+      background:#242d3c;
+      border-color:#596b8a;
+      color:var(--text);
+    }
+    .floating-nav-dot{
+      width:7px;
+      height:7px;
+      flex:0 0 auto;
+      border-radius:50%;
+      background:currentColor;
+      opacity:.75;
+    }
+    .floating-nav-empty{
+      padding:6px 9px;
+      color:var(--muted);
+      font-size:.8rem;
+    }
+    .nav-scroll-target{scroll-margin-top:var(--nav-scroll-offset,96px)}
+    @media(max-width:760px){
+      .floating-nav{
+        top:var(--floating-nav-panel-top,70px);
+        left:12px;
+        bottom:12px;
+        width:calc(100vw - 24px)
+      }
+      .floating-nav-button{
+        left:14px;
+        top:var(--floating-nav-button-top,14px)
+      }
+    }
+
+
+    .calendar-controls{
+      display:flex;
+      align-items:center;
+      min-height:38px;
+      margin:-2px 0 10px;
+    }
+    .calendar-month-count-control{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:var(--muted);
+      font-size:.8rem;
+      font-weight:750;
+    }
+    .calendar-month-count-control input{
+      width:68px;
+      padding:5px 8px;
+    }
+    .calendar-month-top{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:8px;
+      align-items:center;
+    }
+    .calendar-month-subrow{
+      display:flex;
+      align-items:center;
+      margin-top:6px;
+    }
+    .calendar-days-control{
+      display:flex;
+      align-items:center;
+      gap:5px;
+      color:var(--muted);
+      font-size:.75rem;
+      font-weight:750;
+      white-space:nowrap;
+    }
+    .calendar-days-control input{
+      width:58px;
+      padding:5px 7px;
+      text-align:center;
+    }
+    .calendar-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:10px;
+    }
+    .calendar-month{
+      min-width:0;
+      padding:9px;
+      background:var(--card-bg);
+      border:1px solid var(--border);
+      border-radius:12px;
+      box-shadow:0 8px 22px var(--shadow);
+    }
+    .calendar-month-header{
+      margin-bottom:8px;
+    }
+    .calendar-month-name{
+      min-width:0;
+      font-size:.9rem;
+      font-weight:750;
+      padding:5px 7px;
+      background:var(--surface-input);
+    }
+    .calendar-season{
+      width:auto;
+      max-width:116px;
+      padding:5px 22px 5px 8px;
+      border-radius:999px;
+      font-size:.68rem;
+      font-weight:700;
+      background:var(--surface);
+    }
+    .calendar-weekdays,
+    .calendar-days{
+      display:grid;
+      grid-template-columns:repeat(7,minmax(0,1fr));
+      gap:3px;
+    }
+    .calendar-weekdays{margin-bottom:4px}
+    .calendar-weekday{
+      padding:2px 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:.64rem;
+      font-weight:750;
+    }
+    .calendar-day,
+    .calendar-day-spacer{
+      aspect-ratio:1;
+      min-width:0;
+    }
+    .calendar-day{
+      width:100%;
+      padding:0;
+      display:grid;
+      place-items:center;
+      border-radius:7px;
+      background:var(--surface);
+      font-size:.7rem;
+    }
+    .calendar-day:hover{border-color:var(--accent)}
+    .calendar-day.selected{
+      border-color:color-mix(in srgb, var(--accent) 45%, var(--border));
+      box-shadow:0 0 0 1px color-mix(in srgb, var(--accent) 25%, transparent);
+      background:var(--panel2);
+      font-weight:800;
+    }
+    @supports not (color: color-mix(in srgb, white, black)){
+      .calendar-day.selected{
+        border-color:#6b7280;
+        box-shadow:0 0 0 1px rgba(107,114,128,.35);
+      }
+    }
+    @media(max-width:1080px){
+      .calendar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:680px){
+      .calendar-grid{grid-template-columns:1fr}
+    }
+
+    .small{font-size:.85rem;color:var(--muted)}
+    .milestone-list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    .milestone-row{
+      display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;
+      gap:8px;align-items:center;
+      padding:8px;background:var(--surface);border:1px solid var(--border);border-radius:8px;
+    }
+    .milestone-row.active{border-color:color-mix(in srgb, var(--accent) 45%, var(--border));box-shadow:0 0 0 1px color-mix(in srgb, var(--accent) 25%, transparent)}
+    .milestone-row input[type="checkbox"]{width:18px;height:18px;cursor:pointer}
+    .milestone-row input[type="text"]{padding:7px 9px;font-weight:650}
+    .milestone-row.done input[type="text"]{
+      text-decoration:line-through;color:var(--muted);
+    }
+    .milestone-detail{
+      margin-top:12px;padding:10px;
+      background:var(--surface-deep);border:1px solid var(--border);border-radius:9px;
+    }
+    .milestone-detail-head{
+      display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px;
+    }
+    .milestone-detail-head strong{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .milestone-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+    .milestone-tab{
+      padding:6px 9px;background:var(--surface);border:1px solid var(--border);
+      border-radius:999px;font-size:.82rem;
+    }
+    .milestone-tab.active{border-color:var(--accent);background:var(--panel2)}
+    .milestone-detail textarea{min-height:120px;resize:vertical}
+    .milestone-detail-empty{color:var(--muted);font-style:italic;padding:6px 0}
+    
+    @supports not (color: color-mix(in srgb, white, black)){
+      .milestone-row.active{border-color:#6b7280;box-shadow:0 0 0 1px rgba(107,114,128,.35)}
+    }
+
+    @media(max-width:560px){
+      .milestone-row{grid-template-columns:auto minmax(0,1fr) auto}
+      .milestone-row .milestone-delete{grid-column:3}
+      .milestone-detail-head{align-items:flex-start;flex-direction:column}
+    }
+    .icon-button{padding:7px 10px;min-width:38px}
+    .status-pill{
+      padding:3px 8px;border-radius:999px;font-size:.75rem;background:#303746;
+    }
+    .section-title{margin:28px 0 12px}
+    .log-item{
+      border-left:3px solid var(--accent);padding:8px 10px;margin:8px 0;background:#171b22;
+      border-radius:6px;
+    }
+    .log-item strong{display:block}
+    .empty{color:var(--muted);font-style:italic}
+    footer{padding:28px;text-align:center;color:var(--muted)}
+    @media(max-width:650px){.row{grid-template-columns:1fr}}
+  
+    :root{
+      --body-gradient:linear-gradient(180deg,#0d0f13,#151922);
+      --header-bg:#0d1015;
+      --card-bg:rgba(27,31,39,.96);
+      --surface:#171b22;
+      --surface-deep:#11151c;
+      --surface-input:#151922;
+      --shadow:rgba(0,0,0,.22);
+    }
+    html[data-theme="light"]{
+      --bg:#f3f0e8;
+      --panel:#ffffff;
+      --panel2:#f3efe5;
+      --text:#292821;
+      --muted:#68675f;
+      --accent:#9a6d22;
+      --danger:#a34444;
+      --ok:#3f7b4c;
+      --border:#cfc8b8;
+      --body-gradient:linear-gradient(180deg,#ebe7dc,#f8f6f0);
+      --header-bg:#fbf9f3;
+      --card-bg:rgba(255,255,255,.97);
+      --surface:#f5f1e8;
+      --surface-deep:#ece7dc;
+      --surface-input:#fffdf8;
+      --shadow:rgba(67,55,35,.13);
+    }
+    body{background:var(--body-gradient)}
+    header{background:var(--header-bg)}
+    .card{background:var(--card-bg);box-shadow:0 10px 30px var(--shadow)}
+    #regionsCard > .region{background:var(--card-bg);box-shadow:0 8px 22px var(--shadow)}
+    .event-title-input,.region-title-input{background:var(--surface-input)}
+    .political-row,.city-card,.character-card,.diagnosis-tag,.milestone-row,.log-item{background:var(--surface)}
+    .city-rating,.diagnosis-editor,.floating-nav{background:var(--surface-deep)}
+    .suggestion-chip{background:var(--panel)}
+    .progress{background:var(--surface-deep)}
+    .rating-dot,.mini-dot{background:var(--surface-deep)}
+    html[data-theme="light"] .primary{background:#e8d4aa;border-color:#b68b45}
+    html[data-theme="light"] .danger{background:#f1d6d3;border-color:#c4837d}
+    html[data-theme="light"] .floating-nav-link:hover{background:#e8e2d5}
+    html[data-theme="light"] .floating-nav-link.active{background:#ded6c7;border-color:#9d8e76}
+
+    header{padding:12px 18px}
+    .header-main{
+      display:grid;
+      grid-template-columns:minmax(250px,auto) minmax(0,1fr) auto;
+      align-items:center;
+      gap:18px;
+      max-width:1400px;
+      margin:0 auto;
+    }
+    .header-title{min-width:0}
+    .header-title h1{margin:0 0 3px}
+    .header-title p{white-space:normal}
+    .toolbar{
+      margin-top:0;
+      justify-content:flex-end;
+      align-items:center;
+    }
+    .header-controls{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:8px;
+      margin-left:auto;
+      padding-left:18px;
+      border-left:1px solid var(--border);
+    }
+    .header-control{
+      width:42px;
+      height:42px;
+      padding:0;
+      display:inline-grid;
+      place-items:center;
+      flex:0 0 auto;
+      font-weight:700;
+      line-height:1;
+    }
+    .theme-glyphs{
+      display:grid;
+      place-items:center;
+      font-size:1.05rem;
+    }
+    .language-glyph{
+      font-size:.78rem;
+      letter-spacing:.02em;
+    }
+    @media(max-width:980px){
+      .header-main{grid-template-columns:1fr auto}
+      .toolbar{
+        grid-column:1/-1;
+        grid-row:2;
+        justify-content:flex-end;
+      }
+      .header-controls{
+        grid-column:2;
+        grid-row:1;
+      }
+    }
+    @media(max-width:620px){
+      header{padding:10px 12px}
+      .header-main{gap:10px}
+      .header-title p{font-size:.9rem}
+      .toolbar{gap:6px}
+    }
+
+  
+    body,
+    header,
+    .card,
+    #regionsCard > .region,
+    button,
+    select,
+    input,
+    textarea,
+    .political-row,
+    .city-card,
+    .character-card,
+    .diagnosis-tag,
+    .milestone-row,
+    .log-item,
+    .city-rating,
+    .diagnosis-editor,
+    .floating-nav,
+    .suggestion-chip,
+    .progress,
+    .rating-dot,
+    .mini-dot,
+    .floating-nav-link,
+    .calendar-month,
+    .calendar-day,
+    .calendar-month-name,
+    .calendar-season{
+      transition:
+        background-color .28s ease,
+        background .28s ease,
+        color .28s ease,
+        border-color .28s ease,
+        box-shadow .28s ease;
+    }
+
+  
+    @keyframes ulpe-theme-fade-out{
+      from{opacity:1}
+      to{opacity:0}
+    }
+    @keyframes ulpe-theme-fade-in{
+      from{opacity:0}
+      to{opacity:1}
+    }
+    ::view-transition-old(root){
+      animation:ulpe-theme-fade-out .24s ease both;
+    }
+    ::view-transition-new(root){
+      animation:ulpe-theme-fade-in .24s ease both;
+    }
+    html.theme-fallback,
+    html.theme-fallback body,
+    html.theme-fallback header{
+      transition:background-color .24s ease,color .24s ease,border-color .24s ease;
+    }
+
+  
+    .world-title-editor{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      min-width:0;
+      margin-bottom:3px;
+    }
+    .world-title-editor h1{
+      margin:0;
+      min-width:0;
+      overflow-wrap:anywhere;
+    }
+    .world-title-prefix{white-space:nowrap}
+    .world-name{overflow-wrap:anywhere}
+    .world-title-input{
+      width:min(240px,45vw);
+      padding:5px 8px;
+      font-size:1.6rem;
+      line-height:1.2;
+      font-weight:700;
+      background:var(--surface-input);
+    }
+    .world-title-edit-button{
+      width:34px;
+      height:34px;
+      padding:0;
+      flex:0 0 auto;
+      display:inline-grid;
+      place-items:center;
+      border-radius:7px;
+    }
+    @media(max-width:620px){
+      .world-title-editor{align-items:flex-start}
+      .world-title-editor h1{font-size:1.35rem}
+      .world-title-prefix{white-space:normal}
+      .world-title-input{
+        width:min(190px,48vw);
+        font-size:1.35rem;
+      }
+    }
+
+  
+
+.player-button{
+  left:auto;
+  right:18px;
+  top:168px;
+  z-index:1004;
+  transition:right .25s ease, transform .2s ease;
+}
+body.player-panel-open .player-button,
+body.player-panel-open .notes-button{
+  right:calc(min(520px, calc(100vw - 72px)) + 18px);
+}
+.player-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.35);
+  visibility:hidden;
+  opacity:0;
+  pointer-events:none;
+  z-index:1003;
+  transition:opacity .25s ease, visibility 0s linear .25s;
+}
+.player-overlay.open{
+  visibility:visible;
+  opacity:1;
+  pointer-events:auto;
+  transition:opacity .25s ease;
+}
+.player-panel{
+  position:absolute;
+  top:0;
+  right:0;
+  width:min(520px, calc(100vw - 72px));
+  height:100%;
+  overflow:auto;
+  padding:14px;
+  background:var(--panel,#fff);
+  box-shadow:-8px 0 24px rgba(0,0,0,.25);
+  transform:translateX(100%);
+  transition:transform .25s ease;
+}
+.player-overlay.open .player-panel{transform:translateX(0)}
+.player-panel-head{
+  position:sticky;
+  top:-14px;
+  z-index:4;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin:-14px -14px 12px;
+  padding:13px 14px;
+  background:var(--panel);
+  border-bottom:1px solid var(--border);
+}
+.player-panel-head h2{
+  margin:0;
+  font-size:1.08rem;
+}
+.player-panel #playerCharactersGrid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+.player-panel .player-card{
+  padding:12px;
+  border-radius:11px;
+}
+.player-panel .player-card-section{
+  margin-top:10px;
+  padding-top:10px;
+}
+.player-panel .player-identity-row{
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) 72px;
+  gap:7px;
+}
+.player-panel .ability-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:6px;
+}
+.player-panel .ability-box{
+  padding:6px;
+  border-radius:8px;
+}
+.player-panel .ability-box label{
+  margin-bottom:3px;
+  font-size:.72rem;
+}
+.player-panel .ability-line{
+  grid-template-columns:14px minmax(0,1fr) 34px;
+  gap:5px;
+}
+.player-panel .ability-line input{
+  padding:5px 4px;
+}
+.player-panel .proficiency-dot{
+  width:10px;
+  height:10px;
+  min-width:10px;
+}
+.player-panel .ability-modifier{
+  font-size:.82rem;
+}
+.player-panel .derived-stats-row{
+  gap:7px;
+  margin-top:7px;
+}
+.player-panel .derived-stat{
+  padding:7px 8px;
+  border-radius:8px;
+  font-size:.82rem;
+}
+.player-panel .player-related-list{
+  grid-template-columns:1fr;
+  gap:8px;
+  margin-top:8px;
+}
+.player-panel .character-card{
+  padding:9px;
+}
+.player-panel .compact-grid{
+  gap:7px;
+}
+.player-panel .item-notes{
+  min-height:62px;
+}
+.player-panel .player-notes{
+  min-height:86px;
+}
+.player-panel input,
+.player-panel select,
+.player-panel textarea{
+  font-size:.84rem;
+}
+@media(max-width:760px){
+  .notes-button{
+    left:auto;
+    right:14px;
+    top:var(--floating-nav-button-top,14px);
+  }
+  .player-button{
+    left:auto;
+    right:74px;
+    top:var(--floating-nav-button-top,14px);
+  }
+  body.player-panel-open .notes-button,
+  body.notes-panel-open .notes-button{
+    right:calc(min(520px, calc(100vw - 64px)) + 2px);
+  }
+  body.player-panel-open .player-button,
+  body.notes-panel-open .player-button{
+    right:calc(min(520px, calc(100vw - 64px)) + 62px);
+  }
+  .player-panel{
+    width:min(520px, calc(100vw - 64px));
+  }
+}
+@media(max-width:560px){
+  .player-panel .player-identity-row,
+  .player-panel .ability-grid,
+  .player-panel .derived-stats-row{
+    grid-template-columns:1fr;
+  }
+}
+
+.notes-button{
+  left:auto;
+  right:18px;
+  z-index:1004;
+  transition:right .25s ease, transform .2s ease;
+}
+body.notes-panel-open .player-button,
+body.notes-panel-open .notes-button{
+  right:calc(min(520px, calc(100vw - 72px)) + 18px);
+}
+.notes-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.35);
+  visibility:hidden;
+  opacity:0;
+  pointer-events:none;
+  z-index:1003;
+  transition:opacity .25s ease, visibility 0s linear .25s;
+}
+.notes-overlay.open{
+  visibility:visible;
+  opacity:1;
+  pointer-events:auto;
+  transition:opacity .25s ease;
+}
+.notes-panel{
+  position:absolute;
+  top:0;
+  right:0;
+  width:min(520px, calc(100vw - 72px));
+  height:100%;
+  overflow:auto;
+  padding:18px;
+  background:var(--panel,#fff);
+  box-shadow:-8px 0 24px rgba(0,0,0,.25);
+  transform:translateX(100%);
+  transition:transform .25s ease;
+}
+.notes-overlay.open .notes-panel{transform:translateX(0)}
+@media(max-width:760px){
+  .notes-panel{
+    width:min(520px, calc(100vw - 64px));
+  }
+}
+
+@media(max-width:760px){
+  main{
+    padding-top:82px;
+  }
+}
+
+
+.player-panel.compact-mode .player-card{padding:8px}
+.player-panel.compact-mode .player-card-section{margin-top:6px;padding-top:6px}
+.player-panel.compact-mode .player-related-list{gap:6px;margin-top:6px}
+.player-panel.compact-mode .character-card{padding:6px}
+.player-panel.compact-mode .item-notes{min-height:36px}
+.player-panel.compact-mode .player-notes{min-height:48px}
+.player-panel.compact-mode .player-panel-head{margin-bottom:8px}
+.player-panel.compact-mode .player-card textarea{resize:vertical}
+.player-panel.compact-mode .player-related-list .compact-grid{gap:5px}
+
+
+.player-panel.compact-mode .player-card-section > h4{
+  margin-top:0;
+  margin-bottom:8px;
+}
+.player-panel.compact-mode .player-card-section{
+  padding-top:6px;
+}
+.player-panel.compact-mode .npc-summary-card{
+  padding:7px 8px;
+}
+.npc-summary-card{
+  min-width:0;
+  max-width:100%;
+  overflow:hidden;
+}
+.npc-summary-head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:8px;
+  min-width:0;
+  max-width:100%;
+}
+.npc-summary-view-group{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  width:fit-content;
+  max-width:100%;
+  min-width:0;
+  overflow:hidden;
+}
+.npc-summary-main{
+  width:fit-content;
+  min-width:0;
+  max-width:calc(100% - 36px);
+  flex:0 1 auto;
+  overflow:hidden;
+}
+.npc-summary-actions{
+  display:flex;
+  gap:5px;
+  justify-self:end;
+  flex:0 0 auto;
+}
+.npc-summary-name{
+  margin:0;
+  display:block;
+  width:fit-content;
+  max-width:100%;
+  font-size:.9rem;
+  line-height:1.2;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.npc-summary-meta{
+  width:fit-content;
+  max-width:100%;
+  margin-top:3px;
+  color:var(--muted);
+  font-size:.75rem;
+  line-height:1.25;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.npc-summary-toggle{
+  width:30px;
+  height:30px;
+  min-width:30px;
+  padding:0;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  line-height:1;
+}
+.npc-expanded-content{
+  margin-top:8px;
+  padding-top:8px;
+  border-top:1px solid var(--border);
+  min-width:0;
+  max-width:100%;
+  overflow:hidden;
+}
+.npc-summary-actions .square-button{
+  width:30px;
+  height:30px;
+  min-width:30px;
+  padding:0;
+  line-height:1;
+}
+.npc-summary-main input{
+  padding:5px 7px;
+}
+.npc-summary-name-wrap{
+  display:block;
+  width:fit-content;
+  min-width:0;
+  max-width:100%;
+  overflow:hidden;
+}
+.npc-summary-name-wrap .npc-summary-name{
+  display:block;
+  width:fit-content;
+  max-width:100%;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.npc-summary-name-wrap input{
+  width:auto;
+  min-width:8ch;
+  max-width:100%;
+  box-sizing:border-box;
+}
+
+
+.city-list > .npc-summary-card,
+.character-list > .npc-summary-card{
+  min-width:0;
+  max-width:100%;
+  overflow:hidden;
+}
+
+
+/* ===== Panel de Archivo de Personajes ===== */
+.npc-codex-button{
+  left:auto;
+  right:138px;
+  z-index:1004;
+  transition:right .25s ease, transform .2s ease;
+}
+body.npc-codex-open .npc-codex-button,
+body.npc-codex-open .player-button,
+body.npc-codex-open .notes-button{
+  right:calc(min(620px, calc(100vw - 72px)) + 18px);
+}
+.npc-codex-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.35);
+  visibility:hidden;
+  opacity:0;
+  pointer-events:none;
+  z-index:1003;
+  transition:opacity .25s ease, visibility 0s linear .25s;
+}
+.npc-codex-overlay.open{
+  visibility:visible;
+  opacity:1;
+  pointer-events:auto;
+  transition:opacity .25s ease;
+}
+.npc-codex-panel{
+  position:absolute;
+  top:0;
+  right:0;
+  width:min(620px, calc(100vw - 72px));
+  height:100%;
+  overflow:auto;
+  padding:14px;
+  background:var(--panel);
+  box-shadow:-8px 0 24px rgba(0,0,0,.25);
+  transform:translateX(100%);
+  transition:transform .25s ease;
+}
+.npc-codex-overlay.open .npc-codex-panel{transform:translateX(0)}
+.npc-codex-head{
+  position:sticky;
+  top:-14px;
+  z-index:4;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin:-14px -14px 12px;
+  padding:13px 14px;
+  background:var(--panel);
+  border-bottom:1px solid var(--border);
+}
+.npc-codex-head h2{margin:0;font-size:1.08rem}
+#importantNpcsGrid{display:grid;grid-template-columns:1fr;gap:10px}
+.important-npc-card{padding:12px;border-radius:11px;min-width:0}
+.npc-identity-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) 82px;
+  gap:7px;
+}
+.npc-core-stats{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:6px;
+}
+.npc-core-stat{
+  min-width:0;
+  padding:6px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--panel2);
+  text-align:center;
+}
+.npc-core-stat label{
+  display:block;
+  margin-bottom:3px;
+  font-size:.67rem;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.npc-core-stat input{
+  width:100%;
+  min-width:0;
+  padding:5px 3px;
+  text-align:center;
+}
+.npc-abilities-horizontal{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:6px;
+}
+.npc-ability-cell{
+  min-width:0;
+  padding:6px 4px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--panel2);
+  text-align:center;
+}
+.npc-ability-cell strong{display:block;font-size:.72rem}
+.npc-ability-cell input{
+  width:100%;
+  min-width:0;
+  padding:4px 2px;
+  text-align:center;
+}
+.npc-ability-mod{font-size:.72rem;color:var(--muted);margin-top:2px}
+.npc-defense-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:7px;
+}
+.npc-section{
+  margin-top:10px;
+  padding-top:10px;
+  border-top:1px solid var(--border);
+}
+.npc-section .subsection-head{margin-bottom:7px}
+.npc-feature-list{display:grid;gap:7px}
+.npc-feature-card{
+  min-width:0;
+  border:1px solid var(--border);
+  border-radius:9px;
+  background:var(--panel2);
+  padding:8px;
+  overflow:hidden;
+}
+.npc-feature-summary{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:7px;
+}
+.npc-feature-summary-main{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  min-width:0;
+}
+.npc-feature-title{
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-weight:700;
+  font-size:.86rem;
+}
+.npc-feature-meta{
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:var(--muted);
+  font-size:.73rem;
+}
+.npc-feature-toggle{
+  width:28px;
+  height:28px;
+  min-width:28px;
+  padding:0;
+  display:grid;
+  place-items:center;
+}
+.npc-feature-actions{display:flex;gap:5px}
+.npc-feature-body{
+  margin-top:8px;
+  padding-top:8px;
+  border-top:1px solid var(--border);
+}
+.npc-feature-fields{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:7px;
+}
+.npc-feature-body textarea{min-height:72px}
+.npc-card-notes{min-height:95px}
+.npc-inline-checks{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 12px;
+  margin-top:7px;
+}
+.npc-inline-checks label{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  margin:0;
+  font-size:.76rem;
+}
+.npc-inline-checks input{width:auto}
+@media(max-width:760px){
+  .npc-codex-button{right:134px;top:var(--floating-nav-button-top,14px)}
+  body.npc-codex-open .npc-codex-button,
+  body.npc-codex-open .player-button,
+  body.npc-codex-open .notes-button{
+    right:calc(min(620px, calc(100vw - 64px)) + 2px);
+  }
+  .npc-codex-panel{width:min(620px, calc(100vw - 64px))}
+}
+@media(max-width:560px){
+  .npc-core-stats,.npc-abilities-horizontal{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .npc-identity-grid,.npc-defense-grid,.npc-feature-fields{grid-template-columns:1fr}
+}
+
+
+.important-npc-card > .item-head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:8px;
+}
+.npc-card-toggle{
+  width:30px;
+  height:30px;
+  min-width:30px;
+  padding:0;
+  display:grid;
+  place-items:center;
+}
+.npc-section-titlebar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:7px 9px;
+  border:1px solid var(--border);
+  border-radius:9px;
+  background:var(--panel2);
+}
+.npc-section-titlebar h3{
+  margin:0;
+  font-size:.96rem;
+  letter-spacing:.02em;
+}
+.npc-actions-group{
+  margin-top:10px;
+  padding:10px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:var(--panel2);
+}
+.npc-actions-group > .subsection-head{
+  margin:0 0 7px;
+  padding-bottom:6px;
+  border-bottom:1px dashed var(--border);
+}
+.npc-actions-group > .subsection-head h4{
+  margin:0;
+  font-size:.82rem;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.npc-trait-card .npc-feature-summary{
+  grid-template-columns:minmax(0,1fr) auto;
+}
+.npc-trait-card .npc-feature-summary-main{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+}
+.npc-trait-card .npc-feature-meta{
+  display:none;
+}
+.npc-trait-card .npc-feature-body{
+  padding-top:8px;
+}
+.npc-trait-card .npc-feature-body textarea{
+  min-height:76px;
+}
+
+
+/* ===== Ajuste visual: una sola tarjeta continua por NPC ===== */
+.important-npc-card{
+  overflow:hidden;
+}
+
+.npc-section-titlebar{
+  padding:0 0 6px;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  border-bottom:1px solid var(--border);
+}
+
+.npc-section-titlebar h3{
+  font-size:.9rem;
+  letter-spacing:0;
+}
+
+.npc-actions-group{
+  margin-top:8px;
+  padding:8px 0 0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+
+.npc-actions-group + .npc-actions-group{
+  margin-top:10px;
+  padding-top:10px;
+  border-top:1px dashed var(--border);
+}
+
+.npc-actions-group > .subsection-head{
+  margin:0 0 7px;
+  padding:0;
+  border:0;
+}
+
+.npc-actions-group > .subsection-head h4{
+  font-size:.8rem;
+  color:var(--text);
+  text-transform:none;
+  letter-spacing:0;
+}
+
+.npc-feature-card{
+  background:transparent;
+}
+
+.npc-feature-list{
+  gap:6px;
+}
+
+.npc-defense-grid{
+  padding-top:0;
+}
+
+.npc-section{
+  background:transparent;
+}
+
+
+.npc-feature-order{
+  display:flex;
+  gap:4px;
+}
+.npc-feature-order .square-button{
+  width:28px;
+  height:28px;
+  min-width:28px;
+  padding:0;
+  line-height:1;
+}
+.npc-actions-group > .subsection-head{
+  align-items:center;
+}
+.npc-actions-group > .subsection-head > div{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.npc-subsection-toggle{
+  width:28px;
+  height:28px;
+  min-width:28px;
+  padding:0;
+  display:grid;
+  place-items:center;
+}
+
+
+/* ===== Archivo de Personajes: posición y anchura alineadas con PJs ===== */
+.npc-codex-button{
+  right:18px;
+  top:calc(var(--floating-nav-button-top, 14px) + 52px);
+  left:auto;
+}
+
+.npc-codex-panel{
+  width:min(620px, calc(100vw - 72px));
+}
+
+body.npc-codex-open .npc-codex-button,
+body.npc-codex-open .player-button,
+body.npc-codex-open .notes-button{
+  right:calc(min(620px, calc(100vw - 72px)) + 18px);
+}
+
+@media(max-width:760px){
+  .npc-codex-button{
+    right:14px;
+    top:calc(var(--floating-nav-button-top, 14px) + 48px);
+  }
+
+  .npc-codex-panel{
+    width:min(620px, calc(100vw - 64px));
+  }
+
+  body.npc-codex-open .npc-codex-button,
+  body.npc-codex-open .player-button,
+  body.npc-codex-open .notes-button{
+    right:calc(min(620px, calc(100vw - 64px)) + 2px);
+  }
+}
+
+
+/* ===== Corrección final: separación y anchura del Archivo de Personajes ===== */
+.npc-codex-button{
+  left:auto;
+  right:18px;
+  top:calc(336px - var(--floating-nav-button-top,96px));
+}
+
+/* Los tres paneles laterales comparten exactamente la misma anchura. */
+.npc-codex-panel{
+  width:min(520px, calc(100vw - 72px));
+}
+
+/* Al abrir cualquiera de los paneles, los tres botones acompañan su borde. */
+body.player-panel-open .player-button,
+body.player-panel-open .notes-button,
+body.player-panel-open .npc-codex-button,
+body.notes-panel-open .player-button,
+body.notes-panel-open .notes-button,
+body.notes-panel-open .npc-codex-button,
+body.npc-codex-open .player-button,
+body.npc-codex-open .notes-button,
+body.npc-codex-open .npc-codex-button{
+  right:calc(min(520px, calc(100vw - 72px)) + 18px);
+}
+
+@media(max-width:760px){
+  .notes-button{
+    right:14px;
+    top:var(--floating-nav-button-top,14px);
+  }
+
+  .player-button{
+    right:74px;
+    top:var(--floating-nav-button-top,14px);
+  }
+
+  .npc-codex-button{
+    right:134px;
+    top:var(--floating-nav-button-top,14px);
+  }
+
+  .npc-codex-panel{
+    width:min(520px, calc(100vw - 64px));
+  }
+
+  body.player-panel-open .notes-button,
+  body.notes-panel-open .notes-button,
+  body.npc-codex-open .notes-button{
+    right:calc(min(520px, calc(100vw - 64px)) + 2px);
+  }
+
+  body.player-panel-open .player-button,
+  body.notes-panel-open .player-button,
+  body.npc-codex-open .player-button{
+    right:calc(min(520px, calc(100vw - 64px)) + 62px);
+  }
+
+  body.player-panel-open .npc-codex-button,
+  body.notes-panel-open .npc-codex-button,
+  body.npc-codex-open .npc-codex-button{
+    right:calc(min(520px, calc(100vw - 64px)) + 122px);
+  }
+}
+
+
+.npc-section-inline-actions{
+  display:flex;
+  justify-content:flex-end;
+  margin:7px 0 8px;
+}
+
+
+.npc-section-title-actions{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+
+/* ===== Nuevas funciones: PJs colapsables y Habilidades de NPC ===== */
+.player-card > .item-head{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:8px;
+}
+
+.player-card-name{
+  min-width:0;
+}
+
+.player-card-name h2{
+  margin:0;
+}
+
+.player-card-toggle{
+  align-self:center;
+}
+
+.npc-defense-grid .npc-skills-field{
+  grid-column:1 / -1;
+}
+
+.npc-defense-grid .npc-skills-field textarea{
+  width:100%;
+  min-height:48px;
+  resize:vertical;
+}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="header-main">
+    <div class="header-title">
+      <div id="worldTitleEditor" class="world-title-editor"></div>
+      <p data-i18n="Panel local para seguir eventos, regiones y consecuencias de campaña.">Panel local para seguir eventos, regiones y consecuencias de campaña.</p>
+    </div>
+
+    <div class="toolbar">
+      <button class="primary" onclick="saveState()" data-i18n="Guardar">Guardar</button>
+      <button onclick="exportState()" data-i18n="Exportar JSON">Exportar JSON</button>
+      <button onclick="document.getElementById('importFile').click()" data-i18n="Importar JSON">Importar JSON</button>
+      <button class="danger" onclick="resetState()" data-i18n="Restablecer">Restablecer</button>
+      <input id="importFile" type="file" accept=".json" hidden onchange="importState(event)">
+    </div>
+
+    <div class="header-controls">
+      <button id="themeToggle" class="header-control" type="button" onclick="toggleTheme()"
+        title="Cambiar entre modo oscuro y claro" aria-label="Cambiar entre modo oscuro y claro">
+        <span class="theme-glyphs" aria-hidden="true">☾</span>
+      </button>
+      <button id="languageToggle" class="header-control" type="button" onclick="toggleLanguage()"
+        title="Cambiar idioma a inglés" aria-label="Cambiar idioma a inglés">
+        <span class="language-glyph">ES</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <h2 id="section-events" class="section-title nav-scroll-target" style="margin-bottom:12px">Grandes eventos</h2>
+    <button class="primary" onclick="addEvent()">+ Crear evento</button>
+  </div>
+  <div id="eventsGrid" class="grid"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <h2 id="section-regions" class="section-title nav-scroll-target" style="margin-bottom:12px">Estado de las regiones</h2>
+    <button class="primary" onclick="addRegion()">+ Crear región</button>
+  </div>
+  <div id="regionsCard"></div>
+
+  <h2 id="section-calendar" class="section-title nav-scroll-target">Calendario</h2>
+  <div id="calendarControls" class="calendar-controls"></div>
+  <div id="calendarGrid" class="calendar-grid"></div>
+
+  </main>
+
+<footer>Los datos se guardan en este navegador mediante localStorage.</footer>
+
+<script>
+const STATUS = ["Dormido","Latente","Gestándose","En curso","Escalada","Resuelto"];
+const REGION_STATUS = ["Estable","Inestable","Crisis","Colapsando","Caído"];
+const MILITARY = ["Paz","Movilización","Guerra","Invasión","Ocupación"];
+const RELATION_STATES = [
+  "Desconocida","Neutral","Cordial","Amistosa","Aliada",
+  "Tensa","Rival","Hostil","En guerra"
+];
+const POLITICAL_FIELDS = [
+  ["government","Gobierno"],
+  ["legitimacy","Legitimidad"],
+  ["corruption","Corrupción"],
+  ["religion","Influencia religiosa"],
+  ["magic","Influencia mágica"]
+];
+const CITY_STATES = [
+  "Próspera","Estable","Inquieta","Tensionada","En crisis",
+  "Asediada","Ocupada","Devastada","Abandonada"
+];
+const CHARACTER_STATES = [
+  "Activo","Ausente","Herido","Prisionero","Desaparecido",
+  "Exiliado","Fallecido","Desconocido"
+];
+const DIAGNOSIS_OPTIONS = [
+  {label:"Próspera",tone:"positive"},
+  {label:"Floreciente",tone:"positive"},
+  {label:"Estable",tone:"positive"},
+  {label:"Recuperándose",tone:"positive"},
+  {label:"Vigilante",tone:"alert"},
+  {label:"Expectante",tone:"alert"},
+  {label:"Tensionada",tone:"alert"},
+  {label:"Movilizada",tone:"war"},
+  {label:"Fortificada",tone:"war"},
+  {label:"Asediada",tone:"war"},
+  {label:"Convulsa",tone:"danger"},
+  {label:"Devastada",tone:"danger"},
+  {label:"Colapsada",tone:"danger"},
+  {label:"Ocupada",tone:"danger"},
+  {label:"Aislada",tone:"alert"},
+  {label:"Rebelde",tone:"danger"},
+  {label:"Necrótica",tone:"dark"},
+  {label:"Profanada",tone:"dark"},
+  {label:"Corrompida",tone:"dark"},
+  {label:"Santificada",tone:"special"},
+  {label:"Bajo la mirada de Las Gemelas",tone:"special"},
+  {label:"Influyente",tone:"positive"}
+];
+const CITY_RATING_FIELDS = [
+  ["security","Seguridad"],
+  ["economy","Economía"],
+  ["corruption","Corrupción"],
+  ["legitimacy","Legitimidad"]
+];
+
+
+const UI_TRANSLATIONS = {
+  "Panel de Mundo — ...":"World Panel — ...",
+  "Panel de Mundo —":"World Panel —",
+  "Nombre del mundo":"World Name",
+  "Editar nombre del mundo":"Edit world name",
+  "Guardar nombre del mundo":"Save world name",
+  "Panel local para seguir eventos, regiones y consecuencias de campaña.":"Local dashboard for tracking campaign events, regions, and consequences.",
+  "Guardar":"Save",
+  "Exportar JSON":"Export JSON",
+  "Importar JSON":"Import JSON",
+  "Restablecer":"Reset",
+  "Grandes eventos":"Major Events",
+  "+ Crear evento":"+ Create Event",
+  "Estado de las regiones":"Region Status",
+  "+ Crear región":"+ Create Region",
+  "Personajes jugadores":"Player Characters",
+  "+ Añadir PJ":"+ Add PC",
+  "Abrir personajes jugadores":"Open player characters",
+  "Cerrar personajes jugadores":"Close player characters",
+  "Nombre del PJ":"PC Name",
+  "Raza":"Ancestry",
+  "Clase":"Class",
+  "Nivel":"Level",
+  "Características":"Abilities",
+  "Puntuación":"Score",
+  "Bonificador":"Modifier",
+  "Bonus de competencia":"Proficiency Bonus",
+  "Competente":"Proficient",
+  "No competente":"Not proficient",
+  "Percepción pasiva":"Passive Perception",
+  "NPCs relacionados":"Related NPCs",
+  "+ Añadir NPC":"+ Add NPC",
+  "Relación":"Relationship",
+  "No hay PJs registrados.":"No player characters recorded.",
+  "No hay NPCs relacionados.":"No related NPCs.",
+  "Calendario":"Calendar",
+  "Configuración del calendario":"Calendar settings",
+  "Meses del año":"Months per year",
+  "días":"days",
+  "Días":"Days",
+  "Año":"Year",
+  "Invierno":"Winter",
+  "Primavera":"Spring",
+  "Verano":"Summer",
+  "Otoño":"Autumn",
+  "Registro del Director":"Game Master's Log",
+  "Fecha en campaña":"In-world Date",
+  "Evento o región":"Event or Region",
+  "Suceso":"Occurrence",
+  "Añadir entrada":"Add Entry",
+  "Los datos se guardan en este navegador mediante localStorage.":"Data is stored in this browser using localStorage.",
+  "Índice":"Index",
+  "Secciones":"Sections",
+  "Eventos":"Events",
+  "Regiones":"Regions",
+  "No hay eventos.":"No events.",
+  "No hay regiones.":"No regions.",
+  "Título del evento":"Event Title",
+  "Estado":"Status",
+  "Fase actual":"Current Phase",
+  "Progreso de hitos":"Milestone Progress",
+  "Siguiente detonante":"Next Trigger",
+  "Notas del Director":"Game Master's Notes",
+  "Hitos":"Milestones",
+  "Situación actual":"Current Situation",
+  "Actividades de los implicados":"Activities of Those Involved",
+  "Aventuras disponibles":"Available Adventures",
+  "Notas del Director del hito":"Milestone GM Notes",
+  "No hay hitos. Añade el primer paso.":"No milestones. Add the first step.",
+  "+ Añadir hito":"+ Add Milestone",
+  "Diagnóstico de la región":"Region Diagnosis",
+  "Sugerencias contextuales":"Contextual Suggestions",
+  "Etiqueta":"Label",
+  "No hay regiones. Crea la primera para comenzar.":"No regions. Create the first one to begin.",
+  "Nombre de la región":"Region Name",
+  "Estabilidad":"Stability",
+  "Situación militar":"Military Situation",
+  "Estado político":"Political Status",
+  "Relaciones":"Relations",
+  "Añade otra región para establecer relaciones.":"Add another region to establish relations.",
+  "Ciudades":"Cities",
+  "+ Añadir ciudad":"+ Add City",
+  "Nombre de la ciudad":"City Name",
+  "Estado de la ciudad":"City Status",
+  "Población":"Population",
+  "No hay ciudades registradas en esta región.":"No cities recorded in this region.",
+  "Personajes importantes":"Important Characters",
+  "+ Añadir personaje":"+ Add Character",
+  "Nombre del personaje":"Character Name",
+  "Especie o raza":"Species or Ancestry",
+  "Rol o cargo":"Role or Office",
+  "Ubicación":"Location",
+  "Región / sin concretar":"Region / unspecified",
+  "No hay personajes importantes registrados.":"No important characters recorded.",
+  "Notas":"Notes",
+  "Todavía no hay entradas.":"There are no entries yet.",
+  "Eliminar":"Delete",
+  "Sin fecha":"Undated",
+  "General":"General",
+  "Gobierno":"Government",
+  "Legitimidad":"Legitimacy",
+  "Corrupción":"Corruption",
+  "Influencia religiosa":"Religious Influence",
+  "Influencia mágica":"Magical Influence",
+  "Seguridad":"Security",
+  "Economía":"Economy",
+  "Legitimidad":"Legitimacy",
+  "Dormido":"Dormant",
+  "Latente":"Latent",
+  "Gestándose":"Developing",
+  "En curso":"Ongoing",
+  "Escalada":"Escalating",
+  "Resuelto":"Resolved",
+  "Estable":"Stable",
+  "Inestable":"Unstable",
+  "Crisis":"Crisis",
+  "Colapsando":"Collapsing",
+  "Caído":"Fallen",
+  "Paz":"Peace",
+  "Movilización":"Mobilization",
+  "Guerra":"War",
+  "Invasión":"Invasion",
+  "Ocupación":"Occupation",
+  "Desconocida":"Unknown",
+  "Neutral":"Neutral",
+  "Cordial":"Cordial",
+  "Amistosa":"Friendly",
+  "Aliada":"Allied",
+  "Tensa":"Strained",
+  "Rival":"Rival",
+  "Hostil":"Hostile",
+  "En guerra":"At War",
+  "Próspera":"Prosperous",
+  "Inquieta":"Uneasy",
+  "Tensionada":"Tense",
+  "En crisis":"In Crisis",
+  "Asediada":"Besieged",
+  "Ocupada":"Occupied",
+  "Devastada":"Devastated",
+  "Abandonada":"Abandoned",
+  "Activo":"Active",
+  "Ausente":"Absent",
+  "Herido":"Wounded",
+  "Prisionero":"Prisoner",
+  "Desaparecido":"Missing",
+  "Exiliado":"Exiled",
+  "Fallecido":"Deceased",
+  "Desconocido":"Unknown",
+  "Floreciente":"Thriving",
+  "Recuperándose":"Recovering",
+  "Vigilante":"Watchful",
+  "Expectante":"Expectant",
+  "Movilizada":"Mobilized",
+  "Fortificada":"Fortified",
+  "Convulsa":"Turbulent",
+  "Colapsada":"Collapsed",
+  "Aislada":"Isolated",
+  "Influyente":"Influential"
+};
+
+const UI_TRANSLATIONS_REVERSE = Object.fromEntries(
+  Object.entries(UI_TRANSLATIONS).map(([es,en])=>[en,es])
+);
+
+let currentLanguage = localStorage.getItem("ulpeLanguage") === "en" ? "en" : "es";
+let currentTheme = localStorage.getItem("ulpeTheme") === "light" ? "light" : "dark";
+
+function translateText(value){
+  const clean = String(value ?? "").trim();
+  if(!clean) return value;
+  if(currentLanguage === "en"){
+    return UI_TRANSLATIONS[clean] ?? clean;
+  }
+  return UI_TRANSLATIONS_REVERSE[clean] ?? clean;
+}
+
+function translateAttribute(element,attribute){
+  if(!element.hasAttribute(attribute)) return;
+  const sourceKey = `i18n${attribute.replace(/[^a-z0-9]/gi,"")}`;
+  if(!element.dataset[sourceKey]){
+    const current = element.getAttribute(attribute);
+    const canonical = UI_TRANSLATIONS_REVERSE[current] ?? current;
+    element.dataset[sourceKey] = canonical;
+  }
+  const canonical = element.dataset[sourceKey];
+  element.setAttribute(
+    attribute,
+    currentLanguage === "en" ? (UI_TRANSLATIONS[canonical] ?? canonical) : canonical
+  );
+}
+
+function shouldSkipTranslation(node){
+  const parent = node.parentElement;
+  if(!parent) return true;
+  return Boolean(parent.closest(
+    "input,textarea,.event-title-display,.region-title-display,.item-title,.relation-name,.log-item strong,.log-item span"
+  ));
+}
+
+function applyLanguage(){
+  document.documentElement.lang = currentLanguage;
+
+  document.querySelectorAll("[data-i18n]").forEach(element=>{
+    const canonical = element.dataset.i18n;
+    element.textContent = currentLanguage === "en"
+      ? (UI_TRANSLATIONS[canonical] ?? canonical)
+      : canonical;
+  });
+
+  document.querySelectorAll("option").forEach(option=>{
+    if(!option.dataset.i18nValue){
+      option.dataset.i18nValue = option.value || option.textContent.trim();
+    }
+    if(!option.dataset.i18nSource){
+      const shown = option.textContent.trim();
+      option.dataset.i18nSource = UI_TRANSLATIONS_REVERSE[shown] ?? shown;
+    }
+    option.value = option.dataset.i18nValue;
+    const canonical = option.dataset.i18nSource;
+    option.textContent = currentLanguage === "en"
+      ? (UI_TRANSLATIONS[canonical] ?? canonical)
+      : canonical;
+  });
+
+  const walker = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while(walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node=>{
+    if(shouldSkipTranslation(node)) return;
+    const raw = node.nodeValue;
+    const trimmed = raw.trim();
+    if(!trimmed) return;
+    const canonical = UI_TRANSLATIONS_REVERSE[trimmed] ?? trimmed;
+    const translated = currentLanguage === "en"
+      ? (UI_TRANSLATIONS[canonical] ?? canonical)
+      : canonical;
+    if(translated !== trimmed){
+      node.nodeValue = raw.replace(trimmed,translated);
+    }
+  });
+
+  document.querySelectorAll("[placeholder],[title],[aria-label]").forEach(element=>{
+    translateAttribute(element,"placeholder");
+    translateAttribute(element,"title");
+    translateAttribute(element,"aria-label");
+  });
+
+  const languageButton = document.getElementById("languageToggle");
+  if(languageButton){
+    const glyph = languageButton.querySelector(".language-glyph");
+    if(glyph){
+      glyph.textContent = currentLanguage === "es" ? "ES" : "EN";
+    }
+
+    const label = currentLanguage === "es"
+      ? "Cambiar idioma a inglés"
+      : "Switch language to Spanish";
+    languageButton.title = label;
+    languageButton.setAttribute("aria-label",label);
+  }
+
+  applyTheme();
+}
+
+function toggleLanguage(){
+  currentLanguage = currentLanguage === "es" ? "en" : "es";
+  state.settings.language = currentLanguage;
+  autoSave();
+  render();
+  applyLanguage();
+}
+
+function applyTheme(){
+  document.documentElement.dataset.theme = currentTheme;
+  const button = document.getElementById("themeToggle");
+  if(button){
+    const icon = button.querySelector(".theme-glyphs");
+    if(icon){
+      icon.textContent = currentTheme === "dark" ? "☾" : "☀";
+    }
+
+    const label = currentTheme === "dark"
+      ? (currentLanguage === "en" ? "Switch to light mode" : "Cambiar a modo claro")
+      : (currentLanguage === "en" ? "Switch to dark mode" : "Cambiar a modo oscuro");
+    button.title = label;
+    button.setAttribute("aria-label",label);
+  }
+}
+
+function toggleTheme(){
+  const changeTheme = ()=>{
+    currentTheme = currentTheme === "dark" ? "light" : "dark";
+    state.settings.theme = currentTheme;
+    autoSave();
+    applyTheme();
+  };
+
+  if(typeof document.startViewTransition === "function"){
+    document.startViewTransition(changeTheme);
+  }else{
+    document.documentElement.classList.add("theme-fallback");
+    changeTheme();
+    window.setTimeout(()=>{
+      document.documentElement.classList.remove("theme-fallback");
+    },260);
+  }
+}
+
+
+const CALENDAR_MAX_MONTHS = 12;
+const CALENDAR_MAX_DAYS = 31;
+const CALENDAR_DEFAULT_MONTHS = 12;
+const CALENDAR_DEFAULT_MONTH_DAYS = [31,28,31,30,31,30,31,31,30,31,30,31];
+const CALENDAR_SEASONS = ["Invierno","Primavera","Verano","Otoño"];
+const CALENDAR_WEEKDAYS = ["L","M","X","J","V","S","D"];
+
+function clampCalendarValue(value,min,max,fallback){
+  const number=Number(value);
+  return Number.isInteger(number)
+    ? Math.min(max,Math.max(min,number))
+    : fallback;
+}
+
+function createCalendarMonth(index){
+  return {
+    name:`Mes ${index + 1}`,
+    season:CALENDAR_SEASONS[Math.floor(index / 3) % CALENDAR_SEASONS.length],
+    days:CALENDAR_DEFAULT_MONTH_DAYS[index] ?? 31
+  };
+}
+
+function createDefaultCalendar(){
+  return {
+    monthCount:CALENDAR_DEFAULT_MONTHS,
+    months:Array.from({length:CALENDAR_DEFAULT_MONTHS},(_,index)=>createCalendarMonth(index)),
+    selectedDay:null
+  };
+}
+
+const DEFAULT_STATE = {
+  settings:{
+    worldName:"Mundo",
+    theme:"dark",
+    language:"es",
+    editingWorldName:false
+  },
+  events:[],
+  regions:[],
+  playerCharacters:[],
+  importantNpcs:[],
+  relations:{},
+  calendar:createDefaultCalendar(),
+  log:[]
+};
+
+
+function setFloatingNav(open){
+  const panel=document.getElementById("floatingNav");
+  const button=document.getElementById("floatingNavButton");
+  if(!panel || !button) return;
+  panel.classList.toggle("open",Boolean(open));
+  button.textContent=open ? "×" : "☰";
+  button.title=open ? "Cerrar índice" : "Abrir índice";
+  button.setAttribute("aria-label",button.title);
+}
+
+function toggleFloatingNav(){
+  const panel=document.getElementById("floatingNav");
+  if(!panel) return;
+  setFloatingNav(!panel.classList.contains("open"));
+}
+
+
+function getNavigationOffset(){
+  const selectors=[
+    "header",
+    ".app-header",
+    ".topbar",
+    ".top-bar",
+    ".sticky-header",
+    "[data-app-header]"
+  ];
+
+  let navigationOffset=16;
+  let headerBottom=0;
+
+  selectors.forEach(selector=>{
+    document.querySelectorAll(selector).forEach(element=>{
+      const style=getComputedStyle(element);
+      const rect=element.getBoundingClientRect();
+      const isVisible=style.display!=="none" && style.visibility!=="hidden" && rect.height>0;
+      const isRelevant=style.position==="fixed" || style.position==="sticky" || selector==="header";
+
+      if(isVisible && isRelevant){
+        navigationOffset=Math.max(navigationOffset,Math.ceil(rect.height)+16);
+
+        if(rect.bottom>0 && rect.top<=0){
+          headerBottom=Math.max(headerBottom,Math.ceil(rect.bottom));
+        }else if(style.position==="fixed" || style.position==="sticky"){
+          headerBottom=Math.max(headerBottom,Math.ceil(rect.bottom));
+        }
+      }
+    });
+  });
+
+  const buttonTop=Math.max(14,headerBottom+12);
+  const panelTop=buttonTop+58;
+
+  document.documentElement.style.setProperty("--nav-scroll-offset",`${navigationOffset}px`);
+  document.documentElement.style.setProperty("--floating-nav-button-top",`${buttonTop}px`);
+  document.documentElement.style.setProperty("--floating-nav-panel-top",`${panelTop}px`);
+
+  return navigationOffset;
+}
+
+function navigateTo(targetId){
+  const target=document.getElementById(targetId);
+  if(!target) return;
+
+  const offset=getNavigationOffset();
+  const targetTop=target.getBoundingClientRect().top + window.scrollY - offset;
+
+  window.scrollTo({
+    top:Math.max(0,targetTop),
+    behavior:"smooth"
+  });
+}
+
+function floatingNavItem(targetId,label,sub=false){
+  return `
+    <button type="button"
+      class="floating-nav-link ${sub ? "sub" : ""}"
+      data-nav-target="${escapeAttr(targetId)}"
+      onclick="navigateTo('${escapeAttr(targetId)}')">
+      <span class="floating-nav-dot"></span>
+      <span>${escapeHtml(label)}</span>
+    </button>
+  `;
+}
+
+function renderFloatingNav(){
+  const container=document.getElementById("floatingNavContent");
+  if(!container) return;
+
+  const events=(state.events || []).map(ev=>
+    floatingNavItem(`event-${ev.id}`,ev.name || "Evento sin título")
+  ).join("");
+
+  const regions=(state.regions || []).map(region=>
+    floatingNavItem(`region-${region.id}`,region.name || "Región sin nombre")
+  ).join("");
+
+
+  container.innerHTML=`
+    <div class="floating-nav-group">
+      <div class="floating-nav-label">Secciones</div>
+      ${floatingNavItem("section-events","Grandes eventos")}
+      ${floatingNavItem("section-regions","Estado de las regiones")}
+      ${floatingNavItem("section-calendar","Calendario")}
+      
+    </div>
+    <div class="floating-nav-group">
+      <div class="floating-nav-label">Eventos</div>
+      ${events || '<div class="floating-nav-empty">No hay eventos.</div>'}
+    </div>
+    <div class="floating-nav-group">
+      <div class="floating-nav-label">Regiones</div>
+      ${regions || '<div class="floating-nav-empty">No hay regiones.</div>'}
+    </div>
+  `;
+  updateFloatingNavActive();
+}
+
+function updateFloatingNavActive(){
+  const links=[...document.querySelectorAll("[data-nav-target]")];
+  const activationLine=getNavigationOffset()+8;
+  let active=null;
+  let best=-Infinity;
+
+  links.forEach(link=>{
+    const target=document.getElementById(link.dataset.navTarget);
+    if(!target) return;
+    const top=target.getBoundingClientRect().top;
+    if(top<=activationLine && top>best){
+      best=top;
+      active=link;
+    }
+  });
+
+  if(!active){
+    active=links.find(link=>{
+      const target=document.getElementById(link.dataset.navTarget);
+      return target && target.getBoundingClientRect().top>=0;
+    }) || null;
+  }
+
+  links.forEach(link=>link.classList.toggle("active",link===active));
+}
+
+let floatingNavFrame=0;
+window.addEventListener("scroll",()=>{
+  cancelAnimationFrame(floatingNavFrame);
+  floatingNavFrame=requestAnimationFrame(updateFloatingNavActive);
+},{passive:true});
+
+window.addEventListener("resize",()=>{
+  getNavigationOffset();
+  updateFloatingNavActive();
+},{passive:true});
+
+window.addEventListener("load",()=>{
+  getNavigationOffset();
+  updateFloatingNavActive();
+});
+
+document.addEventListener("click",(event)=>{
+  const panel=document.getElementById("floatingNav");
+  const button=document.getElementById("floatingNavButton");
+  if(!panel || !button || !panel.classList.contains("open")) return;
+
+  const clickedInsidePanel=panel.contains(event.target);
+  const clickedToggle=button.contains(event.target);
+
+  if(!clickedInsidePanel && !clickedToggle){
+    setFloatingNav(false);
+  }
+});
+
+
+let state = normalizeState(loadState());
+currentTheme = state.settings.theme;
+currentLanguage = state.settings.language;
+localStorage.setItem("ulpeTheme",currentTheme);
+localStorage.setItem("ulpeLanguage",currentLanguage);
+document.documentElement.dataset.theme = currentTheme;
+
+function clampRating(value){
+  const number = Number(value);
+  return Number.isFinite(number) ? Math.min(5,Math.max(0,Math.round(number))) : 0;
+}
+
+function relationKey(idA,idB){
+  return [String(idA),String(idB)].sort().join("::");
+}
+
+function normalizeState(data){
+  const source = data && typeof data === "object" && !Array.isArray(data)
+    ? data
+    : structuredClone(DEFAULT_STATE);
+
+  const sourceSettings = source.settings && typeof source.settings === "object" && !Array.isArray(source.settings)
+    ? source.settings
+    : {};
+
+  const normalized = {
+    settings:{
+      worldName:String(sourceSettings.worldName ?? source.worldName ?? "...").trim() || "...",
+      theme:sourceSettings.theme === "light" ? "light" : "dark",
+      language:sourceSettings.language === "en" ? "en" : "es",
+      editingWorldName:Boolean(sourceSettings.editingWorldName)
+    },
+    events:[],
+    regions:[],
+    playerCharacters:[],
+    importantNpcs:[],
+    relations:{},
+    calendar:createDefaultCalendar(),
+    log:[]
+  };
+
+  const sourceEvents = Array.isArray(source.events) ? source.events : [];
+  normalized.events = sourceEvents.map((event,index)=>{
+    const milestones = Array.isArray(event?.milestones) ? event.milestones : [];
+    const normalizedMilestones = milestones.map(milestone=>{
+      if(typeof milestone === "string"){
+        return {
+          text:milestone,
+          done:false,
+          currentSituation:"",
+          involvedActivities:"",
+          availableAdventures:"",
+          directorNotes:""
+        };
+      }
+      return {
+        text:String(milestone?.text ?? ""),
+        done:Boolean(milestone?.done),
+        currentSituation:String(milestone?.currentSituation ?? ""),
+        involvedActivities:String(milestone?.involvedActivities ?? ""),
+        availableAdventures:String(milestone?.availableAdventures ?? ""),
+        directorNotes:String(milestone?.directorNotes ?? "")
+      };
+    });
+
+    return {
+      id:String(event?.id ?? `evento-${Date.now()}-${index}`),
+      name:String(event?.name ?? "Evento sin título"),
+      editingTitle:Boolean(event?.editingTitle),
+      status:STATUS.includes(event?.status) ? event.status : "Dormido",
+      phase:String(event?.phase ?? ""),
+      trigger:String(event?.trigger ?? ""),
+      milestones:normalizedMilestones,
+      progress:normalizedMilestones.filter(milestone=>milestone.done).length,
+      notes:String(event?.notes ?? "")
+    };
+  });
+
+  const sourceRegions = Array.isArray(source.regions) ? source.regions : [];
+  normalized.regions = sourceRegions.map((region,index)=>{
+    const politics = region?.politics && typeof region.politics === "object"
+      ? region.politics
+      : {};
+
+    const cities = (Array.isArray(region?.cities) ? region.cities : []).map((city,cityIndex)=>{
+      const ratings = city?.ratings && typeof city.ratings === "object"
+        ? city.ratings
+        : {};
+
+      return {
+        id:String(city?.id ?? `city-${Date.now()}-${index}-${cityIndex}-${Math.random().toString(36).slice(2,8)}`),
+        name:String(city?.name ?? `Ciudad ${cityIndex + 1}`),
+        editingName:Boolean(city?.editingName),
+        state:CITY_STATES.includes(city?.state) ? city.state : "Estable",
+        population:String(city?.population ?? ""),
+        notes:String(city?.notes ?? ""),
+        expanded:Boolean(city?.expanded),
+        ratings:{
+          security:clampRating(ratings.security ?? 3),
+          economy:clampRating(ratings.economy ?? 3),
+          corruption:clampRating(ratings.corruption ?? 1),
+          legitimacy:clampRating(ratings.legitimacy ?? 3)
+        }
+      };
+    });
+
+    const cityIds = new Set(cities.map(city=>city.id));
+    const characters = (Array.isArray(region?.characters) ? region.characters : []).map((character,characterIndex)=>{
+      const cityId = String(character?.cityId ?? "");
+      return {
+        id:String(character?.id ?? `character-${Date.now()}-${index}-${characterIndex}-${Math.random().toString(36).slice(2,8)}`),
+        name:String(character?.name ?? `Personaje ${characterIndex + 1}`),
+        editingName:Boolean(character?.editingName),
+        species:String(character?.species ?? ""),
+        role:String(character?.role ?? ""),
+        status:CHARACTER_STATES.includes(character?.status) ? character.status : "Activo",
+        cityId:cityIds.has(cityId) ? cityId : "",
+        notes:String(character?.notes ?? ""),
+        expanded:Boolean(character?.expanded)
+      };
+    });
+
+    return {
+      id:String(region?.id ?? `region-${Date.now()}-${index}-${Math.random().toString(36).slice(2,8)}`),
+      name:String(region?.name ?? `Región ${index + 1}`),
+      editingName:Boolean(region?.editingName),
+      diagnosis:String(region?.diagnosis ?? region?.stability ?? "Estable"),
+      editingDiagnosis:Boolean(region?.editingDiagnosis),
+      stability:REGION_STATUS.includes(region?.stability) ? region.stability : "Estable",
+      military:MILITARY.includes(region?.military) ? region.military : "Paz",
+      politics:{
+        government:clampRating(politics.government ?? 1),
+        legitimacy:clampRating(politics.legitimacy ?? 1),
+        corruption:clampRating(politics.corruption ?? 1),
+        religion:clampRating(politics.religion ?? 1),
+        magic:clampRating(politics.magic ?? 1)
+      },
+      cities,
+      characters,
+      notes:String(region?.notes ?? "")
+    };
+  });
+
+
+  const sourcePlayerCharacters = Array.isArray(source.playerCharacters)
+    ? source.playerCharacters
+    : [];
+
+  normalized.playerCharacters = sourcePlayerCharacters.map((player,index)=>{
+    const abilitiesSource = player?.abilities && typeof player.abilities === "object"
+      ? player.abilities
+      : {};
+
+    const abilities = {};
+    ["str","dex","con","int","wis","cha"].forEach(key=>{
+      const entry = abilitiesSource[key] && typeof abilitiesSource[key] === "object"
+        ? abilitiesSource[key]
+        : {};
+      const scoreValue = Number(entry.score);
+      abilities[key] = {
+        score:Number.isFinite(scoreValue) ? Math.min(30,Math.max(1,Math.round(scoreValue))) : 10,
+        proficient:Boolean(entry.proficient)
+      };
+    });
+
+    const relatedNpcs = (Array.isArray(player?.relatedNpcs) ? player.relatedNpcs : []).map((npc,npcIndex)=>({
+      id:String(npc?.id ?? `player-npc-${Date.now()}-${index}-${npcIndex}-${Math.random().toString(36).slice(2,8)}`),
+      name:String(npc?.name ?? `NPC ${npcIndex + 1}`),
+      editingName:Boolean(npc?.editingName),
+      species:String(npc?.species ?? ""),
+      role:String(npc?.role ?? ""),
+      status:CHARACTER_STATES.includes(npc?.status) ? npc.status : "Activo",
+      relationship:String(npc?.relationship ?? ""),
+      notes:String(npc?.notes ?? "")
+    }));
+
+    return {
+      id:String(player?.id ?? `player-${Date.now()}-${index}-${Math.random().toString(36).slice(2,8)}`),
+      name:String(player?.name ?? `Personaje jugador ${index + 1}`),
+      editingName:Boolean(player?.editingName),
+      race:String(player?.race ?? ""),
+      className:String(player?.className ?? player?.class ?? ""),
+      level:Number.isFinite(Number(player?.level))
+        ? Math.min(20,Math.max(1,Math.round(Number(player.level))))
+        : 1,
+      abilities,
+      relatedNpcs,
+      cardExpanded:player?.cardExpanded !== false,
+      notes:String(player?.notes ?? "")
+    };
+  });
+
+
+  const sourceImportantNpcs = Array.isArray(source.importantNpcs) ? source.importantNpcs : [];
+  normalized.importantNpcs = sourceImportantNpcs.map((npc,index)=>{
+    const abilitySource = npc?.abilities && typeof npc.abilities === "object" ? npc.abilities : {};
+    const abilities = {};
+    ["str","dex","con","int","wis","cha"].forEach(key=>{
+      const score = Number(abilitySource[key]?.score ?? abilitySource[key] ?? 10);
+      abilities[key] = {
+        score:Number.isFinite(score) ? Math.min(30,Math.max(1,Math.round(score))) : 10,
+        save:String(abilitySource[key]?.save ?? "")
+      };
+    });
+    const normalizeFeature=(feature,featureIndex,prefix)=>({
+      id:String(feature?.id ?? `${prefix}-${Date.now()}-${index}-${featureIndex}-${Math.random().toString(36).slice(2,8)}`),
+      name:String(feature?.name ?? `Nueva ${prefix}`),
+      type:String(feature?.type ?? ""),
+      activation:String(feature?.activation ?? ""),
+      attackBonus:String(feature?.attackBonus ?? ""),
+      reach:String(feature?.reach ?? ""),
+      damage:String(feature?.damage ?? ""),
+      save:String(feature?.save ?? ""),
+      recharge:String(feature?.recharge ?? ""),
+      description:String(feature?.description ?? ""),
+      notes:String(feature?.notes ?? ""),
+      expanded:Boolean(feature?.expanded)
+    });
+    return {
+      id:String(npc?.id ?? `important-npc-${Date.now()}-${index}-${Math.random().toString(36).slice(2,8)}`),
+      name:String(npc?.name ?? `Personaje del archivo ${index + 1}`),
+      editingName:Boolean(npc?.editingName),
+      species:String(npc?.species ?? ""),
+      alignment:String(npc?.alignment ?? ""),
+      role:String(npc?.role ?? ""),
+      size:String(npc?.size ?? "Mediano"),
+      armorClass:String(npc?.armorClass ?? ""),
+      hitPoints:String(npc?.hitPoints ?? ""),
+      hitDice:String(npc?.hitDice ?? ""),
+      speed:String(npc?.speed ?? ""),
+      initiative:String(npc?.initiative ?? ""),
+      challengeRating:String(npc?.challengeRating ?? ""),
+      proficiencyBonus:String(npc?.proficiencyBonus ?? ""),
+      abilities,
+      vulnerabilities:String(npc?.vulnerabilities ?? ""),
+      resistances:String(npc?.resistances ?? ""),
+      immunities:[String(npc?.immunities ?? "").trim(),String(npc?.conditionImmunities ?? "").trim()]
+        .filter(Boolean).join("; "),
+      conditionImmunities:"",
+      skills:String(npc?.skills ?? ""),
+      senses:String(npc?.senses ?? ""),
+      languages:String(npc?.languages ?? ""),
+      traits:(Array.isArray(npc?.traits) ? npc.traits : []).map((f,i)=>normalizeFeature(f,i,"rasgo")),
+      actions:(Array.isArray(npc?.actions) ? npc.actions : []).map((f,i)=>normalizeFeature(f,i,"acción")),
+      bonusActions:(Array.isArray(npc?.bonusActions) ? npc.bonusActions : []).map((f,i)=>normalizeFeature(f,i,"acción adicional")),
+      reactions:(Array.isArray(npc?.reactions) ? npc.reactions : []).map((f,i)=>normalizeFeature(f,i,"reacción")),
+      legendaryActions:(Array.isArray(npc?.legendaryActions) ? npc.legendaryActions : []).map((f,i)=>normalizeFeature(f,i,"acción legendaria")),
+      lairActions:(Array.isArray(npc?.lairActions) ? npc.lairActions : []).map((f,i)=>normalizeFeature(f,i,"acción de guarida")),
+      cardExpanded:npc?.cardExpanded !== false,
+      defensesSectionExpanded:npc?.defensesSectionExpanded !== false,
+      traitsSectionExpanded:npc?.traitsSectionExpanded !== false,
+      actionsSectionExpanded:npc?.actionsSectionExpanded !== false,
+      actionSubsectionsExpanded:{
+        actions:npc?.actionSubsectionsExpanded?.actions !== false,
+        bonusActions:npc?.actionSubsectionsExpanded?.bonusActions !== false,
+        reactions:npc?.actionSubsectionsExpanded?.reactions !== false,
+        legendaryActions:npc?.actionSubsectionsExpanded?.legendaryActions !== false,
+        lairActions:npc?.actionSubsectionsExpanded?.lairActions !== false
+      },
+      notes:String(npc?.notes ?? "")
+    };
+  });
+
+  const validRegionIds = new Set(normalized.regions.map(region=>region.id));
+  const sourceRelations = source.relations && typeof source.relations === "object" && !Array.isArray(source.relations)
+    ? source.relations
+    : {};
+
+  Object.entries(sourceRelations).forEach(([key,value])=>{
+    const [idA,idB,...extra] = String(key).split("::");
+    if(
+      extra.length === 0 &&
+      idA !== idB &&
+      validRegionIds.has(idA) &&
+      validRegionIds.has(idB) &&
+      RELATION_STATES.includes(value)
+    ){
+      normalized.relations[relationKey(idA,idB)] = value;
+    }
+  });
+
+  const sourceCalendar = source.calendar && typeof source.calendar === "object" && !Array.isArray(source.calendar)
+    ? source.calendar
+    : {};
+  const sourceMonths = Array.isArray(sourceCalendar.months) ? sourceCalendar.months : [];
+  const monthCount = clampCalendarValue(
+    sourceCalendar.monthCount ?? sourceMonths.length,
+    1,
+    CALENDAR_MAX_MONTHS,
+    CALENDAR_DEFAULT_MONTHS
+  );
+  normalized.calendar = {
+    monthCount,
+    months:Array.from({length:monthCount},(_,index)=>{
+      const month = sourceMonths[index] && typeof sourceMonths[index] === "object"
+        ? sourceMonths[index]
+        : {};
+      const defaultMonth = createCalendarMonth(index);
+      return {
+        name:String(month.name ?? defaultMonth.name).trim() || defaultMonth.name,
+        season:CALENDAR_SEASONS.includes(month.season) ? month.season : defaultMonth.season,
+        days:clampCalendarValue(
+          month.days ?? sourceCalendar.daysPerMonth,
+          1,
+          CALENDAR_MAX_DAYS,
+          defaultMonth.days
+        )
+      };
+    }),
+    selectedDay:null
+  };
+
+  const selectedMonth = Number(sourceCalendar.selectedDay?.monthIndex);
+  const selectedDay = Number(sourceCalendar.selectedDay?.day);
+  if(
+    Number.isInteger(selectedMonth) &&
+    selectedMonth >= 0 &&
+    selectedMonth < monthCount &&
+    Number.isInteger(selectedDay) &&
+    selectedDay >= 1 &&
+    selectedDay <= normalized.calendar.months[selectedMonth].days
+  ){
+    normalized.calendar.selectedDay = {
+      monthIndex:selectedMonth,
+      day:selectedDay
+    };
+  }
+
+  const sourceLog = Array.isArray(source.log) ? source.log : [];
+  normalized.log = sourceLog.map((entry,index)=>({
+    date:String(entry?.date ?? ""),
+    source:String(entry?.source ?? ""),
+    text:String(entry?.text ?? ""),
+    createdAt:String(entry?.createdAt ?? new Date(Date.now()+index).toISOString())
+  }));
+
+  return normalized;
+}
+
+function loadState(){
+  try{
+    const raw = localStorage.getItem("ulpeWorldClock");
+    return raw ? JSON.parse(raw) : structuredClone(DEFAULT_STATE);
+  }catch(error){
+    return structuredClone(DEFAULT_STATE);
+  }
+}
+
+function saveState(){
+  if(document.activeElement?.id === "worldNameInput"){
+    saveWorldName(document.activeElement.value);
+  }
+  syncPreferencesToState();
+  localStorage.setItem("ulpeWorldClock", JSON.stringify(state));
+  localStorage.setItem("ulpeTheme",currentTheme);
+  localStorage.setItem("ulpeLanguage",currentLanguage);
+  alert(currentLanguage === "en" ? "State saved." : "Estado guardado.");
+}
+
+function renderWorldTitle(){
+  const container = document.getElementById("worldTitleEditor");
+  if(!container) return;
+
+  const settings = state.settings;
+  const appName = currentLanguage === "en" ? "World Panel" : "Panel de Mundo";
+  document.title = `${appName} — ${settings.worldName}`;
+  if(settings.editingWorldName){
+    container.innerHTML = `
+      <h1>
+        <span class="world-title-prefix" data-i18n="Panel de Mundo —">Panel de Mundo —</span>
+      </h1>
+      <input id="worldNameInput" class="world-title-input"
+        value="${escapeAttr(settings.worldName)}"
+        aria-label="Nombre del mundo"
+        onkeydown="handleWorldNameKey(event,this.value)">
+      <button class="world-title-edit-button" type="button"
+        onclick="saveWorldName(document.getElementById('worldNameInput').value)"
+        title="Guardar nombre del mundo"
+        aria-label="Guardar nombre del mundo">↩</button>
+    `;
+  }else{
+    container.innerHTML = `
+      <h1>
+        <span class="world-title-prefix" data-i18n="Panel de Mundo —">Panel de Mundo —</span>
+        <span class="world-name">${escapeHtml(settings.worldName)}</span>
+      </h1>
+      <button class="world-title-edit-button" type="button"
+        onclick="toggleWorldNameEdit()"
+        title="Editar nombre del mundo"
+        aria-label="Editar nombre del mundo">✎</button>
+    `;
+  }
+}
+
+function toggleWorldNameEdit(){
+  state.settings.editingWorldName = true;
+  autoSave();
+  renderWorldTitle();
+  applyLanguage();
+  requestAnimationFrame(()=>{
+    const input = document.getElementById("worldNameInput");
+    if(input){
+      input.focus();
+      input.select();
+    }
+  });
+}
+
+function saveWorldName(value){
+  const clean = String(value ?? "").trim();
+  state.settings.worldName = clean || "...";
+  state.settings.editingWorldName = false;
+  autoSave();
+  renderWorldTitle();
+  applyLanguage();
+}
+
+function handleWorldNameKey(event,value){
+  if(event.key === "Enter"){
+    event.preventDefault();
+    saveWorldName(value);
+  }else if(event.key === "Escape"){
+    event.preventDefault();
+    state.settings.editingWorldName = false;
+    renderWorldTitle();
+    applyLanguage();
+  }
+}
+
+function syncPreferencesToState(){
+  state.settings.theme = currentTheme;
+  state.settings.language = currentLanguage;
+}
+
+function render(){
+  renderWorldTitle();
+  renderEvents();
+  renderRegions();
+  renderPlayerCharacters();
+  renderImportantNpcs();
+  renderCalendar();
+  renderLog();
+  renderFloatingNav();
+  applyTheme();
+  applyLanguage();
+}
+
+const milestoneDetailUI={};
+
+function getMilestoneDetailUI(eventIndex){
+  const event=state.events[eventIndex];
+  if(!event || !event.milestones.length){
+    milestoneDetailUI[eventIndex]={milestoneIndex:-1,tab:"currentSituation"};
+    return milestoneDetailUI[eventIndex];
+  }
+
+  const current=milestoneDetailUI[eventIndex] || {
+    milestoneIndex:-1,
+    tab:"currentSituation"
+  };
+  const allowedTabs=["currentSituation","involvedActivities","availableAdventures","directorNotes"];
+  const tab=allowedTabs.includes(current.tab) ? current.tab : "currentSituation";
+
+  let milestoneIndex=Number.isInteger(current.milestoneIndex)
+    ? current.milestoneIndex
+    : -1;
+
+  if(milestoneIndex >= event.milestones.length){
+    milestoneIndex=event.milestones.length-1;
+  }
+  if(milestoneIndex < -1){
+    milestoneIndex=-1;
+  }
+
+  milestoneDetailUI[eventIndex]={milestoneIndex,tab};
+  return milestoneDetailUI[eventIndex];
+}
+
+function selectMilestoneDetail(eventIndex,milestoneIndex){
+  const current=getMilestoneDetailUI(eventIndex);
+  const isAlreadySelected=current.milestoneIndex===milestoneIndex;
+
+  milestoneDetailUI[eventIndex]={
+    milestoneIndex:isAlreadySelected ? -1 : milestoneIndex,
+    tab:current.tab
+  };
+  renderEvents();
+}
+
+function selectMilestoneTab(eventIndex,tab){
+  const current=getMilestoneDetailUI(eventIndex);
+  milestoneDetailUI[eventIndex]={milestoneIndex:current.milestoneIndex,tab};
+  renderEvents();
+}
+
+function renderMilestoneDetail(eventIndex){
+  const event=state.events[eventIndex];
+  const ui=getMilestoneDetailUI(eventIndex);
+  if(!event || ui.milestoneIndex<0){
+    return "";
+  }
+
+  const milestone=event.milestones[ui.milestoneIndex];
+  const tabs=[
+    ["currentSituation","Situación actual"],
+    ["involvedActivities","Actividades"],
+    ["availableAdventures","Aventuras"],
+    ["directorNotes","Notas del Director"]
+  ];
+  const labels={
+    currentSituation:"Situación actual",
+    involvedActivities:"Actividades de los implicados",
+    availableAdventures:"Aventuras disponibles",
+    directorNotes:"Notas del Director del hito"
+  };
+
+  return `
+    <div class="milestone-detail">
+      <div class="milestone-detail-head">
+        <strong>Detalles: ${escapeHtml(milestone.text)}</strong>
+        <span class="small">Hito ${ui.milestoneIndex+1} de ${event.milestones.length}</span>
+      </div>
+      <div class="milestone-tabs" role="tablist">
+        ${tabs.map(([key,label])=>`
+          <button
+            class="milestone-tab ${ui.tab===key ? "active" : ""}"
+            type="button"
+            role="tab"
+            aria-selected="${ui.tab===key}"
+            onclick="selectMilestoneTab(${eventIndex},'${key}')">${label}</button>
+        `).join("")}
+      </div>
+      <label>${labels[ui.tab]}</label>
+      <textarea
+        aria-label="${labels[ui.tab]}"
+        placeholder="Escribe aquí..."
+        onchange="updateMilestoneField(${eventIndex},${ui.milestoneIndex},'${ui.tab}',this.value)">${escapeHtml(milestone[ui.tab] || "")}</textarea>
+    </div>
+  `;
+}
+
+
+function getCalendarMonthStart(monthIndex){
+  return state.calendar.months
+    .slice(0,monthIndex)
+    .reduce((total,month)=>total + month.days,0) % 7;
+}
+
+function updateCalendarMonthCount(value){
+  const nextCount=clampCalendarValue(value,1,CALENDAR_MAX_MONTHS,state.calendar.monthCount);
+  const months=state.calendar.months.slice(0,nextCount);
+  while(months.length<nextCount){
+    months.push(createCalendarMonth(months.length));
+  }
+
+  state.calendar.monthCount=nextCount;
+  state.calendar.months=months;
+
+  const selected=state.calendar.selectedDay;
+  if(selected && selected.monthIndex>=nextCount){
+    state.calendar.selectedDay={
+      monthIndex:nextCount-1,
+      day:Math.min(selected.day,months[nextCount-1].days)
+    };
+  }
+
+  autoSave();
+  renderCalendar();
+}
+
+function updateCalendarMonthDays(monthIndex,value){
+  const month=state.calendar.months[monthIndex];
+  if(!month) return;
+
+  month.days=clampCalendarValue(value,1,CALENDAR_MAX_DAYS,month.days);
+
+  const selected=state.calendar.selectedDay;
+  if(selected?.monthIndex===monthIndex && selected.day>month.days){
+    state.calendar.selectedDay={
+      monthIndex,
+      day:month.days
+    };
+  }
+
+  autoSave();
+  renderCalendar();
+}
+
+function updateCalendarMonthName(monthIndex,value){
+  const clean=String(value ?? "").trim();
+  state.calendar.months[monthIndex].name=clean || `Mes ${monthIndex + 1}`;
+  autoSave();
+}
+
+function updateCalendarSeason(monthIndex,value){
+  if(!CALENDAR_SEASONS.includes(value)) return;
+  state.calendar.months[monthIndex].season=value;
+  autoSave();
+}
+
+function selectCalendarDay(monthIndex,day){
+  const current=state.calendar.selectedDay;
+  const sameDay=current &&
+    current.monthIndex===monthIndex &&
+    current.day===day;
+
+  state.calendar.selectedDay=sameDay
+    ? null
+    : {monthIndex,day};
+
+  autoSave();
+  renderCalendar();
+}
+
+function renderCalendar(){
+  const grid=document.getElementById("calendarGrid");
+  const controls=document.getElementById("calendarControls");
+  if(!grid || !controls) return;
+
+  const selected=state.calendar.selectedDay;
+
+  controls.innerHTML=`
+    <label class="calendar-month-count-control" for="calendarMonthCount">
+      Meses del año
+      <input
+        id="calendarMonthCount"
+        type="number"
+        min="1"
+        max="12"
+        step="1"
+        value="${state.calendar.monthCount}"
+        onchange="updateCalendarMonthCount(this.value)">
+    </label>
+  `;
+
+  const monthCards=state.calendar.months.map((month,monthIndex)=>{
+    const startOffset=getCalendarMonthStart(monthIndex);
+    const daysInMonth=month.days;
+    const spacers=Array.from(
+      {length:startOffset},
+      ()=>'<div class="calendar-day-spacer" aria-hidden="true"></div>'
+    ).join("");
+    const days=Array.from({length:daysInMonth},(_,dayIndex)=>{
+      const day=dayIndex+1;
+      const isSelected=selected?.monthIndex===monthIndex && selected?.day===day;
+      return `
+        <button
+          class="calendar-day ${isSelected ? "selected" : ""}"
+          type="button"
+          aria-pressed="${isSelected}"
+          aria-label="${escapeAttr(month.name)}, día ${day}"
+          onclick="selectCalendarDay(${monthIndex},${day})">${day}</button>
+      `;
+    }).join("");
+
+    return `
+      <section class="calendar-month nav-scroll-target" id="calendar-month-${monthIndex + 1}">
+        <div class="calendar-month-header">
+          <div class="calendar-month-top">
+            <input
+              class="calendar-month-name"
+              value="${escapeAttr(month.name)}"
+              aria-label="Nombre del mes ${monthIndex + 1}"
+              onchange="updateCalendarMonthName(${monthIndex},this.value)">
+            <label class="calendar-days-control">
+              <input
+                type="number"
+                min="1"
+                max="31"
+                step="1"
+                value="${month.days}"
+                aria-label="Días de ${escapeAttr(month.name)}"
+                onchange="updateCalendarMonthDays(${monthIndex},this.value)">
+              días
+            </label>
+          </div>
+          <div class="calendar-month-subrow">
+            <select
+              class="calendar-season"
+              aria-label="Estación de ${escapeAttr(month.name)}"
+              onchange="updateCalendarSeason(${monthIndex},this.value)">
+              ${CALENDAR_SEASONS.map(season=>`
+                <option value="${season}" ${season===month.season ? "selected" : ""}>${season}</option>
+              `).join("")}
+            </select>
+          </div>
+        </div>
+        <div class="calendar-weekdays" aria-hidden="true">
+          ${CALENDAR_WEEKDAYS.map(day=>`<div class="calendar-weekday">${day}</div>`).join("")}
+        </div>
+        <div class="calendar-days">
+          ${spacers}
+          ${days}
+        </div>
+      </section>
+    `;
+  }).join("");
+
+  grid.innerHTML=monthCards;
+  applyLanguage();
+}
+
+function renderEvents(){
+  const grid = document.getElementById("eventsGrid");
+  grid.innerHTML = "";
+  state.events.forEach((ev, idx)=>{
+    const milestoneUI=getMilestoneDetailUI(idx);
+    const card = document.createElement("section");
+    card.className = "card nav-scroll-target";
+    card.id = `event-${ev.id}`;
+    card.innerHTML = `
+      <div class="event-card-header">
+        <div class="event-title-area">
+          ${ev.editingTitle ? `
+            <label>Título del evento</label>
+            <input
+              class="event-title-input"
+              value="${escapeAttr(ev.name)}"
+              onchange="saveEventTitle(${idx},this.value)"
+              onkeydown="handleTitleKey(event,${idx},this.value)"
+              aria-label="Editar título del evento">
+          ` : `
+            <h2 class="event-title-display">${escapeHtml(ev.name)}</h2>
+          `}
+        </div>
+        <div class="event-card-actions">
+          <button
+            class="square-button"
+            onclick="toggleTitleEdit(${idx})"
+            title="${ev.editingTitle ? "Cancelar edición" : "Editar título"}"
+            aria-label="${ev.editingTitle ? "Cancelar edición del título" : "Editar título"}">
+            ${ev.editingTitle ? "↩" : "✎"}
+          </button>
+          <button
+            class="danger square-button"
+            onclick="deleteEvent(${idx})"
+            title="Eliminar tarjeta de evento"
+            aria-label="Eliminar tarjeta de evento">×</button>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Estado</label>
+          <select onchange="updateEvent(${idx},'status',this.value)">
+            ${STATUS.map(s=>`<option ${s===ev.status?'selected':''}>${s}</option>`).join("")}
+          </select>
+        </div>
+        <div>
+          <label>Fase actual</label>
+          <input value="${escapeAttr(ev.phase)}" onchange="updateEvent(${idx},'phase',this.value)">
+        </div>
+      </div>
+
+      <label>Progreso de hitos</label>
+      ${(()=>{
+        const total = ev.milestones.length;
+        const completed = ev.milestones.filter(m=>m.done).length;
+        const percent = total ? Math.round((completed / total) * 100) : 0;
+        return `
+          <div class="progress-wrap">
+            <div class="progress"><div style="width:${percent}%"></div></div>
+            <div class="progress-label">
+              <span>${completed}/${total} hitos</span>
+              <span>${percent}%</span>
+            </div>
+          </div>`;
+      })()}
+
+      <label>Siguiente detonante</label>
+      <input value="${escapeAttr(ev.trigger)}" onchange="updateEvent(${idx},'trigger',this.value)">
+
+      <label style="margin-top:10px">Notas del Director</label>
+      <textarea onchange="updateEvent(${idx},'notes',this.value)">${escapeHtml(ev.notes)}</textarea>
+
+      <h3 style="margin-top:14px">Hitos</h3>
+      <div class="milestone-list">
+        ${ev.milestones.length ? ev.milestones.map((m,i)=>`
+          <div class="milestone-row ${m.done ? "done" : ""} ${milestoneUI.milestoneIndex===i ? "active" : ""}">
+            <input
+              type="checkbox"
+              ${m.done ? "checked" : ""}
+              aria-label="Marcar hito como completado"
+              onchange="toggleMilestone(${idx},${i},this.checked)">
+            <input
+              type="text"
+              value="${escapeAttr(m.text)}"
+              aria-label="Editar hito"
+              onchange="editMilestone(${idx},${i},this.value)">
+            <button
+              class="icon-button"
+              type="button"
+              title="${milestoneUI.milestoneIndex===i ? "Ocultar detalles del hito" : "Ver detalles del hito"}"
+              aria-label="${milestoneUI.milestoneIndex===i ? "Ocultar detalles del hito" : "Ver detalles del hito"}"
+              aria-expanded="${milestoneUI.milestoneIndex===i}"
+              onclick="selectMilestoneDetail(${idx},${i})">☰</button>
+            <button
+              class="danger icon-button milestone-delete"
+              title="Eliminar hito"
+              aria-label="Eliminar hito"
+              onclick="deleteMilestone(${idx},${i})">×</button>
+          </div>
+        `).join("") : '<div class="empty">No hay hitos. Añade el primer paso.</div>'}
+      </div>
+      <button style="margin-top:10px" onclick="addMilestone(${idx})">+ Añadir hito</button>
+      ${renderMilestoneDetail(idx)}
+    `;
+    grid.appendChild(card);
+  });
+
+  renderFloatingNav();
+}
+
+
+function diagnosisTone(label){
+  const found = DIAGNOSIS_OPTIONS.find(item=>item.label===label);
+  return found?.tone || "alert";
+}
+
+function suggestDiagnosis(){
+  return [
+    "Próspera",
+    "Estable",
+    "Movilizada",
+    "Tensionada",
+    "Asediada",
+    "Convulsa",
+    "Devastada",
+    "Colapsada",
+    "Aislada",
+    "Influyente"
+  ];
+}
+
+function renderDiagnosisEditor(region,index){
+  const suggestions=suggestDiagnosis();
+  return `
+    <div class="diagnosis-editor">
+      <div class="diagnosis-editor-head">
+        <strong>Diagnóstico de la región</strong>
+        <span class="small">Sugerencias contextuales</span>
+      </div>
+      <div class="diagnosis-input-row">
+        <div>
+          <label>Etiqueta</label>
+          <input value="${escapeAttr(region.diagnosis || "")}"
+            onkeydown="handleDiagnosisKey(event,${index},this.value)"
+            onchange="saveDiagnosis(${index},this.value)">
+        </div>
+        <button onclick="saveDiagnosis(${index},this.parentElement.querySelector('input').value)">Guardar</button>
+      </div>
+      <div class="diagnosis-suggestions">
+        ${suggestions.map(label=>`
+          <button class="suggestion-chip" onclick="applyDiagnosisSuggestion(${index},'${escapeAttr(label)}')">
+            ${escapeHtml(label)}
+          </button>
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function toggleDiagnosisEdit(index){
+  state.regions[index].editingDiagnosis=!state.regions[index].editingDiagnosis;
+  renderRegions();
+}
+
+function saveDiagnosis(index,value){
+  state.regions[index].diagnosis=value.trim()||"Estable";
+  state.regions[index].editingDiagnosis=false;
+  autoSave();
+  renderRegions();
+}
+
+function applyDiagnosisSuggestion(index,label){
+  state.regions[index].diagnosis=label;
+  state.regions[index].editingDiagnosis=false;
+  autoSave();
+  renderRegions();
+}
+
+function handleDiagnosisKey(event,index,value){
+  if(event.key==="Enter"){
+    event.preventDefault();
+    saveDiagnosis(index,value);
+  }else if(event.key==="Escape"){
+    event.preventDefault();
+    state.regions[index].editingDiagnosis=false;
+    renderRegions();
+  }
+}
+
+function renderRegions(){
+  const box = document.getElementById("regionsCard");
+  if(!state.regions.length){
+    box.innerHTML = '<div class="empty">No hay regiones. Crea la primera para comenzar.</div>';
+    return;
+  }
+
+  box.innerHTML = state.regions.map((r,idx)=>`
+    <div class="region nav-scroll-target" id="region-${r.id}">
+      <div class="region-head">
+        <div class="region-title-area">
+          ${r.editingName ? `
+            <label>Nombre de la región</label>
+            <input
+              class="region-title-input"
+              value="${escapeAttr(r.name)}"
+              onchange="saveRegionName(${idx},this.value)"
+              onkeydown="handleRegionNameKey(event,${idx},this.value)"
+              aria-label="Editar nombre de la región">
+          ` : `
+            <h3 class="region-title-display">${escapeHtml(r.name)}</h3>
+            <div class="diagnosis-wrap">
+              <span class="diagnosis-tag" data-tone="${diagnosisTone(r.diagnosis)}">
+                <span class="diagnosis-dot"></span>
+                ${escapeHtml(r.diagnosis || "Estable")}
+              </span>
+              <button class="square-button" onclick="${r.editingDiagnosis ? `saveDiagnosis(${idx},this.closest('.diagnosis-wrap').nextElementSibling.querySelector('input').value)` : `toggleDiagnosisEdit(${idx})`}"
+                title="${r.editingDiagnosis ? 'Guardar diagnóstico' : 'Editar diagnóstico'}"
+                aria-label="${r.editingDiagnosis ? 'Guardar diagnóstico' : 'Editar diagnóstico'}">
+                ${r.editingDiagnosis ? "↩" : "✎"}
+              </button>
+            </div>
+            ${r.editingDiagnosis ? renderDiagnosisEditor(r,idx) : ""}
+          `}
+        </div>
+        <div class="region-actions">
+          <button
+            class="square-button"
+            onclick="${r.editingName ? `saveRegionName(${idx},this.closest('.region-head').querySelector('.region-title-input').value)` : `toggleRegionNameEdit(${idx})`}"
+            title="${r.editingName ? 'Guardar nombre' : 'Editar nombre'}"
+            aria-label="${r.editingName ? 'Guardar nombre' : 'Editar nombre'}">
+            ${r.editingName ? "↩" : "✎"}
+          </button>
+          <button
+            class="danger square-button"
+            onclick="deleteRegion(${idx})"
+            title="Eliminar región"
+            aria-label="Eliminar región">×</button>
+        </div>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <div>
+          <label>Estabilidad</label>
+          <select onchange="updateRegion(${idx},'stability',this.value)">
+            ${REGION_STATUS.map(s=>`<option ${s===r.stability?'selected':''}>${s}</option>`).join("")}
+          </select>
+        </div>
+        <div>
+          <label>Situación militar</label>
+          <select onchange="updateRegion(${idx},'military',this.value)">
+            ${MILITARY.map(s=>`<option ${s===r.military?'selected':''}>${s}</option>`).join("")}
+          </select>
+        </div>
+      </div>
+      <div class="region-section nav-scroll-target" id="region-${r.id}-politics">
+        <h4>Estado político</h4>
+        <div class="political-grid">
+          ${POLITICAL_FIELDS.map(([key,label])=>`
+            <div class="political-row">
+              <span>${label}</span>
+              <div class="rating-dots" aria-label="${label}: ${r.politics[key]} de 5">
+                ${[1,2,3,4,5].map(value=>`
+                  <button
+                    class="rating-dot ${value <= r.politics[key] ? "filled" : ""}"
+                    onclick="setPoliticalRating(${idx},'${key}',${value})"
+                    title="${label}: ${value} de 5"
+                    aria-label="Establecer ${label} en ${value} de 5"></button>
+                `).join("")}
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+
+      <div class="region-section nav-scroll-target" id="region-${r.id}-relations">
+        <h4>Relaciones</h4>
+        <div class="relations-list">
+          ${state.regions.length > 1 ? state.regions
+            .map((other,otherIdx)=>({other,otherIdx}))
+            .filter(({other})=>other.id !== r.id)
+            .map(({other})=>{
+              const current = getRelation(r.id,other.id);
+              return `
+                <div class="relation-row">
+                  <span class="relation-name">${escapeHtml(other.name)}</span>
+                  <select
+                    onchange="setRelation('${escapeAttr(r.id)}','${escapeAttr(other.id)}',this.value)"
+                    aria-label="Relación entre ${escapeAttr(r.name)} y ${escapeAttr(other.name)}">
+                    ${RELATION_STATES.map(status=>`
+                      <option ${status===current ? "selected" : ""}>${status}</option>
+                    `).join("")}
+                  </select>
+                </div>`;
+            }).join("")
+            : '<div class="empty">Añade otra región para establecer relaciones.</div>'}
+        </div>
+      </div>
+
+      <div class="region-section nav-scroll-target" id="region-${r.id}-cities">
+        <div class="subsection-head">
+          <h4>Ciudades</h4>
+          <button onclick="addCity(${idx})">+ Añadir ciudad</button>
+        </div>
+        <div class="city-list">
+          ${r.cities.length ? r.cities.map((city,cityIdx)=>`
+            <div class="city-card npc-summary-card">
+              <div class="npc-summary-head">
+                <div class="npc-summary-view-group">
+                  <div class="npc-summary-main">
+                    <div class="npc-summary-name-wrap">
+                      ${city.editingName ? `
+                        <input value="${escapeAttr(city.name)}"
+                          size="${Math.max(String(city.name || '').length,8)}"
+                          oninput="this.size=Math.max(this.value.length,8)"
+                          onchange="saveCityName(${idx},${cityIdx},this.value)"
+                          onkeydown="handleCityNameKey(event,${idx},${cityIdx},this.value)">
+                      ` : `<h5 class="npc-summary-name">${escapeHtml(city.name)}</h5>`}
+                    </div>
+                    <div class="npc-summary-meta">
+                      ${escapeHtml([city.state, city.population].filter(Boolean).join(" • ") || "Sin estado ni población")}
+                    </div>
+                  </div>
+                  <button class="npc-summary-toggle"
+                    onclick="toggleCityExpanded(${idx},${cityIdx})"
+                    title="${city.expanded ? "Contraer ciudad" : "Ver detalles de la ciudad"}"
+                    aria-expanded="${city.expanded ? "true" : "false"}">
+                    ${city.expanded ? "▴" : "▾"}
+                  </button>
+                </div>
+                <div class="npc-summary-actions">
+                  <button class="square-button"
+                    onclick="${city.editingName
+                      ? `saveCityName(${idx},${cityIdx},this.closest('.npc-summary-head').querySelector('input').value)`
+                      : `toggleCityNameEdit(${idx},${cityIdx})`}"
+                    title="${city.editingName ? "Guardar nombre" : "Editar nombre"}">
+                    ${city.editingName ? "↩" : "✎"}
+                  </button>
+                  <button class="danger square-button" onclick="deleteCity(${idx},${cityIdx})"
+                    title="Eliminar ciudad">×</button>
+                </div>
+              </div>
+              ${city.expanded ? `
+                <div class="npc-expanded-content">
+                  <div class="compact-grid">
+                    <div>
+                      <label>Estado de la ciudad</label>
+                      <select onchange="updateCity(${idx},${cityIdx},'state',this.value)">
+                        ${CITY_STATES.map(status=>`<option ${status===city.state?"selected":""}>${status}</option>`).join("")}
+                      </select>
+                    </div>
+                    <div>
+                      <label>Población</label>
+                      <input value="${escapeAttr(city.population)}" placeholder="Ej. 32.000"
+                        onchange="updateCity(${idx},${cityIdx},'population',this.value)">
+                    </div>
+                  </div>
+                  <div class="city-ratings">
+                    ${CITY_RATING_FIELDS.map(([key,label])=>`
+                      <div class="city-rating">
+                        <div class="city-rating-label"><span>${label}</span><span>${city.ratings[key]}/5</span></div>
+                        <div class="mini-dots">
+                          ${[1,2,3,4,5].map(value=>`
+                            <button class="mini-dot ${value <= city.ratings[key] ? "filled" : ""}"
+                              onclick="setCityRating(${idx},${cityIdx},'${key}',${value})"
+                              title="${label}: ${value} de 5"></button>
+                          `).join("")}
+                        </div>
+                      </div>
+                    `).join("")}
+                  </div>
+                  <textarea class="item-notes" placeholder="Notas sobre la ciudad..."
+                    onchange="updateCity(${idx},${cityIdx},'notes',this.value)">${escapeHtml(city.notes)}</textarea>
+                </div>
+              ` : ""}
+            </div>
+          `).join("") : '<div class="empty">No hay ciudades registradas en esta región.</div>'}
+        </div>
+      </div>
+
+      <div class="region-section nav-scroll-target" id="region-${r.id}-characters">
+        <div class="subsection-head">
+          <h4>Personajes importantes</h4>
+          <button onclick="addCharacter(${idx})">+ Añadir personaje</button>
+        </div>
+        <div class="character-list">
+          ${r.characters.length ? r.characters.map((character,charIdx)=>{
+            const locationName=r.cities.find(city=>city.id===character.cityId)?.name || "Región / sin concretar";
+            return `
+            <div class="character-card npc-summary-card">
+              <div class="npc-summary-head">
+                <div class="npc-summary-view-group">
+                  <div class="npc-summary-main">
+                    <div class="npc-summary-name-wrap">
+                      ${character.editingName ? `
+                        <input value="${escapeAttr(character.name)}"
+                          size="${Math.max(String(character.name || '').length,8)}"
+                          oninput="this.size=Math.max(this.value.length,8)"
+                          onchange="saveCharacterName(${idx},${charIdx},this.value)"
+                          onkeydown="handleCharacterNameKey(event,${idx},${charIdx},this.value)">
+                      ` : `<h5 class="npc-summary-name">${escapeHtml(character.name)}</h5>`}
+                    </div>
+                    <div class="npc-summary-meta">
+                      ${escapeHtml([
+                        character.role || character.species,
+                        character.status,
+                        locationName
+                      ].filter(Boolean).join(" • "))}
+                    </div>
+                  </div>
+                  <button class="npc-summary-toggle"
+                    onclick="toggleCharacterExpanded(${idx},${charIdx})"
+                    title="${character.expanded ? "Contraer personaje" : "Ver detalles del personaje"}"
+                    aria-expanded="${character.expanded ? "true" : "false"}">
+                    ${character.expanded ? "▴" : "▾"}
+                  </button>
+                </div>
+                <div class="npc-summary-actions">
+                  <button class="square-button"
+                    onclick="${character.editingName
+                      ? `saveCharacterName(${idx},${charIdx},this.closest('.npc-summary-head').querySelector('input').value)`
+                      : `toggleCharacterNameEdit(${idx},${charIdx})`}"
+                    title="${character.editingName ? "Guardar nombre" : "Editar nombre"}">
+                    ${character.editingName ? "↩" : "✎"}
+                  </button>
+                  <button class="danger square-button" onclick="deleteCharacter(${idx},${charIdx})"
+                    title="Eliminar personaje">×</button>
+                </div>
+              </div>
+              ${character.expanded ? `
+                <div class="npc-expanded-content">
+                  <div class="compact-grid">
+                    <div>
+                      <label>Especie o raza</label>
+                      <input value="${escapeAttr(character.species)}" placeholder="Ej. Humano"
+                        onchange="updateCharacter(${idx},${charIdx},'species',this.value)">
+                    </div>
+                    <div>
+                      <label>Rol o cargo</label>
+                      <input value="${escapeAttr(character.role)}" placeholder="Ej. Gobernadora"
+                        onchange="updateCharacter(${idx},${charIdx},'role',this.value)">
+                    </div>
+                    <div>
+                      <label>Estado</label>
+                      <select onchange="updateCharacter(${idx},${charIdx},'status',this.value)">
+                        ${CHARACTER_STATES.map(status=>`<option ${status===character.status?"selected":""}>${status}</option>`).join("")}
+                      </select>
+                    </div>
+                    <div>
+                      <label>Ubicación</label>
+                      <select onchange="updateCharacter(${idx},${charIdx},'cityId',this.value)">
+                        <option value="" ${!character.cityId?"selected":""}>Región / sin concretar</option>
+                        ${r.cities.map(city=>`
+                          <option value="${escapeAttr(city.id)}" ${city.id===character.cityId?"selected":""}>${escapeHtml(city.name)}</option>
+                        `).join("")}
+                      </select>
+                    </div>
+                  </div>
+                  <textarea class="item-notes"
+                    placeholder="Motivaciones, relaciones, secretos o situación actual..."
+                    onchange="updateCharacter(${idx},${charIdx},'notes',this.value)">${escapeHtml(character.notes)}</textarea>
+                </div>
+              ` : ""}
+            </div>`;
+          }).join("") : '<div class="empty">No hay personajes importantes registrados.</div>'}
+        </div>
+      </div>
+
+      <div class="region-section nav-scroll-target" id="region-${r.id}-notes">
+        <label>Notas</label>
+        <textarea onchange="updateRegion(${idx},'notes',this.value)">${escapeHtml(r.notes)}</textarea>
+      </div>
+    </div>
+  `).join("");
+
+  renderFloatingNav();
+  applyLanguage();
+}
+
+
+const PLAYER_ABILITY_FIELDS = [
+  ["str","FUE"],
+  ["dex","DES"],
+  ["con","CON"],
+  ["int","INT"],
+  ["wis","SAB"],
+  ["cha","CAR"]
+];
+
+function getAbilityModifier(score){
+  const value=Number(score);
+  return Number.isFinite(value) ? Math.floor((value-10)/2) : 0;
+}
+
+function getProficiencyBonus(level){
+  const value=Math.min(20,Math.max(1,Math.round(Number(level) || 1)));
+  return 2 + Math.floor((value-1)/4);
+}
+
+function formatSigned(value){
+  const number=Number(value) || 0;
+  return number>=0 ? `+${number}` : String(number);
+}
+
+function getPassivePerception(player){
+  const wisdomModifier=getAbilityModifier(player.abilities.wis.score);
+  const proficiency=player.abilities.wis.proficient ? getProficiencyBonus(player.level) : 0;
+  return 10 + wisdomModifier + proficiency;
+}
+
+function renderPlayerCharacters(){
+const __pp=document.querySelector('.player-panel');
+if(__pp){
+  const n=(state.playerCharacters||[]).length;
+  __pp.classList.toggle('compact-mode',n<=2);
+}
+
+  const grid=document.getElementById("playerCharactersGrid");
+  if(!grid) return;
+
+  if(!state.playerCharacters.length){
+    grid.innerHTML='<div class="empty">No hay PJs registrados.</div>';
+    return;
+  }
+
+  grid.innerHTML=state.playerCharacters.map((player,playerIndex)=>`
+    <section class="card player-card nav-scroll-target" id="player-${player.id}">
+      <div class="item-head">
+        <button class="player-card-toggle square-button" type="button"
+          onclick="togglePlayerCardExpanded(${playerIndex})"
+          aria-expanded="${player.cardExpanded}"
+          title="${player.cardExpanded ? "Contraer ficha" : "Expandir ficha"}">
+          ${player.cardExpanded ? "▴" : "▾"}
+        </button>
+        <div class="player-card-name">
+          ${player.editingName ? `
+            <label>Nombre del PJ</label>
+            <input
+              value="${escapeAttr(player.name)}"
+              onchange="savePlayerName(${playerIndex},this.value)"
+              onkeydown="handlePlayerNameKey(event,${playerIndex},this.value)">
+          ` : `<h2 class="event-title-display">${escapeHtml(player.name)}</h2>`}
+        </div>
+        <div class="item-actions">
+          <button class="square-button"
+            onclick="${player.editingName
+              ? `savePlayerName(${playerIndex},this.closest('.item-head').querySelector('input').value)`
+              : `togglePlayerNameEdit(${playerIndex})`}"
+            title="${player.editingName ? "Guardar nombre" : "Editar nombre"}">
+            ${player.editingName ? "↩" : "✎"}
+          </button>
+          <button class="danger square-button"
+            onclick="deletePlayerCharacter(${playerIndex})"
+            title="Eliminar PJ">×</button>
+        </div>
+      </div>
+
+      ${player.cardExpanded ? `
+      <div class="player-identity-row">
+        <div>
+          <label>Raza</label>
+          <input value="${escapeAttr(player.race)}" placeholder="Ej. Elfo"
+            onchange="updatePlayerCharacter(${playerIndex},'race',this.value)">
+        </div>
+        <div>
+          <label>Clase</label>
+          <input value="${escapeAttr(player.className)}" placeholder="Ej. Mago"
+            onchange="updatePlayerCharacter(${playerIndex},'className',this.value)">
+        </div>
+        <div>
+          <label>Nivel</label>
+          <input type="number" min="1" max="20" step="1" value="${player.level}"
+            onchange="updatePlayerNumber(${playerIndex},'level',this.value,1,20)">
+        </div>
+      </div>
+
+      <div class="player-card-section">
+        <h4>Características</h4>
+        <div class="ability-grid">
+          ${PLAYER_ABILITY_FIELDS.map(([key,label])=>`
+            <div class="ability-box">
+              <label>${label}</label>
+              <div class="ability-line">
+                <button
+                  type="button"
+                  class="proficiency-dot ${player.abilities[key].proficient ? "active" : ""}"
+                  title="${player.abilities[key].proficient ? "Competente" : "No competente"}"
+                  aria-label="${label}: ${player.abilities[key].proficient ? "competente" : "no competente"}"
+                  aria-pressed="${player.abilities[key].proficient ? "true" : "false"}"
+                  onclick="togglePlayerAbilityProficiency(${playerIndex},'${key}')"></button>
+                <input type="number" min="1" max="30" step="1"
+                  value="${player.abilities[key].score}"
+                  title="Puntuación"
+                  aria-label="${label}: puntuación"
+                  onchange="updatePlayerAbilityScore(${playerIndex},'${key}',this.value)">
+                <div class="ability-modifier"
+                  title="Bonificador calculado"
+                  aria-label="${label}: bonificador ${formatSigned(getAbilityModifier(player.abilities[key].score))}">
+                  ${formatSigned(getAbilityModifier(player.abilities[key].score))}
+                </div>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+        <div class="derived-stats-row">
+          <div class="derived-stat">
+            <label>Bonus de competencia</label>
+            <div class="derived-value">${formatSigned(getProficiencyBonus(player.level))}</div>
+          </div>
+          <div class="derived-stat">
+            <label>Percepción pasiva</label>
+            <div class="derived-value">${getPassivePerception(player)}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-card-section">
+        <div class="subsection-head">
+          <h4>NPCs relacionados</h4>
+          <button onclick="addPlayerRelatedNpc(${playerIndex})">+ Añadir NPC</button>
+        </div>
+        <div class="player-related-list">
+          ${player.relatedNpcs.length ? player.relatedNpcs.map((npc,npcIndex)=>`
+            <div class="character-card npc-summary-card">
+              <div class="npc-summary-head">
+                <div class="npc-summary-view-group">
+                  <div class="npc-summary-main">
+                    <div class="npc-summary-name-wrap">
+                      ${npc.editingName ? `
+                        <input value="${escapeAttr(npc.name)}"
+                          size="${Math.max(String(npc.name || '').length,8)}"
+                          oninput="this.size=Math.max(this.value.length,8)"
+                          onchange="savePlayerNpcName(${playerIndex},${npcIndex},this.value)"
+                          onkeydown="handlePlayerNpcNameKey(event,${playerIndex},${npcIndex},this.value)">
+                      ` : `<h5 class="npc-summary-name">${escapeHtml(npc.name)}</h5>`}
+                    </div>
+                    <div class="npc-summary-meta">
+                      ${escapeHtml([npc.relationship, npc.status].filter(Boolean).join(" • ") || "Sin relación ni estado")}
+                    </div>
+                  </div>
+
+                  <button class="npc-summary-toggle"
+                    onclick="togglePlayerRelatedNpcExpanded(${playerIndex},${npcIndex})"
+                    title="${npc.expanded ? "Contraer NPC" : "Ver detalles del NPC"}"
+                    aria-expanded="${npc.expanded ? "true" : "false"}">
+                    ${npc.expanded ? "▴" : "▾"}
+                  </button>
+                </div>
+
+                <div class="npc-summary-actions">
+                  <button class="square-button"
+                    onclick="${npc.editingName
+                      ? `savePlayerNpcName(${playerIndex},${npcIndex},this.closest('.npc-summary-head').querySelector('input').value)`
+                      : `togglePlayerNpcNameEdit(${playerIndex},${npcIndex})`}"
+                    title="${npc.editingName ? "Guardar nombre" : "Editar nombre"}">
+                    ${npc.editingName ? "↩" : "✎"}
+                  </button>
+                  <button class="danger square-button"
+                    onclick="deletePlayerRelatedNpc(${playerIndex},${npcIndex})"
+                    title="Eliminar personaje">×</button>
+                </div>
+              </div>
+              ${npc.expanded ? `
+                <div class="npc-expanded-content">
+                  <div class="compact-grid">
+                    <div>
+                      <label>Especie o raza</label>
+                      <input value="${escapeAttr(npc.species)}" placeholder="Ej. Humano"
+                        onchange="updatePlayerRelatedNpc(${playerIndex},${npcIndex},'species',this.value)">
+                    </div>
+                    <div>
+                      <label>Rol o cargo</label>
+                      <input value="${escapeAttr(npc.role)}" placeholder="Ej. Mentora"
+                        onchange="updatePlayerRelatedNpc(${playerIndex},${npcIndex},'role',this.value)">
+                    </div>
+                    <div>
+                      <label>Estado</label>
+                      <select onchange="updatePlayerRelatedNpc(${playerIndex},${npcIndex},'status',this.value)">
+                        ${CHARACTER_STATES.map(status=>`
+                          <option ${status===npc.status ? "selected" : ""}>${status}</option>
+                        `).join("")}
+                      </select>
+                    </div>
+                    <div>
+                      <label>Relación</label>
+                      <input value="${escapeAttr(npc.relationship)}" placeholder="Ej. Mentor, rival, familiar"
+                        onchange="updatePlayerRelatedNpc(${playerIndex},${npcIndex},'relationship',this.value)">
+                    </div>
+                  </div>
+                  <textarea class="item-notes"
+                    placeholder="Motivaciones, conflictos, secretos o situación actual..."
+                    onchange="updatePlayerRelatedNpc(${playerIndex},${npcIndex},'notes',this.value)">${escapeHtml(npc.notes)}</textarea>
+                </div>
+              ` : ""}
+            </div>
+          `).join("") : '<div class="empty">No hay NPCs relacionados.</div>'}
+        </div>
+      </div>
+
+      <div class="player-card-section">
+        <label>Notas</label>
+        <textarea class="player-notes"
+          placeholder="Objetivos, secretos, objetos, deudas, tramas personales..."
+          onchange="updatePlayerCharacter(${playerIndex},'notes',this.value)">${escapeHtml(player.notes)}</textarea>
+      </div>
+      ` : ""}
+    </section>
+  `).join("");
+
+  renderFloatingNav();
+  applyLanguage();
+}
+
+function renderLog(){
+  const list = document.getElementById("logList");
+  if(!state.log.length){
+    list.innerHTML = '<div class="empty">Todavía no hay entradas.</div>';
+    return;
+  }
+  list.innerHTML = state.log.slice().reverse().map((x, revIdx)=>{
+    const originalIdx = state.log.length - 1 - revIdx;
+    return `
+      <div class="log-item">
+        <strong>${escapeHtml(x.date || "Sin fecha")} — ${escapeHtml(x.source || "General")}</strong>
+        <span>${escapeHtml(x.text)}</span>
+        <div style="margin-top:6px"><button class="danger" onclick="deleteLog(${originalIdx})">Eliminar</button></div>
+      </div>`;
+  }).join("");
+}
+
+function addEvent(){
+  const newEvent = {
+    id:`evento-${Date.now()}`,
+    name:"Nuevo evento",
+    editingTitle:false,
+    status:"Dormido",
+    progress:0,
+    trigger:"",
+    phase:"Sin iniciar",
+    notes:"",
+    milestones:[]
+  };
+
+  state.events.push(newEvent);
+  autoSave();
+  renderEvents();
+
+  const newIndex = state.events.length - 1;
+  state.events[newIndex].editingTitle = true;
+  renderEvents();
+
+  requestAnimationFrame(()=>{
+    const cards = document.querySelectorAll("#eventsGrid .card");
+    const lastCard = cards[cards.length - 1];
+    const titleInput = lastCard?.querySelector(".event-title-input");
+    if(titleInput){
+      titleInput.focus();
+      titleInput.select();
+      lastCard.scrollIntoView({behavior:"smooth", block:"center"});
+    }
+  });
+}
+
+function toggleTitleEdit(i){
+  state.events[i].editingTitle = !state.events[i].editingTitle;
+  renderEvents();
+
+  if(state.events[i].editingTitle){
+    requestAnimationFrame(()=>{
+      const cards = document.querySelectorAll("#eventsGrid .card");
+      const input = cards[i]?.querySelector(".event-title-input");
+      if(input){
+        input.focus();
+        input.select();
+      }
+    });
+  }
+}
+
+function saveEventTitle(i,value){
+  state.events[i].name = value.trim() || "Evento sin título";
+  state.events[i].editingTitle = false;
+  autoSave();
+  renderEvents();
+}
+
+function handleTitleKey(event,i,value){
+  if(event.key === "Enter"){
+    event.preventDefault();
+    saveEventTitle(i,value);
+  }else if(event.key === "Escape"){
+    event.preventDefault();
+    state.events[i].editingTitle = false;
+    renderEvents();
+  }
+}
+
+function deleteEvent(i){
+  const eventName = state.events[i]?.name || "este evento";
+  if(!confirm(`¿Eliminar la tarjeta "${eventName}"? Esta acción no se puede deshacer.`)) return;
+  state.events.splice(i,1);
+  autoSave();
+  renderEvents();
+}
+
+function updateEvent(i,key,value){
+  state.events[i][key]=value;
+  autoSave();
+}
+
+function syncEventProgress(i){
+  state.events[i].progress =
+    state.events[i].milestones.filter(m=>m.done).length;
+}
+
+function toggleMilestone(eventIndex, milestoneIndex, checked){
+  state.events[eventIndex].milestones[milestoneIndex].done = checked;
+  syncEventProgress(eventIndex);
+  autoSave();
+  renderEvents();
+}
+
+function editMilestone(eventIndex, milestoneIndex, value){
+  state.events[eventIndex].milestones[milestoneIndex].text =
+    value.trim() || "Hito sin título";
+  autoSave();
+  renderEvents();
+}
+
+function updateMilestoneField(eventIndex, milestoneIndex, key, value){
+  const allowedFields=[
+    "currentSituation",
+    "involvedActivities",
+    "availableAdventures",
+    "directorNotes"
+  ];
+  if(!allowedFields.includes(key)) return;
+  state.events[eventIndex].milestones[milestoneIndex][key]=value;
+  autoSave();
+}
+
+function addMilestone(eventIndex){
+  state.events[eventIndex].milestones.push({
+    text:"Nuevo hito",
+    done:false,
+    currentSituation:"",
+    involvedActivities:"",
+    availableAdventures:"",
+    directorNotes:""
+  });
+  syncEventProgress(eventIndex);
+  milestoneDetailUI[eventIndex]={
+    milestoneIndex:state.events[eventIndex].milestones.length-1,
+    tab:"currentSituation"
+  };
+  autoSave();
+  renderEvents();
+
+  const inputs = document.querySelectorAll(
+    `#eventsGrid .card:nth-child(${eventIndex + 1}) .milestone-row input[type="text"]`
+  );
+  const last = inputs[inputs.length - 1];
+  if(last){
+    last.focus();
+    last.select();
+  }
+}
+
+function deleteMilestone(eventIndex, milestoneIndex){
+  const milestone = state.events[eventIndex].milestones[milestoneIndex];
+  if(!confirm(`¿Eliminar el hito "${milestone.text}"?`)) return;
+  state.events[eventIndex].milestones.splice(milestoneIndex,1);
+  const current=milestoneDetailUI[eventIndex];
+  if(current){
+    if(current.milestoneIndex===milestoneIndex){
+      current.milestoneIndex=Math.max(0,milestoneIndex-1);
+    }else if(current.milestoneIndex>milestoneIndex){
+      current.milestoneIndex--;
+    }
+  }
+  syncEventProgress(eventIndex);
+  autoSave();
+  renderEvents();
+}
+
+function addRegion(){
+  const newRegion = {
+    id:`region-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
+    name:"Nueva región",
+    stability:"Estable",
+    military:"Paz",
+    notes:"",
+    editingName:true,
+    politics:{government:1,legitimacy:1,corruption:1,religion:1,magic:1},
+    diagnosis:"Estable",
+    editingDiagnosis:false,
+    cities:[],
+    characters:[]
+  };
+
+  state.regions.push(newRegion);
+  autoSave();
+  renderRegions();
+
+  requestAnimationFrame(()=>{
+    const regions = document.querySelectorAll("#regionsCard .region");
+    const lastRegion = regions[regions.length - 1];
+    const input = lastRegion?.querySelector(".region-title-input");
+    if(input){
+      input.focus();
+      input.select();
+      lastRegion.scrollIntoView({behavior:"smooth", block:"center"});
+    }
+  });
+}
+
+function toggleRegionNameEdit(i){
+  state.regions[i].editingName = !state.regions[i].editingName;
+  renderRegions();
+
+  if(state.regions[i].editingName){
+    requestAnimationFrame(()=>{
+      const regions = document.querySelectorAll("#regionsCard .region");
+      const input = regions[i]?.querySelector(".region-title-input");
+      if(input){
+        input.focus();
+        input.select();
+      }
+    });
+  }
+}
+
+function saveRegionName(i,value){
+  state.regions[i].name = value.trim() || "Región sin nombre";
+  state.regions[i].editingName = false;
+  autoSave();
+  renderRegions();
+}
+
+function handleRegionNameKey(event,i,value){
+  if(event.key === "Enter"){
+    event.preventDefault();
+    saveRegionName(i,value);
+  }else if(event.key === "Escape"){
+    event.preventDefault();
+    state.regions[i].editingName = false;
+    renderRegions();
+  }
+}
+
+function deleteRegion(i){
+  const regionName = state.regions[i]?.name || "esta región";
+  if(!confirm(`¿Eliminar la región "${regionName}"? Esta acción no se puede deshacer.`)) return;
+  const deletedId = state.regions[i].id;
+  state.regions.splice(i,1);
+  Object.keys(state.relations).forEach(key=>{
+    if(key.split("::").includes(deletedId)) delete state.relations[key];
+  });
+  autoSave();
+  renderRegions();
+}
+
+function setPoliticalRating(regionIndex,key,value){
+  if(!POLITICAL_FIELDS.some(([field])=>field === key)) return;
+  state.regions[regionIndex].politics[key] = clampRating(value);
+  autoSave();
+  renderRegions();
+}
+
+function getRelation(idA,idB){
+  return state.relations[relationKey(idA,idB)] || "Neutral";
+}
+
+function setRelation(idA,idB,value){
+  if(idA === idB || !RELATION_STATES.includes(value)) return;
+  state.relations[relationKey(idA,idB)] = value;
+  autoSave();
+  renderRegions();
+}
+
+function addCity(regionIndex){
+  state.regions[regionIndex].cities.push({
+    id:`city-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
+    name:"Nueva ciudad", editingName:true, state:"Estable", population:"", notes:"",
+    expanded:false,
+    ratings:{security:3,economy:3,corruption:1,legitimacy:3}
+  });
+  autoSave(); renderRegions();
+  requestAnimationFrame(()=>{
+    const region=document.querySelectorAll("#regionsCard .region")[regionIndex];
+    const cards=region?.querySelectorAll(".city-card");
+    const input=cards?.[cards.length-1]?.querySelector("input");
+    if(input){input.focus();input.select();}
+  });
+}
+
+function toggleCityExpanded(regionIndex,cityIndex){
+  const city=state.regions?.[regionIndex]?.cities?.[cityIndex];
+  if(!city) return;
+  city.expanded=!city.expanded;
+  autoSave();
+  renderRegions();
+}
+
+function toggleCityNameEdit(regionIndex,cityIndex){
+  const city=state.regions[regionIndex].cities[cityIndex];
+  city.editingName=!city.editingName; renderRegions();
+  if(city.editingName) requestAnimationFrame(()=>{
+    const region=document.querySelectorAll("#regionsCard .region")[regionIndex];
+    const input=region?.querySelectorAll(".city-card")[cityIndex]?.querySelector("input");
+    if(input){input.focus();input.select();}
+  });
+}
+
+function saveCityName(regionIndex,cityIndex,value){
+  const city=state.regions[regionIndex].cities[cityIndex];
+  city.name=value.trim()||"Ciudad sin nombre"; city.editingName=false;
+  autoSave(); renderRegions();
+}
+
+function handleCityNameKey(event,regionIndex,cityIndex,value){
+  if(event.key==="Enter"){event.preventDefault();saveCityName(regionIndex,cityIndex,value);}
+  else if(event.key==="Escape"){
+    event.preventDefault();state.regions[regionIndex].cities[cityIndex].editingName=false;renderRegions();
+  }
+}
+
+function deleteCity(regionIndex,cityIndex){
+  const region=state.regions[regionIndex], city=region.cities[cityIndex];
+  if(!confirm(`¿Eliminar la ciudad "${city?.name||"sin nombre"}"?`)) return;
+  const deletedId=city.id;
+  region.cities.splice(cityIndex,1);
+  region.characters.forEach(character=>{if(character.cityId===deletedId) character.cityId="";});
+  autoSave(); renderRegions();
+}
+
+function updateCity(regionIndex,cityIndex,key,value){
+  state.regions[regionIndex].cities[cityIndex][key]=value; autoSave(); renderRegions();
+}
+
+function setCityRating(regionIndex,cityIndex,key,value){
+  if(!CITY_RATING_FIELDS.some(([field])=>field===key)) return;
+  state.regions[regionIndex].cities[cityIndex].ratings[key]=clampRating(value);
+  autoSave(); renderRegions();
+}
+
+function addCharacter(regionIndex){
+  state.regions[regionIndex].characters.push({
+    id:`character-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
+    name:"Nuevo personaje", editingName:true, species:"", role:"",
+    status:"Activo", cityId:"", notes:"", expanded:false
+  });
+  autoSave(); renderRegions();
+  requestAnimationFrame(()=>{
+    const region=document.querySelectorAll("#regionsCard .region")[regionIndex];
+    const cards=region?.querySelectorAll(".character-card");
+    const input=cards?.[cards.length-1]?.querySelector("input");
+    if(input){input.focus();input.select();}
+  });
+}
+
+function toggleCharacterExpanded(regionIndex,charIndex){
+  const character=state.regions?.[regionIndex]?.characters?.[charIndex];
+  if(!character) return;
+  character.expanded=!character.expanded;
+  autoSave();
+  renderRegions();
+}
+
+function toggleCharacterNameEdit(regionIndex,charIndex){
+  const character=state.regions[regionIndex].characters[charIndex];
+  character.editingName=!character.editingName; renderRegions();
+  if(character.editingName) requestAnimationFrame(()=>{
+    const region=document.querySelectorAll("#regionsCard .region")[regionIndex];
+    const input=region?.querySelectorAll(".character-card")[charIndex]?.querySelector("input");
+    if(input){input.focus();input.select();}
+  });
+}
+
+function saveCharacterName(regionIndex,charIndex,value){
+  const character=state.regions[regionIndex].characters[charIndex];
+  character.name=value.trim()||"Personaje sin nombre"; character.editingName=false;
+  autoSave(); renderRegions();
+}
+
+function handleCharacterNameKey(event,regionIndex,charIndex,value){
+  if(event.key==="Enter"){event.preventDefault();saveCharacterName(regionIndex,charIndex,value);}
+  else if(event.key==="Escape"){
+    event.preventDefault();state.regions[regionIndex].characters[charIndex].editingName=false;renderRegions();
+  }
+}
+
+function deleteCharacter(regionIndex,charIndex){
+  const character=state.regions[regionIndex].characters[charIndex];
+  if(!confirm(`¿Eliminar al personaje "${character?.name||"sin nombre"}"?`)) return;
+  state.regions[regionIndex].characters.splice(charIndex,1);
+  autoSave(); renderRegions();
+}
+
+function updateCharacter(regionIndex,charIndex,key,value){
+  state.regions[regionIndex].characters[charIndex][key]=value; autoSave(); renderRegions();
+}
+
+function updateRegion(i,key,value){
+  state.regions[i][key]=value;
+  autoSave();
+  renderRegions();
+}
+
+
+function addPlayerCharacter(){
+  state.playerCharacters.push({
+    id:`player-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
+    name:"Nuevo personaje jugador",
+    editingName:true,
+    race:"",
+    className:"",
+    level:1,
+    abilities:{
+      str:{score:10,proficient:false},
+      dex:{score:10,proficient:false},
+      con:{score:10,proficient:false},
+      int:{score:10,proficient:false},
+      wis:{score:10,proficient:false},
+      cha:{score:10,proficient:false}
+    },
+    relatedNpcs:[],
+    cardExpanded:true,
+    notes:""
+  });
+  autoSave();
+  renderPlayerCharacters();
+
+  requestAnimationFrame(()=>{
+    const cards=document.querySelectorAll("#playerCharactersGrid .player-card");
+    const card=cards[cards.length-1];
+    const input=card?.querySelector(".item-head input");
+    if(input){
+      input.focus();
+      input.select();
+      card.scrollIntoView({behavior:"smooth",block:"center"});
+    }
+  });
+}
+
+function togglePlayerCardExpanded(playerIndex){
+  const player=state.playerCharacters?.[playerIndex];
+  if(!player) return;
+  player.cardExpanded=player.cardExpanded === false;
+  autoSave();
+  renderPlayerCharacters();
+}
+
+function togglePlayerNameEdit(playerIndex){
+  state.playerCharacters[playerIndex].editingName=
+    !state.playerCharacters[playerIndex].editingName;
+  renderPlayerCharacters();
+}
+
+function savePlayerName(playerIndex,value){
+  const player=state.playerCharacters[playerIndex];
+  player.name=String(value ?? "").trim() || "PJ sin nombre";
+  player.editingName=false;
+  autoSave();
+  renderPlayerCharacters();
+}
+
+function handlePlayerNameKey(event,playerIndex,value){
+  if(event.key==="Enter"){
+    event.preventDefault();
+    savePlayerName(playerIndex,value);
+  }else if(event.key==="Escape"){
+    event.preventDefault();
+    state.playerCharacters[playerIndex].editingName=false;
+    renderPlayerCharacters();
+  }
+}
+
+function deletePlayerCharacter(playerIndex){
+  const player=state.playerCharacters[playerIndex];
+  if(!confirm(`¿Eliminar al PJ "${player?.name || "sin nombre"}"?`)) return;
+  state.playerCharacters.splice(playerIndex,1);
+  autoSave();
+  renderPlayerCharacters();
+}
+
+function updatePlayerCharacter(playerIndex,key,value){
+  const allowed=["race","className","notes"];
+  if(!allowed.includes(key)) return;
+  state.playerCharacters[playerIndex][key]=value;
+  autoSave();
+}
+
+function updatePlayerNumber(playerIndex,key,value,min,max){
+  if(key!=="level") return;
+  const number=Number(value);
+  state.playerCharacters[playerIndex][key]=Number.isFinite(number)
+    ? Math.min(max,Math.max(min,Math.round(number)))
+    : min;
+  autoSave();
+  renderPlayerCharacters();
+}
+
+function updatePlayerAbilityScore(playerIndex,abilityKey,value){
+  if(!["str","dex","con","int","wis","cha"].includes(abilityKey)) return;
+  const number=Number(value);
+  state.playerCharacters[playerIndex].abilities[abilityKey].score=Number.isFinite(number)
+    ? Math.min(30,Math.max(1,Math.round(number)))
+    : 10;
+  autoSave();
+  renderPlayerCharacters();
+}
+
+function togglePlayerAbilityProficiency(playerIndex,abilityKey){
+  if(!["str","dex","con","int","wis","cha"].includes(abilityKey)) return;
+  const ability=state.playerCharacters[playerIndex].abilities[abilityKey];
+  ability.proficient=!ability.proficient;
+  autoSave();
+  renderPlayerCharacters();
+}
+
+function togglePlayerRelatedNpcExpanded(playerIndex,npcIndex){
+  const npc=state.playerCharacters?.[playerIndex]?.relatedNpcs?.[npcIndex];
+  if(!npc) return;
+  npc.expanded=!npc.expanded;
+  renderPlayerCharacters();
+}
+
+function addPlayerRelatedNpc(playerIndex){
+  state.playerCharacters[playerIndex].relatedNpcs.push({
+    id:`player-npc-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
+    name:"Nuevo NPC",
+    editingName:true,
+    species:"",
+    role:"",
+    status:"Activo",
+    relationship:"",
+    notes:"",
+    expanded:false
+  });
+  autoSave();
+  renderPlayerCharacters();
+}
+
+function togglePlayerNpcNameEdit(playerIndex,npcIndex){
+  const npc=state.playerCharacters[playerIndex].relatedNpcs[npcIndex];
+  npc.editingName=!npc.editingName;
+  renderPlayerCharacters();
+}
+
+function savePlayerNpcName(playerIndex,npcIndex,value){
+  const npc=state.playerCharacters[playerIndex].relatedNpcs[npcIndex];
+  npc.name=String(value ?? "").trim() || "Personaje sin nombre";
+  npc.editingName=false;
+  autoSave();
+  renderPlayerCharacters();
+}
+
+function handlePlayerNpcNameKey(event,playerIndex,npcIndex,value){
+  if(event.key==="Enter"){
+    event.preventDefault();
+    savePlayerNpcName(playerIndex,npcIndex,value);
+  }else if(event.key==="Escape"){
+    event.preventDefault();
+    state.playerCharacters[playerIndex].relatedNpcs[npcIndex].editingName=false;
+    renderPlayerCharacters();
+  }
+}
+
+function deletePlayerRelatedNpc(playerIndex,npcIndex){
+  const npc=state.playerCharacters[playerIndex].relatedNpcs[npcIndex];
+  if(!confirm(`¿Eliminar al NPC relacionado "${npc?.name || "sin nombre"}"?`)) return;
+  state.playerCharacters[playerIndex].relatedNpcs.splice(npcIndex,1);
+  autoSave();
+  renderPlayerCharacters();
+}
+
+function updatePlayerRelatedNpc(playerIndex,npcIndex,key,value){
+  const allowed=["species","role","status","relationship","notes"];
+  if(!allowed.includes(key)) return;
+  if(key==="status" && !CHARACTER_STATES.includes(value)) return;
+  state.playerCharacters[playerIndex].relatedNpcs[npcIndex][key]=value;
+  autoSave();
+}
+
+function addLog(){
+  const date=document.getElementById("logDate").value.trim();
+  const source=document.getElementById("logSource").value.trim();
+  const text=document.getElementById("logText").value.trim();
+  if(!text){ alert(currentLanguage === "en" ? "Describe an occurrence." : "Describe un suceso."); return; }
+  state.log.push({date,source,text,createdAt:new Date().toISOString()});
+  document.getElementById("logDate").value="";
+  document.getElementById("logSource").value="";
+  document.getElementById("logText").value="";
+  autoSave();
+  renderLog();
+}
+
+function deleteLog(i){
+  state.log.splice(i,1);
+  autoSave();
+  renderLog();
+}
+
+function autoSave(){
+  syncPreferencesToState();
+  localStorage.setItem("ulpeWorldClock", JSON.stringify(state));
+  localStorage.setItem("ulpeTheme",currentTheme);
+  localStorage.setItem("ulpeLanguage",currentLanguage);
+}
+
+function formatWorldNameForFilename(value){
+  const clean = String(value ?? "Mundo")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g,"")
+    .trim()
+    .replace(/\s+/g,"-")
+    .replace(/[^A-Za-z0-9-]/g,"")
+    .replace(/-+/g,"-")
+    .replace(/^-+|-+$/g,"");
+
+  if(!clean) return "Mundo";
+  return clean.charAt(0).toUpperCase()+clean.slice(1);
+}
+
+function formatSaveDate(){
+  const d=new Date();
+  const dd=String(d.getDate()).padStart(2,"0");
+  const mm=String(d.getMonth()+1).padStart(2,"0");
+  const yyyy=String(d.getFullYear());
+  return `${dd}-${mm}-${yyyy}`;
+}
+
+function exportState(){
+  if(document.activeElement?.id === "worldNameInput"){
+    saveWorldName(document.activeElement.value);
+  }else if(document.activeElement && typeof document.activeElement.blur === "function"){
+    document.activeElement.blur();
+  }
+
+  syncPreferencesToState();
+  const completeState = normalizeState(structuredClone(state));
+  state = completeState;
+  autoSave();
+
+  const blob = new Blob(
+    [JSON.stringify(completeState,null,2)],
+    {type:"application/json;charset=utf-8"}
+  );
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `${formatWorldNameForFilename(completeState.settings.worldName)}-${formatSaveDate()}.json`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),0);
+}
+
+function importState(event){
+  const input = event.target;
+  const file = input.files?.[0];
+  if(!file) return;
+
+  const reader = new FileReader();
+  reader.onload=()=>{
+    try{
+      const imported = JSON.parse(String(reader.result ?? ""));
+      state = normalizeState(imported);
+      currentTheme = state.settings.theme;
+      currentLanguage = state.settings.language;
+      autoSave();
+      render();
+      updateFloatingNavActive();
+      alert(currentLanguage === "en" ? "State imported successfully." : "Estado importado correctamente.");
+    }catch(error){
+      alert(currentLanguage === "en" ? "The JSON file is invalid or does not contain a compatible state." : "El archivo JSON no es válido o no contiene un estado compatible.");
+    }finally{
+      input.value = "";
+    }
+  };
+  reader.onerror=()=>{
+    input.value = "";
+    alert(currentLanguage === "en" ? "The JSON file could not be read." : "No se pudo leer el archivo JSON.");
+  };
+  reader.readAsText(file);
+}
+
+function resetState(){
+  if(!confirm(currentLanguage === "en" ? "Reset everything to its initial state?" : "¿Restablecer todo al estado inicial?")) return;
+  state=normalizeState(structuredClone(DEFAULT_STATE));
+  currentTheme = state.settings.theme;
+  currentLanguage = state.settings.language;
+  autoSave();
+  render();
+}
+
+function escapeHtml(str){
+  return String(str ?? "")
+    .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
+}
+function escapeAttr(str){
+  return escapeHtml(str).replaceAll('"',"&quot;");
+}
+
+
+const IMPORTANT_NPC_ABILITY_FIELDS=[
+  ["str","FUE"],["dex","DES"],["con","CON"],["int","INT"],["wis","SAB"],["cha","CAR"]
+];
+const IMPORTANT_NPC_FEATURE_SECTIONS=[
+  ["traits","Rasgos"],
+  ["actions","Acciones"],
+  ["bonusActions","Acciones adicionales"],
+  ["reactions","Reacciones"],
+  ["legendaryActions","Acciones legendarias"],
+  ["lairActions","Acciones de guarida"]
+];
+
+function npcAbilityModifier(score){
+  return Math.floor((Number(score || 10)-10)/2);
+}
+function signedNpcNumber(value){
+  const n=Number(value);
+  return Number.isFinite(n) ? `${n>=0?"+":""}${n}` : "";
+}
+function createImportantNpcFeature(label){
+  return {
+    id:`npc-feature-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
+    name:`Nueva ${label.toLowerCase()}`,
+    type:"",
+    activation:"",
+    attackBonus:"",
+    reach:"",
+    damage:"",
+    save:"",
+    recharge:"",
+    description:"",
+    notes:"",
+    expanded:true
+  };
+}
+function addImportantNpc(){
+  state.importantNpcs.push({
+    id:`important-npc-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
+    name:"Nuevo Personaje del archivo",
+    editingName:true,
+    species:"",
+    alignment:"",
+    role:"",
+    size:"Mediano",
+    armorClass:"",
+    hitPoints:"",
+    hitDice:"",
+    speed:"",
+    initiative:"",
+    challengeRating:"",
+    proficiencyBonus:"",
+    abilities:Object.fromEntries(IMPORTANT_NPC_ABILITY_FIELDS.map(([key])=>[key,{score:10,save:""}])),
+    vulnerabilities:"",
+    resistances:"",
+    immunities:"",
+    conditionImmunities:"",
+    skills:"",
+    senses:"",
+    languages:"",
+    traits:[],
+    actions:[],
+    bonusActions:[],
+    reactions:[],
+    legendaryActions:[],
+    lairActions:[],
+    cardExpanded:true,
+    defensesSectionExpanded:true,
+    traitsSectionExpanded:true,
+    actionsSectionExpanded:true,
+    actionSubsectionsExpanded:{
+      actions:true,
+      bonusActions:true,
+      reactions:true,
+      legendaryActions:true,
+      lairActions:true
+    },
+    notes:""
+  });
+  autoSave();
+  renderImportantNpcs();
+}
+function moveImportantNpc(index,direction){
+  const target=index+direction;
+  if(index<0 || target<0 || index>=state.importantNpcs.length || target>=state.importantNpcs.length) return;
+  [state.importantNpcs[index],state.importantNpcs[target]]=
+    [state.importantNpcs[target],state.importantNpcs[index]];
+  autoSave();
+  renderImportantNpcs();
+}
+
+function deleteImportantNpc(index){
+  if(!confirm("¿Eliminar este Personaje del archivo?")) return;
+  state.importantNpcs.splice(index,1);
+  autoSave();
+  renderImportantNpcs();
+}
+function updateImportantNpc(index,field,value){
+  const npc=state.importantNpcs[index];
+  if(!npc) return;
+  npc[field]=value;
+  autoSave();
+}
+function updateImportantNpcAbility(index,key,field,value){
+  const npc=state.importantNpcs[index];
+  if(!npc?.abilities?.[key]) return;
+  npc.abilities[key][field]=field==="score"
+    ? Math.min(30,Math.max(1,Math.round(Number(value)||10)))
+    : value;
+  autoSave();
+  if(field==="score") renderImportantNpcs();
+}
+function toggleImportantNpcNameEdit(index){
+  const npc=state.importantNpcs[index];
+  if(!npc) return;
+  npc.editingName=!npc.editingName;
+  autoSave();
+  renderImportantNpcs();
+}
+function saveImportantNpcName(index,value){
+  const npc=state.importantNpcs[index];
+  if(!npc) return;
+  npc.name=String(value||"").trim() || "Personaje sin nombre";
+  npc.editingName=false;
+  autoSave();
+  renderImportantNpcs();
+}
+function handleImportantNpcNameKey(event,index,value){
+  if(event.key==="Enter"){event.preventDefault();saveImportantNpcName(index,value)}
+  if(event.key==="Escape"){state.importantNpcs[index].editingName=false;renderImportantNpcs()}
+}
+function addImportantNpcFeature(npcIndex,section,label){
+  const npc=state.importantNpcs[npcIndex];
+  if(!npc || !Array.isArray(npc[section])) return;
+
+  npc.cardExpanded=true;
+
+  if(section==="traits"){
+    npc.traitsSectionExpanded=true;
+  }else{
+    npc.actionsSectionExpanded=true;
+    npc.actionSubsectionsExpanded=npc.actionSubsectionsExpanded || {};
+    npc.actionSubsectionsExpanded[section]=true;
+  }
+
+  npc[section].push(createImportantNpcFeature(label));
+  autoSave();
+  renderImportantNpcs();
+}
+
+function toggleImportantNpcActionSubsection(npcIndex,section){
+  const npc=state.importantNpcs?.[npcIndex];
+  if(!npc) return;
+  npc.actionSubsectionsExpanded=npc.actionSubsectionsExpanded || {};
+  npc.actionSubsectionsExpanded[section]=npc.actionSubsectionsExpanded[section] === false;
+  autoSave();
+  renderImportantNpcs();
+}
+
+function moveImportantNpcFeature(npcIndex,section,featureIndex,direction){
+  const list=state.importantNpcs?.[npcIndex]?.[section];
+  if(!Array.isArray(list)) return;
+  const targetIndex=featureIndex+direction;
+  if(targetIndex<0 || targetIndex>=list.length) return;
+  [list[featureIndex],list[targetIndex]]=[list[targetIndex],list[featureIndex]];
+  autoSave();
+  renderImportantNpcs();
+}
+
+function updateImportantNpcFeature(npcIndex,section,featureIndex,field,value){
+  const feature=state.importantNpcs?.[npcIndex]?.[section]?.[featureIndex];
+  if(!feature) return;
+  feature[field]=value;
+  autoSave();
+}
+function toggleImportantNpcFeature(npcIndex,section,featureIndex){
+  const feature=state.importantNpcs?.[npcIndex]?.[section]?.[featureIndex];
+  if(!feature) return;
+  feature.expanded=!feature.expanded;
+  autoSave();
+  renderImportantNpcs();
+}
+function deleteImportantNpcFeature(npcIndex,section,featureIndex){
+  const list=state.importantNpcs?.[npcIndex]?.[section];
+  if(!list) return;
+  list.splice(featureIndex,1);
+  autoSave();
+  renderImportantNpcs();
+}
+function importantNpcFeatureMeta(feature){
+  return [
+    feature.type,
+    feature.activation,
+    feature.attackBonus ? `Ataque ${feature.attackBonus}` : "",
+    feature.save,
+    feature.recharge
+  ].filter(Boolean).join(" • ") || "Sin detalles";
+}
+function renderImportantNpcFeature(npcIndex,section,feature,featureIndex){
+  const isTrait=section==="traits";
+  return `
+    <div class="npc-feature-card ${isTrait ? "npc-trait-card" : ""}">
+      <div class="npc-feature-summary">
+        <div class="npc-feature-summary-main">
+          <button class="npc-feature-toggle" type="button"
+            onclick="toggleImportantNpcFeature(${npcIndex},'${section}',${featureIndex})"
+            aria-expanded="${feature.expanded}">
+            ${feature.expanded?"▴":"▾"}
+          </button>
+          <div style="min-width:0">
+            <div class="npc-feature-title">${escapeHtml(feature.name)}</div>
+            ${isTrait ? "" : `<div class="npc-feature-meta">${escapeHtml(importantNpcFeatureMeta(feature))}</div>`}
+          </div>
+        </div>
+        <div class="npc-feature-actions">
+          ${isTrait ? "" : `
+            <div class="npc-feature-order">
+              <button class="square-button" type="button"
+                onclick="moveImportantNpcFeature(${npcIndex},'${section}',${featureIndex},-1)"
+                title="Mover arriba"
+                ${featureIndex===0 ? "disabled" : ""}>↑</button>
+              <button class="square-button" type="button"
+                onclick="moveImportantNpcFeature(${npcIndex},'${section}',${featureIndex},1)"
+                title="Mover abajo"
+                ${featureIndex===state.importantNpcs[npcIndex][section].length-1 ? "disabled" : ""}>↓</button>
+            </div>
+          `}
+          <button class="danger square-button" type="button"
+            onclick="deleteImportantNpcFeature(${npcIndex},'${section}',${featureIndex})"
+            title="Eliminar">×</button>
+        </div>
+      </div>
+      ${feature.expanded ? `
+        <div class="npc-feature-body">
+          ${isTrait ? `
+            <div>
+              <label>Nombre</label>
+              <input value="${escapeAttr(feature.name)}"
+                onchange="updateImportantNpcFeature(${npcIndex},'${section}',${featureIndex},'name',this.value);renderImportantNpcs()">
+            </div>
+            <label>Descripción</label>
+            <textarea onchange="updateImportantNpcFeature(${npcIndex},'${section}',${featureIndex},'description',this.value)">${escapeHtml(feature.description)}</textarea>
+          ` : `
+            <div class="npc-feature-fields">
+              <div><label>Nombre</label><input value="${escapeAttr(feature.name)}"
+                onchange="updateImportantNpcFeature(${npcIndex},'${section}',${featureIndex},'name',this.value);renderImportantNpcs()"></div>
+              <div><label>Tipo</label><input value="${escapeAttr(feature.type)}" placeholder="Cuerpo a cuerpo, pasivo..."
+                onchange="updateImportantNpcFeature(${npcIndex},'${section}',${featureIndex},'type',this.value)"></div>
+              <div><label>Activación</label><input value="${escapeAttr(feature.activation)}" placeholder="Acción, reacción..."
+                onchange="updateImportantNpcFeature(${npcIndex},'${section}',${featureIndex},'activation',this.value)"></div>
+              <div><label>Bonificador al ataque</label><input value="${escapeAttr(feature.attackBonus)}" placeholder="+7"
+                onchange="updateImportantNpcFeature(${npcIndex},'${section}',${featureIndex},'attackBonus',this.value)"></div>
+              <div><label>Alcance</label><input value="${escapeAttr(feature.reach)}" placeholder="1,5 m / 18 m"
+                onchange="updateImportantNpcFeature(${npcIndex},'${section}',${featureIndex},'reach',this.value)"></div>
+              <div><label>Daño</label><input value="${escapeAttr(feature.damage)}" placeholder="2d8+4 cortante"
+                onchange="updateImportantNpcFeature(${npcIndex},'${section}',${featureIndex},'damage',this.value)"></div>
+              <div><label>Salvación</label><input value="${escapeAttr(feature.save)}" placeholder="DES CD 15"
+                onchange="updateImportantNpcFeature(${npcIndex},'${section}',${featureIndex},'save',this.value)"></div>
+              <div><label>Recarga o usos</label><input value="${escapeAttr(feature.recharge)}" placeholder="Recarga 5–6 / 3 al día"
+                onchange="updateImportantNpcFeature(${npcIndex},'${section}',${featureIndex},'recharge',this.value)"></div>
+            </div>
+            <label>Descripción</label>
+            <textarea onchange="updateImportantNpcFeature(${npcIndex},'${section}',${featureIndex},'description',this.value)">${escapeHtml(feature.description)}</textarea>
+          `}
+        </div>` : ""}
+    </div>`;
+}
+
+function toggleImportantNpcSection(npcIndex,sectionKey){
+  const npc=state.importantNpcs?.[npcIndex];
+  if(!npc) return;
+  npc[sectionKey]=!npc[sectionKey];
+  autoSave();
+  renderImportantNpcs();
+}
+
+function renderImportantNpcs(){
+  const grid=document.getElementById("importantNpcsGrid");
+  if(!grid) return;
+  if(!state.importantNpcs?.length){
+    grid.innerHTML='<div class="empty">No hay Personajes registrados.</div>';
+    return;
+  }
+  grid.innerHTML=state.importantNpcs.map((npc,npcIndex)=>`
+    <section class="card important-npc-card">
+      <div class="item-head">
+        <div style="min-width:0">
+          ${npc.editingName ? `
+            <label>Nombre del NPC</label>
+            <input value="${escapeAttr(npc.name)}"
+              onchange="saveImportantNpcName(${npcIndex},this.value)"
+              onkeydown="handleImportantNpcNameKey(event,${npcIndex},this.value)">
+          ` : `<h2 class="event-title-display">${escapeHtml(npc.name)}</h2>`}
+        </div>
+        <div class="item-actions">
+          <button class="square-button" type="button"
+            onclick="moveImportantNpc(${npcIndex},-1)"
+            title="Mover personaje arriba"
+            ${npcIndex===0 ? "disabled" : ""}>↑</button>
+          <button class="square-button" type="button"
+            onclick="moveImportantNpc(${npcIndex},1)"
+            title="Mover personaje abajo"
+            ${npcIndex===state.importantNpcs.length-1 ? "disabled" : ""}>↓</button>
+          <button class="npc-card-toggle" type="button"
+            onclick="toggleImportantNpcSection(${npcIndex},'cardExpanded')"
+            aria-expanded="${npc.cardExpanded}"
+            title="${npc.cardExpanded ? "Contraer ficha" : "Expandir ficha"}">
+            ${npc.cardExpanded ? "▴" : "▾"}
+          </button>
+          <button class="square-button" onclick="${npc.editingName
+            ? `saveImportantNpcName(${npcIndex},this.closest('.item-head').querySelector('input').value)`
+            : `toggleImportantNpcNameEdit(${npcIndex})`}">${npc.editingName?"↩":"✎"}</button>
+          <button class="danger square-button" onclick="deleteImportantNpc(${npcIndex})">×</button>
+        </div>
+      </div>
+
+      ${npc.cardExpanded ? `
+      <div class="npc-identity-grid">
+        <div><label>Especie o tipo</label><input value="${escapeAttr(npc.species)}" placeholder="Humanoide, infernal..."
+          onchange="updateImportantNpc(${npcIndex},'species',this.value)"></div>
+        <div><label>Rol</label><input value="${escapeAttr(npc.role)}" placeholder="Villano, aliado..."
+          onchange="updateImportantNpc(${npcIndex},'role',this.value)"></div>
+        <div><label>Tamaño</label><input value="${escapeAttr(npc.size)}"
+          onchange="updateImportantNpc(${npcIndex},'size',this.value)"></div>
+        <div><label>Alineamiento</label><input value="${escapeAttr(npc.alignment)}" placeholder="Legal malvado..."
+          onchange="updateImportantNpc(${npcIndex},'alignment',this.value)"></div>
+        <div><label>Dados de golpe</label><input value="${escapeAttr(npc.hitDice)}" placeholder="18d10+90"
+          onchange="updateImportantNpc(${npcIndex},'hitDice',this.value)"></div>
+        <div><label>PG</label><input value="${escapeAttr(npc.hitPoints)}" placeholder="199"
+          onchange="updateImportantNpc(${npcIndex},'hitPoints',this.value)"></div>
+      </div>
+
+      <div class="npc-section">
+        <div class="npc-core-stats">
+          ${[
+            ["armorClass","CA",npc.armorClass,"18"],
+            ["hitPoints","PG",npc.hitPoints,"199"],
+            ["speed","Velocidad",npc.speed,"9 m, vuelo 18 m"],
+            ["initiative","Iniciativa",npc.initiative,"+7"],
+            ["challengeRating","CR",npc.challengeRating,"11"],
+            ["proficiencyBonus","BC",npc.proficiencyBonus,"+4"]
+          ].map(([key,label,value,placeholder])=>`
+            <div class="npc-core-stat"><label>${label}</label>
+              <input value="${escapeAttr(value)}" placeholder="${placeholder}"
+                onchange="updateImportantNpc(${npcIndex},'${key}',this.value)">
+            </div>`).join("")}
+        </div>
+      </div>
+
+      <div class="npc-section">
+        <h4>Características y salvaciones</h4>
+        <div class="npc-abilities-horizontal">
+          ${IMPORTANT_NPC_ABILITY_FIELDS.map(([key,label])=>`
+            <div class="npc-ability-cell">
+              <strong>${label}</strong>
+              <input type="number" min="1" max="30" value="${npc.abilities[key].score}"
+                title="Puntuación"
+                onchange="updateImportantNpcAbility(${npcIndex},'${key}','score',this.value)">
+              <div class="npc-ability-mod">${signedNpcNumber(npcAbilityModifier(npc.abilities[key].score))}</div>
+              <input value="${escapeAttr(npc.abilities[key].save)}" placeholder="Salv."
+                title="Bonificador de salvación"
+                onchange="updateImportantNpcAbility(${npcIndex},'${key}','save',this.value)">
+            </div>`).join("")}
+        </div>
+      </div>
+
+      <div class="npc-section">
+        <div class="npc-section-titlebar">
+          <h3>Defensas, sentidos, idiomas y habilidades</h3>
+          <button class="square-button" type="button"
+            onclick="toggleImportantNpcSection(${npcIndex},'defensesSectionExpanded')"
+            aria-expanded="${npc.defensesSectionExpanded}">
+            ${npc.defensesSectionExpanded ? "▴" : "▾"}
+          </button>
+        </div>
+        ${npc.defensesSectionExpanded ? `
+          <div class="npc-defense-grid" style="margin-top:8px">
+          <div class="npc-skills-field">
+            <label>Habilidades</label>
+            <textarea
+              placeholder="Ej. Percepción +7, Sigilo +5, Persuasión +6..."
+              onchange="updateImportantNpc(${npcIndex},'skills',this.value)">${escapeHtml(npc.skills)}</textarea>
+          </div>
+          <div><label>Vulnerabilidades</label><input value="${escapeAttr(npc.vulnerabilities)}"
+            onchange="updateImportantNpc(${npcIndex},'vulnerabilities',this.value)"></div>
+          <div><label>Resistencias</label><input value="${escapeAttr(npc.resistances)}"
+            onchange="updateImportantNpc(${npcIndex},'resistances',this.value)"></div>
+          <div><label>Inmunidades</label><input value="${escapeAttr(npc.immunities)}"
+            placeholder="Daño y estados inmunes..."
+            onchange="updateImportantNpc(${npcIndex},'immunities',this.value)"></div>
+          <div><label>Sentidos</label><input value="${escapeAttr(npc.senses)}" placeholder="Visión en la oscuridad 36 m..."
+            onchange="updateImportantNpc(${npcIndex},'senses',this.value)"></div>
+          <div><label>Idiomas</label><input value="${escapeAttr(npc.languages)}"
+            onchange="updateImportantNpc(${npcIndex},'languages',this.value)"></div>
+          </div>
+        ` : ""}
+      </div>
+
+      <div class="npc-section">
+        <div class="npc-section-titlebar">
+          <h3>Rasgos${npc.traits.length ? ` · ${npc.traits.length}` : ""}</h3>
+          <div class="npc-section-title-actions">
+            ${npc.traitsSectionExpanded ? `
+              <button type="button"
+                onclick="addImportantNpcFeature(${npcIndex},'traits','Rasgo')">
+                + Añadir rasgo
+              </button>
+            ` : ""}
+            <button class="square-button" type="button"
+              onclick="toggleImportantNpcSection(${npcIndex},'traitsSectionExpanded')"
+              aria-expanded="${npc.traitsSectionExpanded}">
+              ${npc.traitsSectionExpanded ? "▴" : "▾"}
+            </button>
+          </div>
+        </div>
+        ${npc.traitsSectionExpanded ? `
+          <div class="npc-feature-list">
+            ${npc.traits.length
+              ? npc.traits.map((feature,featureIndex)=>renderImportantNpcFeature(npcIndex,'traits',feature,featureIndex)).join("")
+              : '<div class="empty">Sin rasgos.</div>'}
+          </div>` : ""}
+      </div>
+
+      <div class="npc-section">
+        <div class="npc-section-titlebar">
+          <h3>Acciones</h3>
+          <button class="square-button" type="button"
+            onclick="toggleImportantNpcSection(${npcIndex},'actionsSectionExpanded')"
+            aria-expanded="${npc.actionsSectionExpanded}">
+            ${npc.actionsSectionExpanded ? "▴" : "▾"}
+          </button>
+        </div>
+        ${npc.actionsSectionExpanded ? `
+          ${[
+            ["actions","Acciones"],
+            ["bonusActions","Acciones adicionales"],
+            ["reactions","Reacciones"],
+            ["legendaryActions","Acciones legendarias"],
+            ["lairActions","Acciones de guarida"]
+          ].map(([section,label])=>{
+            const subsectionOpen=npc.actionSubsectionsExpanded?.[section] !== false;
+            return `
+            <div class="npc-actions-group">
+              <div class="subsection-head">
+                <h4>${label}${npc[section].length ? ` · ${npc[section].length}` : ""}</h4>
+                <button class="npc-subsection-toggle" type="button"
+                  onclick="toggleImportantNpcActionSubsection(${npcIndex},'${section}')"
+                  aria-expanded="${subsectionOpen}"
+                  title="${subsectionOpen ? "Contraer subsección" : "Expandir subsección"}">
+                  ${subsectionOpen ? "▴" : "▾"}
+                </button>
+              </div>
+              ${subsectionOpen ? `
+                <div class="npc-section-inline-actions">
+                  <button type="button"
+                    onclick="addImportantNpcFeature(${npcIndex},'${section}','${label.replace(/es$/,"").replace(/s$/,"")}')">
+                    + Añadir
+                  </button>
+                </div>
+                <div class="npc-feature-list">
+                  ${npc[section].length
+                    ? npc[section].map((feature,featureIndex)=>renderImportantNpcFeature(npcIndex,section,feature,featureIndex)).join("")
+                    : `<div class="empty">Sin ${label.toLowerCase()}.</div>`}
+                </div>
+              ` : ""}
+            </div>`;
+          }).join("")}
+        ` : ""}
+      </div>
+
+      <div class="npc-section">
+        <h4>Notas</h4>
+        <textarea class="npc-card-notes" placeholder="Motivaciones, relaciones, tácticas, secretos y evolución..."
+          onchange="updateImportantNpc(${npcIndex},'notes',this.value)">${escapeHtml(npc.notes)}</textarea>
+      </div>
+      ` : ""}
+    </section>
+  `).join("");
+}
+
+function toggleNpcCodexPanel(force){
+  const overlay=document.getElementById("npcCodexOverlay");
+  const button=document.getElementById("npcCodexButton");
+  if(!overlay || !button) return;
+  const open=typeof force==="boolean" ? force : !overlay.classList.contains("open");
+  if(open){
+    togglePlayerPanel(false);
+    toggleNotesPanel(false);
+  }
+  overlay.classList.toggle("open",open);
+  button.classList.toggle("open",open);
+  document.body.classList.toggle("npc-codex-open",open);
+  button.textContent=open ? "✕" : "♜";
+  button.title=open ? "Cerrar Archivo de Personajes" : "Abrir Archivo de Personajes";
+  button.setAttribute("aria-label",button.title);
+  button.setAttribute("aria-expanded",String(open));
+}
+
+render();
+</script>
+
+<aside id="floatingNav" class="floating-nav" aria-label="Índice de navegación">
+  <div class="floating-nav-header">
+    <h3>Índice</h3>
+  </div>
+  <nav id="floatingNavContent" class="floating-nav-content"></nav>
+</aside>
+<button id="floatingNavButton" class="floating-nav-button primary" type="button"
+  onclick="toggleFloatingNav()" title="Abrir índice" aria-label="Abrir índice">☰</button>
+
+
+<script>
+  getNavigationOffset();
+  renderFloatingNav();
+  updateFloatingNavActive();
+</script>
+
+
+<button id="playerButton" class="floating-nav-button player-button primary" type="button"
+  onclick="togglePlayerPanel()" title="Abrir personajes jugadores"
+  aria-label="Abrir personajes jugadores" aria-expanded="false">♟</button>
+<div id="playerOverlay" class="player-overlay">
+  <aside class="player-panel" aria-label="Personajes jugadores">
+    <div class="player-panel-head">
+      <h2 id="section-player-characters">Personajes jugadores</h2>
+      <button class="primary" onclick="addPlayerCharacter()">+ Añadir PJ</button>
+    </div>
+    <div id="playerCharactersGrid"></div>
+  </aside>
+</div>
+
+
+<button id="npcCodexButton" class="floating-nav-button npc-codex-button primary" type="button"
+  onclick="toggleNpcCodexPanel()" title="Abrir Archivo de Personajes"
+  aria-label="Abrir Archivo de Personajes" aria-expanded="false">♜</button>
+<div id="npcCodexOverlay" class="npc-codex-overlay">
+  <aside class="npc-codex-panel" aria-label="Archivo de Personajes">
+    <div class="npc-codex-head">
+      <h2>Archivo de Personajes</h2>
+      <button class="primary" onclick="addImportantNpc()">+ Añadir NPC</button>
+    </div>
+    <div id="importantNpcsGrid"></div>
+  </aside>
+</div>
+
+<button id="notesButton" class="floating-nav-button notes-button primary" type="button"
+  onclick="toggleNotesPanel()" title="Abrir notas" aria-label="Abrir notas" aria-expanded="false">🕮</button>
+<div id="notesOverlay" class="notes-overlay">
+<div class="notes-panel">
+<h2 id="section-director-log" class="section-title nav-scroll-target">Registro del Director</h2>
+  <div class="card">
+    <div class="row">
+      <div>
+        <label>Fecha en campaña</label>
+        <input id="logDate" placeholder="Ej.: 14 de Brumario">
+      </div>
+      <div>
+        <label>Evento o región</label>
+        <input id="logSource" placeholder="Ej.: Guerra del Norte / Reino de Astoria">
+      </div>
+    </div>
+    <label>Suceso</label>
+    <textarea id="logText" placeholder="Describe qué ocurrió y qué cambió..."></textarea>
+    <button class="primary" onclick="addLog()">Añadir entrada</button>
+    <div id="logList" style="margin-top:14px"></div>
+  </div>
+
+</div></div>
+<script>
+renderPlayerCharacters();
+renderImportantNpcs();
+
+function togglePlayerPanel(force){
+  const overlay=document.getElementById('playerOverlay');
+  const button=document.getElementById('playerButton');
+  const open=(typeof force==='boolean') ? force : !overlay.classList.contains('open');
+
+  if(open){ toggleNotesPanel(false); toggleNpcCodexPanel(false); }
+
+  overlay.classList.toggle('open',open);
+  button.classList.toggle('open',open);
+  document.body.classList.toggle('player-panel-open',open);
+  button.textContent=open ? '✕' : '♟';
+  button.title=open ? 'Cerrar personajes jugadores' : 'Abrir personajes jugadores';
+  button.setAttribute('aria-label',open ? 'Cerrar personajes jugadores' : 'Abrir personajes jugadores');
+  button.setAttribute('aria-expanded',String(open));
+
+  if(open) renderPlayerCharacters();
+}
+
+function toggleNotesPanel(force){
+  const overlay=document.getElementById('notesOverlay');
+  const button=document.getElementById('notesButton');
+  const open=(typeof force==='boolean') ? force : !overlay.classList.contains('open');
+
+  if(open){ togglePlayerPanel(false); toggleNpcCodexPanel(false); }
+
+  overlay.classList.toggle('open',open);
+  button.classList.toggle('open',open);
+  document.body.classList.toggle('notes-panel-open',open);
+  button.textContent=open ? '✕' : '🕮';
+  button.title=open ? 'Cerrar notas' : 'Abrir notas';
+  button.setAttribute('aria-label',open ? 'Cerrar notas' : 'Abrir notas');
+  button.setAttribute('aria-expanded',String(open));
+}
+</script>
+
+
+<script>
+(function initSafeSidePanelOutsideClicks(){
+  function bindSafeOutsideClose(overlayId, panelSelector, closePanel){
+    const overlay = document.getElementById(overlayId);
+    const panel = overlay ? overlay.querySelector(panelSelector) : null;
+
+    if (!overlay || !panel || overlay.dataset.safeOutsideClose === "true") return;
+
+    overlay.dataset.safeOutsideClose = "true";
+    let interactionStartedOutside = false;
+
+    overlay.addEventListener("pointerdown", function(event){
+      interactionStartedOutside = event.target === overlay;
+    }, true);
+
+    overlay.addEventListener("pointercancel", function(){
+      interactionStartedOutside = false;
+    }, true);
+
+    overlay.addEventListener("click", function(event){
+      const interactionEndedOutside = event.target === overlay;
+
+      if (interactionStartedOutside && interactionEndedOutside) {
+        closePanel();
+      }
+
+      interactionStartedOutside = false;
+    });
+  }
+
+  bindSafeOutsideClose(
+    "playerOverlay",
+    ".player-panel",
+    function(){ togglePlayerPanel(false); }
+  );
+
+  bindSafeOutsideClose(
+    "npcCodexOverlay",
+    ".npc-codex-panel",
+    function(){ toggleNpcCodexPanel(false); }
+  );
+
+  bindSafeOutsideClose(
+    "notesOverlay",
+    ".notes-panel",
+    function(){ toggleNotesPanel(false); }
+  );
+})();
+</script>
+
+</body>
+</html>
