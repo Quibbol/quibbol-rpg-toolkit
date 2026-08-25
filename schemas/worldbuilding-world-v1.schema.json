@@ -1,15 +1,15 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://quibbol.github.io/apps-rol/schemas/worldbuilding-world-v1.schema.json",
-  "title": "Archivo de Rol - Mundo agnóstico",
+  "$id": "https://quibbol.github.io/quibbol-rpg-toolkit/schemas/worldbuilding-world-v1.schema.json",
+  "title": "Quibbol’s RPG Toolkit - Mundo agnóstico",
   "type": "object",
-  "required": ["_archivoRol", "_worldFile", "settings"],
+  "required": ["_quibbolRpgToolkit", "_worldFile", "settings"],
   "properties": {
-    "_archivoRol": {
+    "_quibbolRpgToolkit": {
       "type": "object",
       "required": ["application", "formatVersion", "module", "system", "entity", "schemaVersion"],
       "properties": {
-        "application": {"const": "archivo-de-rol"},
+        "application": {"const": "quibbol-rpg-toolkit"},
         "formatVersion": {"const": 1},
         "module": {"const": "worldbuilding"},
         "system": {"const": "agnostic"},
