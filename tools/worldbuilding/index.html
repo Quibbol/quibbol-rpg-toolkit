@@ -668,6 +668,8 @@
       border-radius:6px;
     }
     .log-item strong{display:block}
+    .log-item-actions{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:8px}
+    .log-item-actions button{width:auto}
     .empty{color:var(--muted);font-style:italic}
     footer{padding:28px;text-align:center;color:var(--muted)}
     @media(max-width:650px){.row{grid-template-columns:1fr}}
@@ -1780,7 +1782,7 @@ body.npc-codex-open .npc-codex-button{
   button,select,input,textarea{border-radius:3px;border:1px solid var(--border);background:var(--panel2);color:var(--text)}button{font-weight:700;letter-spacing:.02em}button:hover{border-color:var(--accent);color:var(--text);transform:translateY(-1px)}
   .primary{background:#5f4924!important;border-color:#8c6d35!important;color:#fff!important}.danger{background:#532929!important;border-color:#804242!important;color:var(--text)!important}.danger:hover{background:#6a3333!important;color:#fff!important}html[data-theme="light"] .primary{background:#8f3048!important;border-color:#6f2237!important;color:#fff!important}html[data-theme="light"] .danger{background:#f1d6d3!important;border-color:#c4837d!important;color:#7b3232!important}
   label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800}input:focus,select:focus,textarea:focus{outline:0;border-color:var(--accent);background:color-mix(in srgb,var(--accent) 7%,var(--panel2))}
-  .progress{background:#0005;border-color:var(--border)}.progress>div{background:linear-gradient(90deg,var(--ok),var(--accent),var(--danger))}.rating-dot.filled,.mini-dot.filled{background:var(--accent);border-color:var(--accent)}
+  .progress{background:#0005;border-color:var(--border)}.progress>div{background:var(--accent)}.rating-dot.filled,.mini-dot.filled{background:var(--accent);border-color:var(--accent)}
   .floating-nav{background:var(--panel);border-color:var(--accent)}.floating-nav-link.active{background:#5f4924!important;border-color:#8c6d35!important}.floating-nav-link:hover{background:var(--panel2)!important;color:var(--accent)!important}html[data-theme="light"] .floating-nav-link.active{background:#8f3048!important;border-color:#6f2237!important;color:#fff!important}
   @media(max-width:700px){header{padding:10px 14px}main{padding:15px 9px 45px}.card{box-shadow:0 10px 28px var(--shadow)}}
 </style>
@@ -2048,6 +2050,9 @@ const UI_TRANSLATIONS = {
   "Notas":"Notes",
   "Todavía no hay entradas.":"There are no entries yet.",
   "Eliminar":"Delete",
+  "Editar":"Edit",
+  "Guardar cambios":"Save Changes",
+  "Cancelar":"Cancel",
   "Sin fecha":"Undated",
   "General":"General",
   "Gobierno":"Government",
@@ -4405,22 +4410,50 @@ if(__pp){
   applyLanguage();
 }
 
+let editingLogIndex=-1;
+
 function renderLog(){
   const list = document.getElementById("logList");
   if(!list) return;
   if(!state.log.length){
     list.innerHTML = '<div class="empty">Todavía no hay entradas.</div>';
+    applyLanguage();
     return;
   }
   list.innerHTML = state.log.slice().reverse().map((x, revIdx)=>{
     const originalIdx = state.log.length - 1 - revIdx;
+    const isEditing=editingLogIndex===originalIdx;
     return `
       <div class="log-item">
-        <strong>${escapeHtml(x.date || "Sin fecha")} — ${escapeHtml(x.source || "General")}</strong>
-        <span>${escapeHtml(x.text)}</span>
-        <div style="margin-top:6px"><button class="danger" onclick="deleteLog(${originalIdx})">Eliminar</button></div>
+        ${isEditing ? `
+          <div class="row">
+            <div>
+              <label>Fecha en campaña</label>
+              <input id="logEditDate-${originalIdx}" value="${escapeAttr(x.date || "")}">
+            </div>
+            <div>
+              <label>Evento o región</label>
+              <input id="logEditSource-${originalIdx}" value="${escapeAttr(x.source || "")}">
+            </div>
+          </div>
+          <label>Suceso</label>
+          <textarea id="logEditText-${originalIdx}">${escapeHtml(x.text)}</textarea>
+        ` : `
+          <strong>${escapeHtml(x.date || "Sin fecha")} — ${escapeHtml(x.source || "General")}</strong>
+          <span>${escapeHtml(x.text)}</span>
+        `}
+        <div class="log-item-actions">
+          <button class="danger" onclick="deleteLog(${originalIdx})">Eliminar</button>
+          ${isEditing ? `
+            <button class="primary" onclick="saveLogEdit(${originalIdx})">Guardar cambios</button>
+            <button onclick="cancelLogEdit()">Cancelar</button>
+          ` : `
+            <button onclick="editLog(${originalIdx})">Editar</button>
+          `}
+        </div>
       </div>`;
   }).join("");
+  applyLanguage();
 }
 
 function addEvent(){
@@ -4978,6 +5011,33 @@ function updatePlayerRelatedNpc(playerIndex,npcIndex,key,value){
   autoSave();
 }
 
+function editLog(i){
+  if(!state.log[i]) return;
+  editingLogIndex=i;
+  renderLog();
+  requestAnimationFrame(()=>document.getElementById(`logEditText-${i}`)?.focus());
+}
+
+function cancelLogEdit(){
+  editingLogIndex=-1;
+  renderLog();
+}
+
+function saveLogEdit(i){
+  if(!state.log[i]) return;
+  const date=document.getElementById(`logEditDate-${i}`)?.value.trim() || "";
+  const source=document.getElementById(`logEditSource-${i}`)?.value.trim() || "";
+  const text=document.getElementById(`logEditText-${i}`)?.value.trim() || "";
+  if(!text){
+    alert(currentLanguage === "en" ? "Describe an occurrence." : "Describe un suceso.");
+    return;
+  }
+  state.log[i]={...state.log[i],date,source,text,updatedAt:new Date().toISOString()};
+  editingLogIndex=-1;
+  autoSave();
+  renderLog();
+}
+
 function addLog(){
   const date=document.getElementById("logDate").value.trim();
   const source=document.getElementById("logSource").value.trim();
@@ -4992,6 +5052,11 @@ function addLog(){
 }
 
 function deleteLog(i){
+  if(editingLogIndex===i){
+    editingLogIndex=-1;
+  }else if(editingLogIndex>i){
+    editingLogIndex--;
+  }
   state.log.splice(i,1);
   autoSave();
   renderLog();
@@ -5111,19 +5176,25 @@ function chooseImportConflict(kind,name,language='es'){
       const {data:imported}=ArchivoRolJSON.read(importedDocument,WORLD_JSON_DESCRIPTOR);
       const importedState = normalizeState(imported?.world ?? imported?.state ?? imported);
       const importedId = String(imported?._worldFile?.id ?? imported?.worldId ?? "");
+      const importedName=importedState.settings.worldName || (currentLanguage==="en"?"Untitled world":"Mundo sin nombre");
+      const importedNameKey=String(importedName).trim().toLocaleLowerCase();
       const importedSignature = JSON.stringify(importedState);
       autoSave();
 
-      const matchingWorld=importedId
+      const matchingWorldById=importedId
         ?worldLibrary.worlds.find(world=>world.id===importedId)
         :null;
+      const matchingWorld=matchingWorldById || (importedNameKey
+        ?worldLibrary.worlds.find(world=>
+          String(world?.state?.settings?.worldName ?? "").trim().toLocaleLowerCase()===importedNameKey
+        )
+        :null);
       if(matchingWorld){
         const localSignature=JSON.stringify(normalizeState(structuredClone(matchingWorld.state)));
         if(localSignature===importedSignature){
           alert(currentLanguage === "en" ? "This world is already up to date." : "Este mundo ya está actualizado.");
           return;
         }
-        const importedName=importedState.settings.worldName || (currentLanguage==="en"?"Untitled world":"Mundo sin nombre");
         const choice=await chooseImportConflict("world",importedName,currentLanguage);
         if(choice==="copy"){
           const copyId=createWorldFileId();
